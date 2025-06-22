@@ -67,21 +67,21 @@
                 </div>                {% if offering.description %}
                 <div class="mb-4">
                     <h3 class="h5 academy-text">{% trans "Description" %}</h3>
-                    <div class="text-muted">{{ offering.description|linebreaks }}</div>
+                    <div class="text-muted">{{ offering.description|safe }}</div>
                 </div>
                 {% endif %}
 
                 {% if offering.program_content %}
                 <div class="mb-4">
                     <h3 class="h5 academy-text">{% trans "Program Content" %}</h3>
-                    <div class="text-muted">{{ offering.program_content|linebreaks }}</div>
+                    <div class="text-muted">{{ offering.program_content|safe }}</div>
                 </div>
                 {% endif %}
 
                 {% if offering.remarks %}
                 <div class="mb-4">
                     <h3 class="h5 academy-text">{% trans "Remarks" %}</h3>
-                    <div class="alert academy-bg-light">{{ offering.remarks|linebreaks }}</div>
+                    <div class="alert academy-bg-light">{{ offering.remarks|safe }}</div>
                 </div>
                 {% endif %}
             </div>
@@ -104,6 +104,12 @@
                     <div class="variation-item academy-themed mb-3 p-3 bg-light rounded">
                         {% if variation.title and variation.title != offering.title %}
                         <h6 class="mb-2 academy-text">{{ variation.title }}</h6>
+                        {% endif %}
+                        
+                        {% if variation.description %}
+                        <div class="mb-2 small">
+                            {{ variation.description|safe }}
+                        </div>
                         {% endif %}
                         
                         {% if variation.lesson_dates %}

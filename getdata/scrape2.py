@@ -4,6 +4,7 @@ import json
 from datetime import datetime
 import time
 import re
+import os
 
 def scrape_categories(academy_url, academy_name):
     """
@@ -256,17 +257,20 @@ def scrape_offering_details(offering_url, offering_title, academy_name):
     # Extract language if available
     language_element = soup.select_one('.course-language .field--name-field-course-language')
     if language_element:
-        details['language'] = language_element.get_text().strip()
-    
-    # Extract description
+        details['language'] = language_element.get_text().strip()      # Extract description with HTML content preserved
     description_element = soup.select_one('.field--name-field-course-desc')
     if description_element:
-        details['description'] = description_element.get_text().strip()
+        # Get the inner HTML content of the element (exclude the container tag)
+        # First get all the inner HTML
+        inner_html = ''.join(str(child) for child in description_element.children)
+        details['description'] = inner_html
     
-    # Extract program details
+    # Extract program details with HTML content preserved
     program_element = soup.select_one('.field--name-field-course-program')
     if program_element:
-        details['program'] = program_element.get_text().strip()
+        # Get the inner HTML content of the element (exclude the container tag)
+        inner_html = ''.join(str(child) for child in program_element.children)
+        details['program'] = inner_html
     
     # Extract partners
     partner_elements = soup.select('.field--name-field-course-partners .field__item')
@@ -307,12 +311,12 @@ def scrape_offering_details(offering_url, offering_title, academy_name):
         # Extract variation title
         title_element = variation.select_one('.field--name-title')
         if title_element:
-            variation_data['title'] = title_element.get_text().strip()
-        
-        # Extract variation description
+            variation_data['title'] = title_element.get_text().strip()          # Extract variation description with HTML content preserved
         desc_element = variation.select_one('.field--name-field-description')
         if desc_element:
-            variation_data['description'] = desc_element.get_text().strip()
+            # Get the inner HTML content of the element (exclude the container tag)
+            inner_html = ''.join(str(child) for child in desc_element.children)
+            variation_data['description'] = inner_html
         
         # Extract variation price
         price_element = variation.select_one('.field--name-price .field__item')
@@ -490,20 +494,20 @@ if __name__ == "__main__":
         
         # Replace the basic offering with the detailed one
         offerings_dict[url] = details
-    
-    # Convert the dictionary to a list for the final JSON
+      # Convert the dictionary to a list for the final JSON
     all_data['offerings'] = list(offerings_dict.values())
     
     # Save all data to a single JSON file
     if all_data['offerings']:
         print(f"\nTotal unique offerings found: {len(all_data['offerings'])}")
         
-        # Save to a single JSON file
+        # Save to a single JSON file in the getdata directory
         combined_filename = "ugent_academies_data_detailed.json"
-        with open(combined_filename, 'w', encoding='utf-8') as jsonfile:
+        output_path = os.path.join(os.path.dirname(__file__), combined_filename)
+        with open(output_path, 'w', encoding='utf-8') as jsonfile:
             json.dump(all_data, jsonfile, ensure_ascii=False, indent=4)
         
-        print(f"Saved all data to {combined_filename}")
+        print(f"Saved all data to {output_path}")
         
         # Print sample of detailed offerings
         print("\nSample of detailed offerings:")

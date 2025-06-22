@@ -191,13 +191,13 @@ class Command(BaseCommand):
                     if lang_name:
                         language, _ = Language.objects.get_or_create(name=lang_name)
                         break  # Just use the first language for now
-            
-            # Find or create the offering
+              # Find or create the offering
             defaults = {
                 'title': item['title'],
                 'academy': academy,
-                'description': item.get('description', ''),
-                'program_content': item.get('program', ''),
+                'description': item.get('description', ''),  # Preserve HTML content
+                'program_content': item.get('program', ''),  # Preserve HTML content
+                'remarks': item.get('remarks', ''),  # Preserve HTML content
                 'course_id': item.get('course_id', ''),
                 'language': language,
                 'is_active': True
@@ -305,8 +305,7 @@ class Command(BaseCommand):
                         except ValueError:
                             # If parsing fails, continue with the next date string
                             continue
-            
-            # Create the variation
+              # Create the variation
             variation = Variation.objects.create(
                 offering=offering,
                 title=variation_data.get('title', ''),
@@ -315,7 +314,7 @@ class Command(BaseCommand):
                 start_date=start_date,
                 end_date=end_date,
                 location=location,
-                description=variation_data.get('description', ''),
+                description=variation_data.get('description', ''),  # Preserve HTML content
                 is_available=True
             )
             count += 1
