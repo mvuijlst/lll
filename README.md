@@ -1,22 +1,19 @@
 # UGent Academy Data Management
 
-This project scrapes and manages data from UGent academies while preserving customizations like logos, colors, and sort orders.
+This project manages data from UGent academies while preserving customizations like logos, colors, and sort orders.
 
 ## Quick Start
 
-### Option 1: Using the Helper Script (Recommended)
+### Using the Detailed JSON Import
 ```bash
-# Full scrape and import (preserves customizations)
-python update_academy_data.py
+# Import data from the detailed JSON file
+python manage.py import_detailed_data getdata/ugent_academies_data_detailed.json
 
-# Only scrape new data (don't import)
-python update_academy_data.py --scrape-only
-
-# Only import existing data
-python update_academy_data.py --import-only
+# Clear existing data before import
+python manage.py import_detailed_data getdata/ugent_academies_data_detailed.json --clear
 ```
 
-### Option 2: Using Django Management Commands
+### Legacy Methods
 ```bash
 # Full scrape and import
 python manage.py scrape_and_update

@@ -3,7 +3,7 @@ import os
 import sys
 import subprocess
 from datetime import datetime
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 from academies.models import (
     Academy, Category, Language, Location, Teacher, 
@@ -12,7 +12,7 @@ from academies.models import (
 
 
 class Command(BaseCommand):
-    help = 'Scrape academy data and update database while preserving academy customizations'
+    help = 'This command is deprecated. Please use import_detailed_data instead.'
 
     def add_arguments(self, parser):
         parser.add_argument(
@@ -26,20 +26,40 @@ class Command(BaseCommand):
             help='Only import data from existing JSON file, do not scrape'
         )
         parser.add_argument(
-            '--json-file',
-            type=str,
-            help='Path to JSON file (for import-only mode)',
-            default=None
+            '--json-file',            type=str,
+            help='Path to JSON file to import (with --import-only)'
+        )
+        parser.add_argument(
+            '--force',
+            action='store_true',
+            help='Force execution of the deprecated command'
         )
 
     def handle(self, *args, **options):
-        scrape_only = options['scrape_only']
-        import_only = options['import_only']
-        json_file = options['json_file']
-
-        if scrape_only and import_only:
-            self.stdout.write(self.style.ERROR('Cannot use both --scrape-only and --import-only'))
+        if not options['force']:
+            self.stdout.write(self.style.WARNING(
+                "This command is deprecated. Please use 'import_detailed_data' instead.\n"
+                "Example: python manage.py import_detailed_data path/to/ugent_academies_data_detailed.json\n"
+                "Use --force to run this command anyway."
+            ))            
+            # Suggest running the new command
+            json_path = os.path.join('getdata', 'ugent_academies_data_detailed.json')
+            if os.path.exists(json_path):
+                self.stdout.write(self.style.SUCCESS(
+                    f"Found JSON file at '{json_path}'. You can import it with:\n"
+                    f"python manage.py import_detailed_data {json_path}"
+                ))
+                
             return
+            
+        # If --force is used, run the original command
+        self.stdout.write(self.style.WARNING("Running deprecated command because --force was specified"))
+        
+        # Original command code would go here, but we've removed it
+        self.stdout.write(self.style.ERROR(
+            "The original functionality has been removed. "
+            "Please use 'import_detailed_data' instead."
+        ))
 
         # Step 1: Export current academy metadata
         self.stdout.write('Exporting current academy metadata...')

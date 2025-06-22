@@ -72,6 +72,7 @@ class Category(models.Model):
     """Categories for grouping offerings within academies."""
     name = models.CharField(max_length=200)
     academy = models.ForeignKey(Academy, on_delete=models.CASCADE, related_name='categories')
+    url = models.URLField(blank=True, help_text="URL to the category page")
     created_at = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
