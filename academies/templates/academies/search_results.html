@@ -1,0 +1,197 @@
+{% extends 'academies/base.html' %}
+
+{% block title %}
+    {% if query %}Search: {{ query }} - UGent Academies{% else %}Search - UGent Academies{% endif %}
+{% endblock %}
+
+{% block header %}
+<div class="page-header">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                {% if query %}
+                <h1 class="mb-0">
+                    <i class="bi bi-search me-3"></i>Search Results
+                </h1>
+                <p class="lead mb-0 mt-2">Results for "{{ query }}"</p>
+                {% else %}
+                <h1 class="mb-0">
+                    <i class="bi bi-search me-3"></i>Search
+                </h1>
+                <p class="lead mb-0 mt-2">Find courses, teachers, and academies</p>
+                {% endif %}
+            </div>
+            {% if total_results %}
+            <div class="col-md-4 text-md-end">
+                <div class="stats-card d-inline-block">
+                    <h3 class="mb-1 text-primary">{{ total_results }}</h3>
+                    <small class="text-muted">Result{{ total_results|pluralize }}</small>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+{% if no_query %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="bi bi-search fs-1 text-muted mb-3"></i>
+                <h3>Search UGent Academies</h3>
+                <p class="text-muted mb-4">Enter keywords to find courses, teachers, or academies</p>
+                <form method="get" action="{% url 'academies:search_results' %}">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" name="q" 
+                               placeholder="Search for courses, teachers, academies..." 
+                               required>
+                        <button class="btn btn-primary" type="submit">
+                            <i class="bi bi-search me-1"></i>Search
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% elif total_results == 0 %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="alert alert-info text-center">
+            <i class="bi bi-info-circle fs-3 mb-3 d-block"></i>
+            <h4>No results found</h4>
+            <p class="mb-3">We couldn't find anything matching "{{ query }}"</p>
+            <form method="get" action="{% url 'academies:search_results' %}">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="q" 
+                           placeholder="Try different keywords..." 
+                           value="{{ query }}">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% else %}
+
+<!-- Search Summary -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="mb-0 text-muted">
+                Found {{ total_results }} result{{ total_results|pluralize }} for "{{ query }}"
+            </p>
+            <form method="get" action="{% url 'academies:search_results' %}" class="d-flex">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="q" 
+                           placeholder="Refine search..." 
+                           value="{{ query }}">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Academies Results -->
+{% if academies %}
+<div class="mb-5">
+    <h3 class="h5 mb-3">
+        <i class="bi bi-mortarboard me-2"></i>Academies 
+        <span class="badge bg-secondary">{{ academies.count }}</span>
+    </h3>
+    <div class="row g-3">
+        {% for academy in academies %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card academy-card">
+                <div class="card-body">
+                    <h6 class="card-title">{{ academy.name }}</h6>
+                    <a href="{% url 'academies:academy_detail' academy.pk %}" 
+                       class="btn btn-sm btn-primary">View Academy</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- Offerings Results -->
+{% if offerings %}
+<div class="mb-5">
+    <h3 class="h5 mb-3">
+        <i class="bi bi-book me-2"></i>Courses 
+        <span class="badge bg-secondary">{{ offerings.count }}</span>
+    </h3>
+    <div class="row g-3">
+        {% for offering in offerings %}
+        <div class="col-lg-6">
+            <div class="card offering-card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h6 class="card-title mb-0">
+                            <a href="{% url 'academies:offering_detail' offering.pk %}" 
+                               class="text-decoration-none">
+                                {{ offering.title|truncatechars:80 }}
+                            </a>
+                        </h6>
+                    </div>
+                    <p class="text-muted small mb-2">
+                        <i class="bi bi-building me-1"></i>{{ offering.academy.name }}
+                        {% if offering.category %}
+                        <span class="ms-2">
+                            <i class="bi bi-folder me-1"></i>{{ offering.category.name }}
+                        </span>
+                        {% endif %}
+                    </p>
+                    {% if offering.description %}
+                    <p class="card-text small text-muted">
+                        {{ offering.description|truncatechars:120 }}
+                    </p>
+                    {% endif %}
+                    <a href="{% url 'academies:offering_detail' offering.pk %}" 
+                       class="btn btn-sm btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- Teachers Results -->
+{% if teachers %}
+<div class="mb-5">
+    <h3 class="h5 mb-3">
+        <i class="bi bi-person-badge me-2"></i>Teachers 
+        <span class="badge bg-secondary">{{ teachers.count }}</span>
+    </h3>
+    <div class="row g-3">
+        {% for teacher in teachers %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="bi bi-person-circle text-primary mb-2" style="font-size: 2rem;"></i>
+                    <h6 class="card-title">{{ teacher.name }}</h6>
+                    {% if teacher.title %}
+                    <p class="text-muted small mb-2">{{ teacher.title }}</p>
+                    {% endif %}
+                    <a href="{% url 'academies:teacher_detail' teacher.pk %}" 
+                       class="btn btn-sm btn-primary">View Profile</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends 'academies/base.html' %}
+
+{% block title %}Upload Logo - {{ academy.name }} - UGent Academies{% endblock %}
+
+{% block header %}
+<div class="page-header" style="background: linear-gradient(135deg, {{ academy.primary_color }} 0%, {{ academy.primary_color }}cc 100%);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="mb-0">
+                    <i class="bi bi-image me-3"></i>Upload Logo
+                </h1>
+                <p class="lead mb-0 mt-2">{{ academy.name }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div style="--academy-color: {{ academy.primary_color }}; --academy-light: {{ academy.light_color }}; --academy-contrast: {{ academy.contrast_color }};">
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'academies:academy_list' %}">Academies</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'academies:academy_detail' academy.pk %}">{{ academy.name }}</a></li>
+        <li class="breadcrumb-item active">Upload Logo</li>
+    </ol>
+</nav>
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card">
+            <div class="card-header academy-bg">
+                <h5 class="card-title mb-0">
+                    <i class="bi bi-upload me-2"></i>Academy Logo Upload
+                </h5>
+            </div>
+            <div class="card-body">
+                {% if academy.logo %}
+                <div class="text-center mb-4">
+                    <h6>Current Logo:</h6>
+                    <img src="{{ academy.logo.url }}" alt="{{ academy.name }} current logo" 
+                         class="img-fluid" style="max-height: 100px; max-width: 300px; object-fit: contain;">
+                    <p class="text-muted mt-2">
+                        <small>{{ academy.logo.name }}</small>
+                    </p>
+                </div>
+                {% endif %}
+                
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    <div class="mb-3">
+                        <label for="{{ form.logo.id_for_label }}" class="form-label">
+                            <i class="bi bi-file-image me-1"></i>Choose Logo Image
+                        </label>
+                        {{ form.logo }}
+                        {% if form.logo.help_text %}
+                        <div class="form-text">{{ form.logo.help_text }}</div>
+                        {% endif %}
+                        {% if form.logo.errors %}
+                        <div class="text-danger">
+                            {% for error in form.logo.errors %}
+                            <small>{{ error }}</small>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <i class="bi bi-info-circle me-2"></i>
+                        <strong>Tips for best results:</strong>
+                        <ul class="mb-0 mt-2">
+                            <li>Use PNG format for logos with transparency</li>
+                            <li>Recommended dimensions: 200x60 pixels or similar ratio</li>
+                            <li>Keep file size under 1MB for optimal performance</li>
+                            <li>Ensure good contrast for both light and dark backgrounds</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn academy-button">
+                            <i class="bi bi-upload me-1"></i>Upload Logo
+                        </button>
+                        <a href="{% url 'academies:academy_detail' academy.pk %}" class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left me-1"></i>Cancel
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+{% endblock %}

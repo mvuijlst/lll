@@ -1,0 +1,99 @@
+{% extends 'academies/base.html' %}
+
+{% block title %}Teachers - UGent Academies{% endblock %}
+
+{% block header %}
+<div class="page-header">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="mb-0"><i class="bi bi-person-badge-fill me-3"></i>Our Teachers</h1>
+                <p class="lead mb-0 mt-2">Meet the experts who deliver our courses</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <div class="stats-card d-inline-block">
+                    <h3 class="mb-1 text-primary">{{ teachers.paginator.count }}</h3>
+                    <small class="text-muted">Teachers</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+    {% for teacher in teachers %}
+    <div class="col-md-6 col-lg-4">
+        <div class="teacher-card">
+            <div class="mb-3">
+                <i class="bi bi-person-circle text-primary" style="font-size: 3rem;"></i>
+            </div>
+            <h5 class="mb-1">{{ teacher.name }}</h5>
+            {% if teacher.title %}
+            <p class="text-muted mb-2">{{ teacher.title }}</p>
+            {% endif %}
+            
+            {% if teacher.variation_count %}
+            <p class="small text-muted mb-3">
+                <i class="bi bi-book me-1"></i>
+                {{ teacher.variation_count }} course{{ teacher.variation_count|pluralize }}
+            </p>
+            {% endif %}
+            
+            <div class="d-flex gap-2 justify-content-center">
+                <a href="{% url 'academies:teacher_detail' teacher.pk %}" 
+                   class="btn btn-primary btn-sm">
+                    <i class="bi bi-eye me-1"></i>View Profile
+                </a>
+                {% if teacher.profile_url %}
+                <a href="{{ teacher.profile_url }}" target="_blank" 
+                   class="btn btn-outline-primary btn-sm">
+                    <i class="bi bi-link-45deg me-1"></i>Profile
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+        <div class="alert alert-info text-center">
+            <i class="bi bi-info-circle fs-3 mb-3 d-block"></i>
+            <h4>No teachers found</h4>
+            <p class="mb-0">There are no teachers available at the moment.</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Pagination -->
+{% if teachers.has_other_pages %}
+<nav aria-label="Teachers pagination" class="mt-5">
+    <ul class="pagination justify-content-center">
+        {% if teachers.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ teachers.previous_page_number }}">Previous</a>
+        </li>
+        {% endif %}
+        
+        {% for num in teachers.paginator.page_range %}
+        {% if teachers.number == num %}
+        <li class="page-item active">
+            <span class="page-link">{{ num }}</span>
+        </li>
+        {% elif num > teachers.number|add:'-3' and num < teachers.number|add:'3' %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        
+        {% if teachers.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ teachers.next_page_number }}">Next</a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+{% endblock %}

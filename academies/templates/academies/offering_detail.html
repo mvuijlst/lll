@@ -1,0 +1,167 @@
+{% extends 'academies/base.html' %}
+
+{% block title %}{{ offering.title }} - UGent Academies{% endblock %}
+
+{% block content %}
+<div style="--academy-color: {{ offering.academy.primary_color }}; --academy-light: {{ offering.academy.light_color }}; --academy-contrast: {{ offering.academy.contrast_color }};">
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'academies:academy_list' %}">Academies</a></li>
+        <li class="breadcrumb-item">
+            <a href="{% url 'academies:academy_detail' offering.academy.pk %}" class="academy-text">
+                {{ offering.academy.name }}
+            </a>
+        </li>
+        <li class="breadcrumb-item active">{{ offering.title|truncatechars:50 }}</li>
+    </ol>
+</nav>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card"
+             style="border-top: 4px solid {{ offering.academy.primary_color }};">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <h1 class="h2 mb-2">{{ offering.title }}</h1>
+                        <p class="text-muted mb-0">
+                            <i class="bi bi-building me-1"></i>
+                            <a href="{% url 'academies:academy_detail' offering.academy.pk %}" 
+                               class="text-decoration-none academy-text">
+                                {{ offering.academy.name }}
+                            </a>
+                            {% if offering.course_id %}
+                            <span class="ms-3"><i class="bi bi-tag me-1"></i>{{ offering.course_id }}</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                    {% if offering.is_active %}
+                    <span class="badge bg-success">Active</span>
+                    {% else %}
+                    <span class="badge bg-secondary">Inactive</span>
+                    {% endif %}
+                </div>
+
+                <div class="row mb-4">
+                    {% if offering.category %}
+                    <div class="col-auto">
+                        <span class="badge academy-badge">
+                            <i class="bi bi-folder me-1"></i>{{ offering.category.name }}
+                        </span>
+                    </div>
+                    {% endif %}
+                    {% if offering.language %}
+                    <div class="col-auto">
+                        <span class="badge badge-language">
+                            <i class="bi bi-translate me-1"></i>{{ offering.language.name }}
+                        </span>
+                    </div>
+                    {% endif %}
+                </div>
+
+                {% if offering.description %}
+                <div class="mb-4">
+                    <h3 class="h5 academy-text">Description</h3>
+                    <div class="text-muted">{{ offering.description|linebreaks }}</div>
+                </div>
+                {% endif %}
+
+                {% if offering.program_content %}
+                <div class="mb-4">
+                    <h3 class="h5 academy-text">Program Content</h3>
+                    <div class="text-muted">{{ offering.program_content|linebreaks }}</div>
+                </div>
+                {% endif %}
+
+                {% if offering.remarks %}
+                <div class="mb-4">
+                    <h3 class="h5 academy-text">Remarks</h3>
+                    <div class="alert academy-bg-light">{{ offering.remarks|linebreaks }}</div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header academy-bg">
+                <h5 class="mb-0"><i class="bi bi-calendar-event me-2"></i>Available Sessions</h5>
+            </div>
+            <div class="card-body">
+                {% if upcoming_variations %}
+                    {% for variation in upcoming_variations %}
+                    <div class="variation-item academy-themed">
+                        {% if variation.title and variation.title != offering.title %}
+                        <h6 class="mb-1">{{ variation.title }}</h6>
+                        {% endif %}
+                        
+                        {% if variation.lesson_dates %}
+                        <p class="mb-1">
+                            <i class="bi bi-clock me-1"></i>{{ variation.lesson_dates }}
+                        </p>
+                        {% endif %}
+                        
+                        {% if variation.location %}
+                        <p class="mb-1">
+                            <i class="bi bi-geo-alt me-1"></i>{{ variation.location.name }}
+                        </p>
+                        {% endif %}
+                        
+                        {% if variation.price %}
+                        <p class="mb-2 fw-bold academy-text">
+                            <i class="bi bi-tag me-1"></i>{{ variation.price }}
+                        </p>
+                        {% endif %}
+                        
+                        {% if variation.registration_url %}
+                        <a href="{{ variation.registration_url }}" target="_blank" 
+                           class="btn academy-button btn-sm">
+                            <i class="bi bi-person-plus me-1"></i>Register
+                        </a>
+                        {% endif %}
+                        
+                        {% if variation.variation_teachers.exists %}
+                        <div class="mt-2">
+                            <small class="text-muted">
+                                <i class="bi bi-person me-1"></i>
+                                {% for vt in variation.variation_teachers.all %}
+                                    <a href="{% url 'academies:teacher_detail' vt.teacher.pk %}" 
+                                       class="text-decoration-none academy-text">{{ vt.teacher.name }}</a>
+                                    {% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </small>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <p class="text-muted mb-0">
+                        <i class="bi bi-info-circle me-2"></i>
+                        No upcoming sessions available at the moment.
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+
+        {% if offering.links.exists %}
+        <div class="card mt-3">
+            <div class="card-header academy-bg-light">
+                <h6 class="mb-0 academy-text"><i class="bi bi-link-45deg me-2"></i>Related Links</h6>
+            </div>
+            <div class="card-body">
+                {% for link in offering.links.all %}
+                <a href="{{ link.url }}" target="_blank" 
+                   class="btn btn-outline-secondary btn-sm me-2 mb-2">
+                    {{ link.text }}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+</div>
+{% endblock %}

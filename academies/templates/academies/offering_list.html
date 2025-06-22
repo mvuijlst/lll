@@ -1,39 +1,172 @@
 {% extends 'academies/base.html' %}
 
-{% block title %}All Offerings - Academy Site{% endblock %}
+{% block title %}All Offerings - UGent Academies{% endblock %}
 
-{% block content %}
-<div class="row">
-    <div class="col-12">
-        <h1>All Offerings</h1>
-        <p class="lead">Browse all available offerings across all academies.</p>
+{% block header %}
+<div class="page-header">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="mb-0"><i class="bi bi-collection-fill me-3"></i>All Offerings</h1>
+                <p class="lead mb-0 mt-2">Browse all available courses across academies</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <div class="stats-card d-inline-block">
+                    <h3 class="mb-1 text-primary">{{ total_count }}</h3>
+                    <small class="text-muted">Offering{{ total_count|pluralize }}</small>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+{% endblock %}
 
-<div class="row">
+{% block content %}
+<!-- Filters -->
+<div class="filter-section">
+    <form method="get" class="row g-3 align-items-end">
+        <div class="col-md-4">
+            <label for="search" class="form-label">Search</label>
+            <input type="text" class="form-control" id="search" name="search" 
+                   value="{{ search_query }}" placeholder="Search courses...">
+        </div>
+        <div class="col-md-3">
+            <label for="academy" class="form-label">Academy</label>
+            <select class="form-select" id="academy" name="academy">
+                <option value="">All Academies</option>
+                {% for academy in academies %}
+                <option value="{{ academy.id }}" 
+                        {% if selected_academy == academy.id|stringformat:"s" %}selected{% endif %}>
+                    {{ academy.name }} ({{ academy.offering_count }})
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label for="language" class="form-label">Language</label>
+            <select class="form-select" id="language" name="language">
+                <option value="">All Languages</option>
+                {% for language in languages %}
+                <option value="{{ language.id }}" 
+                        {% if selected_language == language.id|stringformat:"s" %}selected{% endif %}>
+                    {{ language.name }} ({{ language.offering_count }})
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary w-100">
+                <i class="bi bi-funnel me-1"></i>Filter
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- Results -->
+<div class="row g-4">
     {% for offering in offerings %}
     <div class="col-md-6 col-lg-4">
-        <div class="card offering-card">
-            <div class="card-body">
-                <h5 class="card-title">{{ offering.name }}</h5>
-                <p class="card-text">{{ offering.description }}</p>
-                <div class="mt-3">
-                    <a href="{% url 'academies:academy_detail' offering.academy.pk %}" 
-                       class="btn btn-sm btn-outline-primary"
-                       style="border-color: {{ offering.academy.colour }}; color: {{ offering.academy.colour }};">
-                        {{ offering.academy.name }}
+        <div class="card offering-card h-100 themed"
+             style="--academy-color: {{ offering.academy.primary_color }}; --academy-light: {{ offering.academy.light_color }}; --academy-contrast: {{ offering.academy.contrast_color }}; border-top-color: {{ offering.academy.primary_color }};">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                    <a href="{% url 'academies:offering_detail' offering.pk %}" 
+                       class="text-decoration-none academy-text">
+                        {{ offering.title|truncatechars:80 }}
                     </a>
+                </h5>
+                
+                <div class="mb-3">
+                    <span class="badge academy-badge">
+                        <i class="bi bi-building me-1"></i>{{ offering.academy.name }}
+                    </span>
+                    {% if offering.category %}
+                    <span class="badge badge-category ms-1">
+                        {{ offering.category.name }}
+                    </span>
+                    {% endif %}
+                    {% if offering.language %}
+                    <span class="badge badge-language ms-1">
+                        {{ offering.language.name }}
+                    </span>
+                    {% endif %}
+                </div>
+                
+                {% if offering.description %}
+                <p class="card-text text-muted flex-grow-1">
+                    {{ offering.description|truncatechars:150 }}
+                </p>
+                {% endif %}
+                
+                <div class="mt-auto">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">
+                            {% if offering.variations.count %}
+                                <i class="bi bi-calendar-event me-1"></i>
+                                {{ offering.variations.count }} session{{ offering.variations.count|pluralize }}
+                            {% endif %}
+                        </small>
+                        <a href="{% url 'academies:offering_detail' offering.pk %}" 
+                           class="btn academy-button btn-sm">
+                            <i class="bi bi-arrow-right me-1"></i>Details
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     {% empty %}
     <div class="col-12">
-        <div class="alert alert-info">
+        <div class="alert alert-info text-center">
+            <i class="bi bi-info-circle fs-3 mb-3 d-block"></i>
             <h4>No offerings found</h4>
-            <p>There are no offerings available at the moment. Please check back later or contact the administrator.</p>
+            {% if search_query or selected_academy or selected_language %}
+            <p class="mb-3">No offerings match your current filters.</p>
+            <a href="{% url 'academies:offering_list' %}" class="btn btn-primary">
+                <i class="bi bi-arrow-clockwise me-1"></i>Clear Filters
+            </a>
+            {% else %}
+            <p class="mb-0">There are no offerings available at the moment.</p>
+            {% endif %}
         </div>
     </div>
     {% endfor %}
 </div>
+
+<!-- Pagination -->
+{% if offerings.has_other_pages %}
+<nav aria-label="Offerings pagination" class="mt-5">
+    <ul class="pagination justify-content-center">
+        {% if offerings.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ offerings.previous_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_academy %}&academy={{ selected_academy }}{% endif %}{% if selected_language %}&language={{ selected_language }}{% endif %}">
+                Previous
+            </a>
+        </li>
+        {% endif %}
+        
+        {% for num in offerings.paginator.page_range %}
+        {% if offerings.number == num %}
+        <li class="page-item active">
+            <span class="page-link">{{ num }}</span>
+        </li>
+        {% elif num > offerings.number|add:'-3' and num < offerings.number|add:'3' %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ num }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_academy %}&academy={{ selected_academy }}{% endif %}{% if selected_language %}&language={{ selected_language }}{% endif %}">
+                {{ num }}
+            </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        
+        {% if offerings.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ offerings.next_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_academy %}&academy={{ selected_academy }}{% endif %}{% if selected_language %}&language={{ selected_language }}{% endif %}">
+                Next
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
 {% endblock %}

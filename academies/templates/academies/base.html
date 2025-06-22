@@ -3,39 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Academy Site{% endblock %}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>{% block title %}UGent Academies{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <style>
-        .academy-card {
-            border-left: 5px solid;
-            margin-bottom: 1rem;
+        :root {
+            --ugent-blue: #1e3a8a;
+            --ugent-light-blue: #3b82f6;
+            --ugent-accent: #f59e0b;
         }
+        
         .navbar-brand {
             font-weight: bold;
         }
+        
+        .academy-card {
+            border-left: 5px solid;
+            margin-bottom: 1rem;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        
+        .academy-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .academy-card.themed {
+            border-left-width: 5px;
+            background: linear-gradient(135deg, var(--academy-light), #ffffff);
+        }
+        
+        .academy-badge {
+            background-color: var(--academy-color, var(--ugent-blue));
+            color: var(--academy-contrast, white);
+        }
+        
+        .academy-button {
+            background-color: var(--academy-color, var(--ugent-blue));
+            border-color: var(--academy-color, var(--ugent-blue));
+            color: var(--academy-contrast, white);
+        }
+        
+        .academy-button:hover {
+            background-color: var(--academy-color, var(--ugent-light-blue));
+            border-color: var(--academy-color, var(--ugent-light-blue));
+            opacity: 0.9;
+        }
+        
+        .academy-text {
+            color: var(--academy-color, var(--ugent-blue));
+        }
+        
+        .academy-border {
+            border-color: var(--academy-color, var(--ugent-blue)) !important;
+        }
+        
+        .academy-bg {
+            background-color: var(--academy-color, var(--ugent-blue));
+            color: var(--academy-contrast, white);
+        }
+          .academy-bg-light {
+            background-color: var(--academy-light, #e0f2fe);
+            color: var(--academy-color, var(--ugent-blue));
+        }
+        
+        .academy-logo {
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .academy-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .academy-card .academy-logo {
+            filter: none;
+        }
+        
+        .page-header .academy-logo {
+            filter: brightness(0) invert(1);
+        }
+        
         .offering-card {
             border: 1px solid #dee2e6;
-            border-radius: 0.375rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        
+        .offering-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .offering-card.themed {
+            border-top: 3px solid var(--academy-color, var(--ugent-blue));
+        }
+        
+        .search-box {
+            max-width: 400px;
+        }
+        
+        .badge-category {
+            background-color: var(--ugent-light-blue);
+        }
+        
+        .badge-language {
+            background-color: var(--ugent-accent);
+        }
+        
+        .teacher-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            height: 100%;
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .teacher-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .filter-section {
+            background-color: #f8f9fa;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--ugent-blue) 0%, var(--ugent-light-blue) 100%);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .page-header.academy-themed {
+            background: linear-gradient(135deg, var(--academy-color, var(--ugent-blue)) 0%, var(--academy-color, var(--ugent-light-blue)) 100%);
+        }
+        
+        .stats-card {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--ugent-blue);
+            border-color: var(--ugent-blue);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--ugent-light-blue);
+            border-color: var(--ugent-light-blue);
+        }
+        
+        .text-primary {
+            color: var(--ugent-blue) !important;
+        }
+        
+        .variation-item {
+            border-left: 3px solid var(--ugent-light-blue);
+            padding-left: 1rem;
             margin-bottom: 1rem;
         }
+        
+        .variation-item.academy-themed {
+            border-left-color: var(--academy-color, var(--ugent-light-blue));
+        }
+        
+        footer {
+            background-color: var(--ugent-blue);
+            color: white;
+            margin-top: 4rem;
+            padding: 2rem 0;
+        }
+        
+        /* Dynamic Academy Color Classes */
+        {% if academy %}
+        :root {
+            --academy-color: {{ academy.primary_color }};
+            --academy-light: {{ academy.light_color }};
+            --academy-contrast: {{ academy.contrast_color }};
+        }
+        {% endif %}
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--ugent-blue);">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'academies:academy_list' %}">Academy Site</a>
-            <div class="navbar-nav">
-                <a class="nav-link" href="{% url 'academies:academy_list' %}">Academies</a>
-                <a class="nav-link" href="{% url 'academies:offering_list' %}">All Offerings</a>
+            <a class="navbar-brand" href="{% url 'academies:academy_list' %}">
+                <i class="bi bi-mortarboard-fill me-2"></i>UGent Academies
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'academies:academy_list' %}">
+                            <i class="bi bi-house-door me-1"></i>Academies
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'academies:offering_list' %}">
+                            <i class="bi bi-book me-1"></i>All Offerings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'academies:teacher_list' %}">
+                            <i class="bi bi-person-badge me-1"></i>Teachers
+                        </a>
+                    </li>
+                </ul>
+                
+                <form class="d-flex search-box" method="get" action="{% url 'academies:search_results' %}">
+                    <div class="input-group">
+                        <input class="form-control" type="search" name="q" placeholder="Search courses, teachers..." 
+                               value="{{ request.GET.q }}" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </nav>
 
+    {% block header %}{% endblock %}
+
     <div class="container mt-4">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+        
         {% block content %}
         {% endblock %}
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="bi bi-mortarboard-fill me-2"></i>UGent Academies</h5>
+                    <p class="mb-0">Lifelong learning opportunities from Ghent University</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="https://ugent.be" class="text-white text-decoration-none">
+                            <i class="bi bi-globe me-1"></i>ugent.be
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    {% block extra_js %}{% endblock %}
 </body>
 </html>

@@ -1,35 +1,100 @@
 {% extends 'academies/base.html' %}
 
-{% block title %}Academies - Academy Site{% endblock %}
+{% block title %}Academies - UGent Academies{% endblock %}
 
-{% block content %}
-<div class="row">
-    <div class="col-12">
-        <h1>Academies</h1>
-        <p class="lead">Explore our different academies and their offerings.</p>
+{% block header %}
+<div class="page-header">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="mb-0"><i class="bi bi-mortarboard-fill me-3"></i>UGent Academies</h1>
+                <p class="lead mb-0 mt-2">Discover lifelong learning opportunities across our specialized academies</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <div class="stats-card d-inline-block">
+                    <h3 class="mb-1 text-primary">{{ academies.count }}</h3>
+                    <small class="text-muted">Academies</small>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+{% endblock %}
 
-<div class="row">
-    {% for academy in academies %}
-    <div class="col-md-6 col-lg-4">
-        <div class="card academy-card" style="border-left-color: {{ academy.colour }};">
-            <div class="card-body">
-                <h5 class="card-title" style="color: {{ academy.colour }};">{{ academy.name }}</h5>
-                <p class="card-text">
-                    <small class="text-muted">{{ academy.offerings.count }} offering{{ academy.offerings.count|pluralize }}</small>
+{% block content %}
+<div class="row g-4">    {% for academy in academies %}
+    <div class="col-md-6 col-lg-4">        <div class="card academy-card h-100" 
+             style="--academy-color: {{ academy.primary_color }}; --academy-light: {{ academy.light_color }}; --academy-contrast: {{ academy.contrast_color }}; border-left-color: {{ academy.primary_color }};">            {% if academy.logo %}
+            <div class="text-center pt-3 pb-2">
+                <img src="{{ academy.logo.url }}" alt="{{ academy.name }} logo" 
+                     class="academy-logo" style="max-height: 60px; max-width: 200px; object-fit: contain;">
+            </div>
+            {% endif %}
+            <div class="card-body d-flex flex-column academy-bg-light">
+                <h5 class="card-title academy-text mb-3">
+                    {{ academy.name }}
+                </h5>
+                
+                {% if academy.description %}
+                <p class="card-text text-muted mb-3">
+                    {{ academy.description|truncatewords:20 }}
                 </p>
-                <a href="{% url 'academies:academy_detail' academy.pk %}" class="btn btn-outline-primary">View Details</a>
+                {% endif %}
+                
+                {% if academy.base_url %}
+                <p class="card-text">
+                    <small class="text-muted">
+                        <i class="bi bi-globe me-1"></i>
+                        <a href="{{ academy.base_url }}" target="_blank" class="text-decoration-none academy-text">
+                            Visit Website
+                        </a>
+                    </small>
+                </p>
+                {% endif %}
+                
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="badge academy-badge">
+                        <i class="bi bi-book me-1"></i>
+                        {{ academy.offering_count }} offering{{ academy.offering_count|pluralize }}
+                    </span>
+                    {% if academy.categories.count %}
+                    <span class="badge bg-secondary">
+                        {{ academy.categories.count }} categor{{ academy.categories.count|pluralize:"y,ies" }}
+                    </span>
+                    {% endif %}
+                </div>
+                
+                <div class="mt-auto">
+                    <a href="{% url 'academies:academy_detail' academy.pk %}" 
+                       class="btn academy-button w-100">
+                        <i class="bi bi-arrow-right me-1"></i>Explore Offerings
+                    </a>
+                </div>
             </div>
         </div>
     </div>
     {% empty %}
     <div class="col-12">
-        <div class="alert alert-info">
-            <h4>No academies found</h4>
-            <p>There are no academies available at the moment. Please check back later or contact the administrator.</p>
+        <div class="alert alert-info text-center">
+            <i class="bi bi-info-circle fs-3 mb-3 d-block"></i>
+            <h4>No academies available</h4>
+            <p class="mb-0">There are no academies available at the moment. Please check back later.</p>
         </div>
     </div>
     {% endfor %}
 </div>
+
+{% if academies %}
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="text-center">
+            <h3 class="mb-3">Ready to Learn?</h3>
+            <p class="lead mb-4">Browse all available courses across our academies</p>
+            <a href="{% url 'academies:offering_list' %}" class="btn btn-lg btn-primary">
+                <i class="bi bi-collection me-2"></i>View All Offerings
+            </a>
+        </div>
+    </div>
+</div>
+{% endif %}
 {% endblock %}
