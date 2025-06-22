@@ -91,7 +91,7 @@ def offering_list(request):
     ).filter(offering_count__gt=0).order_by('name')
     
     # Pagination
-    paginator = Paginator(offerings.order_by('academy__name', 'title'), 20)
+    paginator = Paginator(offerings.order_by('title','academy__name'), 20)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     

@@ -91,11 +91,40 @@
                     </span>
                     {% endif %}
                 </div>
-                
-                {% if offering.description %}
-                <p class="card-text text-muted flex-grow-1">
-                    {{ offering.description|truncatechars:150 }}
+                  {% if offering.description %}
+                <p class="card-text text-muted">
+                    {{ offering.description|truncatechars:120 }}
                 </p>
+                {% endif %}
+                
+                <!-- Variation Preview -->
+                {% if offering.variations.exists %}
+                <div class="variation-preview mb-3">
+                    {% with offering.variations.first as first_variation %}
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                        {% if first_variation.lesson_dates %}
+                        <small class="badge bg-light text-dark border">
+                            <i class="bi bi-calendar me-1"></i>{{ first_variation.lesson_dates }}
+                        </small>
+                        {% endif %}
+                        {% if first_variation.price %}
+                        <small class="badge bg-light text-dark border">
+                            <i class="bi bi-tag me-1"></i>{{ first_variation.price }}
+                        </small>
+                        {% endif %}
+                        {% if first_variation.location %}
+                        <small class="badge bg-light text-dark border">
+                            <i class="bi bi-geo-alt me-1"></i>{{ first_variation.location.name }}
+                        </small>
+                        {% endif %}
+                        {% if offering.variations.count > 1 %}
+                        <small class="text-muted">
+                            +{{ offering.variations.count|add:"-1" }} more session{{ offering.variations.count|add:"-1"|pluralize }}
+                        </small>
+                        {% endif %}
+                    </div>
+                    {% endwith %}
+                </div>
                 {% endif %}
                 
                 <div class="mt-auto">
@@ -108,7 +137,7 @@
                         </small>
                         <a href="{% url 'academies:offering_detail' offering.pk %}" 
                            class="btn academy-button btn-sm">
-                            <i class="bi bi-arrow-right me-1"></i>Details
+                            <i class="bi bi-arrow-right me-1"></i>View Details
                         </a>
                     </div>
                 </div>

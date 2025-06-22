@@ -82,30 +82,36 @@
                 {% endif %}
             </div>
         </div>
-    </div>
-
-    <div class="col-lg-4">
+    </div>    <div class="col-lg-4">
         <div class="card">
             <div class="card-header academy-bg">
-                <h5 class="mb-0"><i class="bi bi-calendar-event me-2"></i>Available Sessions</h5>
+                <h5 class="mb-0">
+                    <i class="bi bi-calendar-event me-2"></i>Sessions & Dates
+                    <span class="badge bg-light text-dark ms-2">{{ variations.count }}</span>
+                </h5>
             </div>
             <div class="card-body">
-                {% if upcoming_variations %}
+                {% if variations %}
+                    <!-- Upcoming Sessions -->
+                    {% if upcoming_variations %}
+                    <h6 class="text-success mb-3">
+                        <i class="bi bi-clock me-1"></i>Upcoming Sessions
+                    </h6>
                     {% for variation in upcoming_variations %}
-                    <div class="variation-item academy-themed">
+                    <div class="variation-item academy-themed mb-3 p-3 bg-light rounded">
                         {% if variation.title and variation.title != offering.title %}
-                        <h6 class="mb-1">{{ variation.title }}</h6>
+                        <h6 class="mb-2 academy-text">{{ variation.title }}</h6>
                         {% endif %}
                         
                         {% if variation.lesson_dates %}
                         <p class="mb-1">
-                            <i class="bi bi-clock me-1"></i>{{ variation.lesson_dates }}
+                            <i class="bi bi-calendar2-event me-1 text-primary"></i>{{ variation.lesson_dates }}
                         </p>
                         {% endif %}
                         
                         {% if variation.location %}
                         <p class="mb-1">
-                            <i class="bi bi-geo-alt me-1"></i>{{ variation.location.name }}
+                            <i class="bi bi-geo-alt me-1 text-info"></i>{{ variation.location.name }}
                         </p>
                         {% endif %}
                         
@@ -118,7 +124,7 @@
                         {% if variation.registration_url %}
                         <a href="{{ variation.registration_url }}" target="_blank" 
                            class="btn academy-button btn-sm">
-                            <i class="bi bi-person-plus me-1"></i>Register
+                            <i class="bi bi-person-plus me-1"></i>Register Now
                         </a>
                         {% endif %}
                         
@@ -136,6 +142,36 @@
                         {% endif %}
                     </div>
                     {% endfor %}
+                    {% endif %}
+                    
+                    <!-- All Sessions -->
+                    {% if variations.count > upcoming_variations.count %}
+                    <hr>
+                    <h6 class="text-muted mb-3">
+                        <i class="bi bi-list me-1"></i>All Sessions
+                    </h6>
+                    {% for variation in variations %}
+                    <div class="variation-item academy-themed mb-2 {% if variation not in upcoming_variations %}opacity-75{% endif %}">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div class="flex-grow-1">
+                                {% if variation.lesson_dates %}
+                                <small class="d-block">
+                                    <i class="bi bi-calendar2-event me-1"></i>{{ variation.lesson_dates }}
+                                </small>
+                                {% endif %}
+                                {% if variation.location %}
+                                <small class="text-muted">
+                                    <i class="bi bi-geo-alt me-1"></i>{{ variation.location.name }}
+                                </small>
+                                {% endif %}
+                            </div>
+                            {% if variation.price %}
+                            <small class="academy-text fw-bold">{{ variation.price }}</small>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
                 {% else %}
                     <p class="text-muted mb-0">
                         <i class="bi bi-info-circle me-2"></i>

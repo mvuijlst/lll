@@ -288,13 +288,15 @@ class AcademyScraper:
             # New offering
             self.scraped_data['offerings'][url] = offering_data
             logger.info(f"Added new offering: {offering_data['title']}")
-    
+
     def scrape_category_list(self, url, category_name, base_url, academy_name):
         """Scrape a category list page to get all offerings"""
+        print(f"      🗂️  Processing category: {category_name}")
         logger.info(f"Scraping category list: {category_name} - {url}")
         
         response = self.get_page(url)
         if not response:
+            print(f"      ❌ Failed to access category page")
             return []
             
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -348,41 +350,51 @@ class AcademyScraper:
                 offerings.append(offering_links_filtered)
         
         logger.info(f"Found {len(offerings)} unique offerings in {category_name}")
+        print(f"      📋 Found {len(offerings)} potential offerings")
         
         # Filter out offerings that only have minimal fields (likely category pages)
         detailed_offerings = []
-        for offering in offerings:
+        for i, offering in enumerate(offerings, 1):
+            print(f"      📄 [{i}/{len(offerings)}] {offering['title'][:50]}{'...' if len(offering['title']) > 50 else ''}")
             logger.info(f"Processing offering: {offering['title']}")
             
             detail_data = self.scrape_offering_detail(offering['url'], category_name, base_url, academy_name)
             if detail_data and len(detail_data['fields']) > 2:  # Only keep offerings with substantial content
                 self.add_or_update_offering(detail_data)
                 detailed_offerings.append(detail_data)
+                print(f"         ✅ Added ({len(detail_data['fields'])} fields)")
+            else:
+                print(f"         ⚠️  Skipped (insufficient data)")
               # Small delay to be respectful
-            time.sleep(1)
+            time.sleep(0.5)
         
+        print(f"      ✅ Category complete: {len(detailed_offerings)} offerings added")
         return detailed_offerings
-    
+
     def scrape_main_page(self, url, academy_name):
         """Scrape the main program page to get categories"""
         logger.info(f"Scraping main page: {url}")
+        print(f"      🌐 Connecting to website...")
           # Extract base URL from the main page URL
         parsed = urlparse(url)
         base_url = f"{parsed.scheme}://{parsed.netloc}"
         
         response = self.get_page(url)
         if not response:
+            print(f"      ❌ Failed to connect to website")
             return False
             
+        print(f"      ✅ Connected successfully")
         soup = BeautifulSoup(response.content, 'html.parser')
-        
-        # Extract actual academy name from page title
+          # Extract actual academy name from page title
+        print(f"      📄 Analyzing page structure...")
         title_tag = soup.find('title')
         if title_tag:
             title_text = title_tag.get_text(strip=True)
             # Title format is usually "Programma | Academy Name"
             if '|' in title_text:
                 actual_academy_name = title_text.split('|')[1].strip()
+                print(f"      🏷️  Academy name: {actual_academy_name}")
                 logger.info(f"Extracted academy name from title: {actual_academy_name}")
                 academy_name = actual_academy_name
             else:
@@ -390,8 +402,10 @@ class AcademyScraper:
                 academy_name = title_text
         else:
             logger.warning(f"No title found, using URL-derived name: {academy_name}")
-        
+            print(f"      ⚠️  Using URL-derived name: {academy_name}")
+
         # Look for category links
+        print(f"      🔍 Searching for program categories...")
         category_links = []
         
         # Try different selectors for finding categories
@@ -408,8 +422,7 @@ class AcademyScraper:
             if links:
                 logger.info(f"Found {len(links)} potential category links with selector: {selector}")
                 category_links.extend(links)
-        
-        # Filter and deduplicate category links
+          # Filter and deduplicate category links
         categories = []
         seen_urls = set()
         
@@ -436,9 +449,15 @@ class AcademyScraper:
                     'name': title,
                     'url': full_url
                 })
-        
+
         logger.info(f"Found {len(categories)} categories for {academy_name}")
+        print(f"      📚 Found {len(categories)} program categories")
         
+        if len(categories) == 0:
+            print(f"      ⚠️  No categories found - this might be a single-page academy")
+        else:
+            print(f"      📋 Categories: {', '.join([cat['name'] for cat in categories])}")
+
         # Store academy info
         academy_info = {
             'name': academy_name,
@@ -447,13 +466,19 @@ class AcademyScraper:
             'categories': [cat['name'] for cat in categories]
         }
         self.scraped_data['academies'].append(academy_info)
-          # Scrape each category
-        for category in categories:
+        
+        # Scrape each category
+        print(f"      🚀 Starting category scraping...")
+        for i, category in enumerate(categories, 1):
+            print(f"   📁 [{i}/{len(categories)}] Processing: {category['name']}")
             logger.info(f"Processing category: {category['name']} for {academy_name}")
             
             self.scrape_category_list(category['url'], category['name'], base_url, academy_name)
             
-            print(f"Completed category '{category['name']}' for {academy_name}")
+            print(f"   ✅ [{i}/{len(categories)}] Completed: {category['name']}")
+        
+        if len(categories) > 0:
+            print(f"      🎉 All categories processed for {academy_name}")
         
         return True, academy_name
     
@@ -474,48 +499,97 @@ class AcademyScraper:
         
         logger.info(f"Data saved to {filepath}")
         return filepath
-    
+
     def run(self):
         """Run the complete scraping process for all academies"""
+        print(f"\n🚀 UGent Academy Scraper Started")
+        print(f"={'=' * 60}")
+        print(f"📊 Target: {len(self.base_urls)} academies")
+        print(f"🕐 Started at: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"{'=' * 60}")
+        
         logger.info(f"Starting scraper for {len(self.base_urls)} academies")
         
         success_count = 0
+        failed_academies = []
         
-        for base_url in self.base_urls:
+        for i, base_url in enumerate(self.base_urls, 1):
             # Extract academy name from URL
             academy_name = self.extract_academy_name(base_url)
+            
+            print(f"\n📍 [{i}/{len(self.base_urls)}] {academy_name}")
+            print(f"   🌐 URL: {base_url}")
             
             # Construct program URL
             program_url = f"{base_url}/programma"
             
+            print(f"   🔍 Scraping from: {program_url}")
             logger.info(f"Scraping {academy_name} from {program_url}")
             
+            # Track start time for this academy
+            academy_start_time = time.time()
+            
             result = self.scrape_main_page(program_url, academy_name)
+            
+            academy_duration = time.time() - academy_start_time
             
             if result:
                 success, actual_academy_name = result
                 if success:
                     success_count += 1
+                    offerings_count = len([o for o in self.scraped_data['offerings'].values() 
+                                         if o.get('academy') == actual_academy_name])
+                    print(f"   ✅ Success! Found {offerings_count} offerings ({academy_duration:.1f}s)")
                     logger.info(f"Successfully scraped {actual_academy_name}")
                 else:
+                    failed_academies.append(actual_academy_name)
+                    print(f"   ❌ Failed to scrape offerings ({academy_duration:.1f}s)")
                     logger.error(f"Failed to scrape {actual_academy_name}")
             else:
+                failed_academies.append(academy_name)
+                print(f"   ❌ Failed to access website ({academy_duration:.1f}s)")
                 logger.error(f"Failed to scrape {academy_name}")
+              # Progress indicator
+            progress = (i / len(self.base_urls)) * 100
+            print(f"   📈 Progress: {progress:.1f}% ({i}/{len(self.base_urls)} completed)")
+        
+        print(f"\n🏁 Scraping Phase Complete")
+        print(f"{'=' * 60}")
         
         if success_count > 0:
+            print(f"💾 Saving data to file...")
             final_filename = "ugent_academies_complete.json"
             filepath = self.save_data(final_filename)
             
-            # Print summary
+            # Print detailed summary
             total_offerings = len(self.scraped_data['offerings'])
             total_academies = len(self.scraped_data['academies'])
-            print(f"\n=== SCRAPING COMPLETE ===")
-            print(f"Total academies scraped: {success_count}/{len(self.base_urls)}")
-            print(f"Total unique offerings: {total_offerings}")
-            print(f"Data saved to: {filepath}")
+            
+            print(f"\n🎉 === SCRAPING COMPLETE ===")
+            print(f"{'=' * 60}")
+            print(f"✅ Successfully scraped: {success_count}/{len(self.base_urls)} academies")
+            if failed_academies:
+                print(f"❌ Failed academies: {len(failed_academies)}")
+                for failed in failed_academies:
+                    print(f"   • {failed}")
+            print(f"📊 Total unique offerings found: {total_offerings}")
+            print(f"🏫 Academy breakdown:")
+            
+            # Show breakdown by academy
+            for academy_info in self.scraped_data['academies']:
+                academy_offerings = len([o for o in self.scraped_data['offerings'].values() 
+                                       if o.get('academy') == academy_info['name']])
+                print(f"   • {academy_info['name']}: {academy_offerings} offerings in {len(academy_info['categories'])} categories")
+                
+            print(f"💾 Data saved to: {filepath}")
+            print(f"🕐 Completed at: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+            print(f"{'=' * 60}")
             
             return filepath
         else:
+            print(f"❌ All scraping attempts failed!")
+            if failed_academies:
+                print(f"Failed academies: {', '.join(failed_academies)}")
             logger.error("All scraping attempts failed")
             return None
     
@@ -536,23 +610,33 @@ class AcademyScraper:
 
 def main():
     # Create scraper with default configuration (all UGent academies)
-    print("Starting UGent Academy Scraper")
-    print("This will scrape all configured UGent academies...")
+    print("🎓 UGent Academy Scraper")
+    print("=" * 50)
+    print("📖 This will scrape all configured UGent academies")
+    print("   and extract their program offerings with details.")
+    print("=" * 50)
     
     scraper = AcademyScraper()  # Uses default list of all academies
     
-    print(f"Configured to scrape {len(scraper.base_urls)} academies:")
+    print(f"\n📋 Configured to scrape {len(scraper.base_urls)} academies:")
     for i, url in enumerate(scraper.base_urls, 1):
         academy_name = scraper.extract_academy_name(url)
-        print(f"  {i}. {academy_name}: {url}")
+        print(f"  {i:2d}. {academy_name:<20} | {url}")
     
-    print("\nStarting scrape process...")
+    print(f"\n🚀 Starting scrape process...")
+    print("=" * 50)
+    
+    start_time = time.time()
     result = scraper.run()
+    total_time = time.time() - start_time
     
     if result:
-        print(f"\nScraping completed successfully! Data saved to: {result}")
+        print(f"\n🎉 Scraping completed successfully!")
+        print(f"📁 Data saved to: {result}")
+        print(f"⏱️  Total time: {total_time:.1f} seconds")
     else:
-        print("\nScraping failed.")
+        print(f"\n❌ Scraping failed.")
+        print(f"⏱️  Total time: {total_time:.1f} seconds")
 
 if __name__ == "__main__":
     main()
