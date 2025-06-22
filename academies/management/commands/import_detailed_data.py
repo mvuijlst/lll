@@ -1,10 +1,14 @@
 import json
 import os
+import re
+from datetime import datetime
 from django.core.management.base import BaseCommand
 from django.core.files.base import ContentFile
 from django.utils.text import slugify
+from django.utils import timezone
 from academies.models import (
-    Academy, Category, Language, Offering, Link
+    Academy, Category, Language, Location, Teacher, 
+    Offering, Variation, VariationTeacher, Link
 )
 
 
@@ -31,9 +35,13 @@ class Command(BaseCommand):
             self.stdout.write('Clearing existing data...')
             # Delete related data first to avoid integrity errors
             Link.objects.all().delete()
+            VariationTeacher.objects.all().delete()
+            Variation.objects.all().delete()
             Offering.objects.all().delete()
             Category.objects.all().delete()
             Language.objects.all().delete()
+            Location.objects.all().delete()
+            Teacher.objects.all().delete()
             Academy.objects.all().delete()
             self.stdout.write(self.style.SUCCESS('Data cleared successfully'))
 
@@ -137,6 +145,7 @@ class Command(BaseCommand):
         created_count = 0
         updated_count = 0
         skipped_count = 0
+        variation_count = 0
         
         # Create a mapping for academy name variations
         academy_name_mapping = {
@@ -202,7 +211,9 @@ class Command(BaseCommand):
             if created:
                 created_count += 1
             else:
-                updated_count += 1            # Create categories for this offering if they exist
+                updated_count += 1
+                
+            # Create categories for this offering if they exist
             if 'categories' in item and item['categories']:
                 for full_category_name in item['categories']:
                     # Format in JSON is typically "Academy Name - Category Name"
@@ -227,9 +238,6 @@ class Command(BaseCommand):
                         if offering.category is None:
                             offering.category = category
                             offering.save()
-                        self.stdout.write(self.style.SUCCESS(
-                            f"Added category '{category.name}' to offering '{offering.title}'"
-                        ))
                     else:
                         # If category doesn't exist yet, create it
                         category = Category.objects.create(
@@ -242,9 +250,97 @@ class Command(BaseCommand):
                         if offering.category is None:
                             offering.category = category
                             offering.save()
-                        self.stdout.write(self.style.SUCCESS(
-                            f"Created and added category '{category.name}' to offering '{offering.title}'"
-                        ))
-                        
+
+            # Process variations for this offering
+            if 'variations' in item and item['variations']:
+                variation_count += self.import_variations(offering, item['variations'])
                         
         self.stdout.write(f'Created {created_count} offerings, updated {updated_count} offerings, skipped {skipped_count} offerings')
+        self.stdout.write(f'Created {variation_count} variations')
+
+    def import_variations(self, offering, variations_data):
+        """Import variations for an offering."""
+        count = 0
+        
+        # Clear existing variations for this offering to avoid duplicates
+        Variation.objects.filter(offering=offering).delete()
+        
+        for variation_data in variations_data:
+            # Process location
+            location = None
+            if 'location' in variation_data and variation_data['location'] and 'name' in variation_data['location']:
+                location_name = variation_data['location']['name']
+                location_url = variation_data['location'].get('link', '')
+                location, _ = Location.objects.get_or_create(
+                    name=location_name,
+                    defaults={'url': location_url}
+                )
+            
+            # Process dates
+            lesson_dates = ''
+            start_date = None
+            end_date = None
+            
+            if 'dates' in variation_data and variation_data['dates']:
+                # Join all dates into a single string
+                lesson_dates = ', '.join(variation_data['dates'])
+                
+                # Try to parse the first date range
+                for date_str in variation_data['dates']:
+                    # Common format: "16/09/2025 - 09:00 – 30/06/2026 - 16:00"
+                    date_pattern = r'(\d{1,2}/\d{1,2}/\d{4})'
+                    dates = re.findall(date_pattern, date_str)
+                    
+                    if dates:
+                        try:
+                            # Parse the start date (first date found)
+                            start_date = datetime.strptime(dates[0], '%d/%m/%Y')
+                            start_date = timezone.make_aware(start_date)
+                            
+                            # Parse the end date if available (last date found)
+                            if len(dates) > 1:
+                                end_date = datetime.strptime(dates[-1], '%d/%m/%Y')
+                                end_date = timezone.make_aware(end_date)
+                            break  # Successfully parsed a date, no need to try other strings
+                        except ValueError:
+                            # If parsing fails, continue with the next date string
+                            continue
+            
+            # Create the variation
+            variation = Variation.objects.create(
+                offering=offering,
+                title=variation_data.get('title', ''),
+                price=variation_data.get('price', ''),
+                lesson_dates=lesson_dates,
+                start_date=start_date,
+                end_date=end_date,
+                location=location,
+                description=variation_data.get('description', ''),
+                is_available=True
+            )
+            count += 1
+            
+            # Process teachers
+            if 'teachers' in variation_data and variation_data['teachers']:
+                for teacher_data in variation_data['teachers']:
+                    if 'name' in teacher_data:
+                        teacher_name = teacher_data['name']
+                        teacher_url = teacher_data.get('link', '')
+                        
+                        teacher, _ = Teacher.objects.get_or_create(
+                            name=teacher_name,
+                            defaults={'profile_url': teacher_url}
+                        )
+                        
+                        # Create the teacher-variation relationship
+                        VariationTeacher.objects.create(
+                            variation=variation,
+                            teacher=teacher
+                        )
+            
+            # Add registration URL if available
+            if 'registration_url' in variation_data and variation_data['registration_url']:
+                variation.registration_url = variation_data['registration_url']
+                variation.save()
+        
+        return count
