@@ -1,0 +1,39 @@
+{% extends 'academies/base.html' %}
+
+{% block title %}All Offerings - Academy Site{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1>All Offerings</h1>
+        <p class="lead">Browse all available offerings across all academies.</p>
+    </div>
+</div>
+
+<div class="row">
+    {% for offering in offerings %}
+    <div class="col-md-6 col-lg-4">
+        <div class="card offering-card">
+            <div class="card-body">
+                <h5 class="card-title">{{ offering.name }}</h5>
+                <p class="card-text">{{ offering.description }}</p>
+                <div class="mt-3">
+                    <a href="{% url 'academies:academy_detail' offering.academy.pk %}" 
+                       class="btn btn-sm btn-outline-primary"
+                       style="border-color: {{ offering.academy.colour }}; color: {{ offering.academy.colour }};">
+                        {{ offering.academy.name }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+        <div class="alert alert-info">
+            <h4>No offerings found</h4>
+            <p>There are no offerings available at the moment. Please check back later or contact the administrator.</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

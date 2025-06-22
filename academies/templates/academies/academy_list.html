@@ -1,0 +1,35 @@
+{% extends 'academies/base.html' %}
+
+{% block title %}Academies - Academy Site{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1>Academies</h1>
+        <p class="lead">Explore our different academies and their offerings.</p>
+    </div>
+</div>
+
+<div class="row">
+    {% for academy in academies %}
+    <div class="col-md-6 col-lg-4">
+        <div class="card academy-card" style="border-left-color: {{ academy.colour }};">
+            <div class="card-body">
+                <h5 class="card-title" style="color: {{ academy.colour }};">{{ academy.name }}</h5>
+                <p class="card-text">
+                    <small class="text-muted">{{ academy.offerings.count }} offering{{ academy.offerings.count|pluralize }}</small>
+                </p>
+                <a href="{% url 'academies:academy_detail' academy.pk %}" class="btn btn-outline-primary">View Details</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+        <div class="alert alert-info">
+            <h4>No academies found</h4>
+            <p>There are no academies available at the moment. Please check back later or contact the administrator.</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'academies/base.html' %}
+
+{% block title %}{{ academy.name }} - Academy Site{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'academies:academy_list' %}">Academies</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ academy.name }}</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card academy-card" style="border-left-color: {{ academy.colour }};">
+            <div class="card-body">
+                <h1 class="card-title" style="color: {{ academy.colour }};">{{ academy.name }}</h1>
+                <p class="card-text">
+                    <span class="badge" style="background-color: {{ academy.colour }};">{{ academy.colour }}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <h2>Offerings</h2>
+        {% if offerings %}
+            <div class="row">
+                {% for offering in offerings %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="card offering-card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ offering.name }}</h5>
+                            <p class="card-text">{{ offering.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="alert alert-info">
+                <p>This academy doesn't have any offerings yet.</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
