@@ -1,6 +1,7 @@
 {% extends 'academies/base.html' %}
+{% load i18n %}
 
-{% block title %}{{ academy.name }} - UGent Academies{% endblock %}
+{% block title %}{{ academy.name }} - {% trans "UGent Academies" %}{% endblock %}
 
 {% block header %}
 <div class="page-header academy-themed" 
@@ -15,11 +16,10 @@
                     <div>
                         <h1 class="mb-0">
                             <i class="bi bi-mortarboard-fill me-3"></i>{{ academy.name }}
-                        </h1>
-                        {% if academy.description %}
+                        </h1>                        {% if academy.description %}
                         <p class="lead mb-0 mt-2">{{ academy.description }}</p>
                         {% else %}
-                        <p class="lead mb-0 mt-2">Explore our specialized courses and programs</p>
+                        <p class="lead mb-0 mt-2">{% trans "Explore our specialized courses and programs" %}</p>
                         {% endif %}
                     </div>
                 </div>
@@ -40,7 +40,7 @@
 
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{% url 'academies:academy_list' %}">Academies</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'academies:academy_list' %}">{% trans "Academies" %}</a></li>
         <li class="breadcrumb-item active">{{ academy.name }}</li>
     </ol>
 </nav>
@@ -55,11 +55,10 @@
                     <div class="col-md-8">
                         <div class="d-flex flex-wrap gap-2 mb-3">
                             <span class="badge academy-badge">
-                                <i class="bi bi-book me-1"></i>{{ total_offerings }} offering{{ total_offerings|pluralize }}
+                                <i class="bi bi-book me-1"></i>{{ total_offerings }} {% trans "offering" %}{{ total_offerings|pluralize }}
                             </span>
-                            {% if categories.count %}
-                            <span class="badge bg-secondary">
-                                <i class="bi bi-folder me-1"></i>{{ categories.count }} categor{{ categories.count|pluralize:"y,ies" }}
+                            {% if categories.count %}                            <span class="badge bg-secondary">
+                                <i class="bi bi-folder me-1"></i>{{ categories.count }} {% trans "category" %}{{ categories.count|pluralize:"y,ies" }}
                             </span>
                             {% endif %}
                         </div>
@@ -68,19 +67,19 @@
                         {% if user.is_staff %}
                         <a href="{% url 'academies:academy_logo_upload' academy.pk %}" 
                            class="btn btn-outline-primary me-2 btn-sm">
-                            <i class="bi bi-upload me-1"></i>{% if academy.logo %}Update{% else %}Add{% endif %} Logo
+                            <i class="bi bi-upload me-1"></i>{% if academy.logo %}{% trans "Update" %}{% else %}{% trans "Add" %}{% endif %} {% trans "Logo" %}
                         </a>
                         {% endif %}
                         {% if academy.base_url %}
                         <a href="{{ academy.base_url }}" target="_blank" 
                            class="btn btn-outline-secondary me-2">
-                            <i class="bi bi-globe me-1"></i>Website
+                            <i class="bi bi-globe me-1"></i>{% trans "Website" %}
                         </a>
                         {% endif %}
                         {% if academy.program_url %}
                         <a href="{{ academy.program_url }}" target="_blank" 
                            class="btn academy-button">
-                            <i class="bi bi-calendar-event me-1"></i>Program
+                            <i class="bi bi-calendar-event me-1"></i>{% trans "Program" %}
                         </a>
                         {% endif %}
                     </div>
@@ -93,10 +92,9 @@
 <!-- Categories Filter -->
 {% if categories.count > 1 %}
 <div class="filter-section">
-    <div class="d-flex flex-wrap align-items-center gap-2">
-        <span class="fw-bold me-2">Categories:</span>
+    <div class="d-flex flex-wrap align-items-center gap-2">        <span class="fw-bold me-2">{% trans "Categories" %}:</span>
         <a href="?" class="btn btn-sm {% if not selected_category %}academy-button{% else %}btn-outline-secondary{% endif %}">
-            All ({{ total_offerings }})
+            {% trans "All" %} ({{ total_offerings }})
         </a>
         {% for category in categories %}
         <a href="?category={{ category.name }}" 
@@ -121,9 +119,14 @@
                         {{ offering.title|truncatechars:80 }}
                     </a>
                 </h5>
-                
-                <div class="mb-3">
-                    {% if offering.category %}
+                  <div class="mb-3">
+                    {% if offering.categories.exists %}
+                        {% for category in offering.categories.all %}
+                        <span class="badge academy-badge me-1">
+                            {{ category.name }}
+                        </span>
+                        {% endfor %}
+                    {% elif offering.category %}
                     <span class="badge academy-badge">
                         {{ offering.category.name }}
                     </span>
@@ -180,7 +183,7 @@
                         </small>
                         <a href="{% url 'academies:offering_detail' offering.pk %}" 
                            class="btn academy-button btn-sm">
-                            <i class="bi bi-arrow-right me-1"></i>Details
+                            <i class="bi bi-arrow-right me-1"></i>{% trans "Details" %}
                         </a>
                     </div>
                 </div>
@@ -191,15 +194,13 @@
     <div class="col-12">
         <div class="alert alert-info text-center">
             <i class="bi bi-info-circle fs-3 mb-3 d-block"></i>
-            {% if selected_category %}
-            <h4>No offerings in "{{ selected_category }}" category</h4>
-            <p class="mb-3">Try selecting a different category or view all offerings.</p>
+            {% if selected_category %}            <h4>{% trans "No offerings in" %} "{{ selected_category }}" {% trans "category" %}</h4>
+            <p class="mb-3">{% trans "Try selecting a different category or view all offerings." %}</p>
             <a href="?" class="btn academy-button">
-                <i class="bi bi-arrow-clockwise me-1"></i>View All Offerings
+                <i class="bi bi-arrow-clockwise me-1"></i>{% trans "View All Offerings" %}
             </a>
-            {% else %}
-            <h4>No offerings available</h4>
-            <p class="mb-0">This academy doesn't have any offerings yet.</p>
+            {% else %}            <h4>{% trans "No offerings available" %}</h4>
+            <p class="mb-0">{% trans "This academy doesn't have any offerings yet." %}</p>
             {% endif %}
         </div>
     </div>
@@ -213,7 +214,7 @@
         {% if offerings.has_previous %}
         <li class="page-item">
             <a class="page-link academy-text" href="?page={{ offerings.previous_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}">
-                Previous
+                {% trans "Previous" %}
             </a>
         </li>
         {% endif %}
@@ -235,7 +236,7 @@
         {% if offerings.has_next %}
         <li class="page-item">
             <a class="page-link academy-text" href="?page={{ offerings.next_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}">
-                Next
+                {% trans "Next" %}
             </a>
         </li>
         {% endif %}

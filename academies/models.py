@@ -134,7 +134,10 @@ class Offering(models.Model):
     title = models.CharField(max_length=300, help_text="Full title of the offering")
     course_id = models.CharField(max_length=50, blank=True, help_text="Course identifier")
     academy = models.ForeignKey(Academy, on_delete=models.CASCADE, related_name='offerings')
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True, related_name='offerings')
+    # Keep the old field for backward compatibility during migration, but make it nullable
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True, related_name='single_category_offerings')
+    # Add the new many-to-many relationship
+    categories = models.ManyToManyField(Category, blank=True, related_name='offerings')
     language = models.ForeignKey(Language, on_delete=models.SET_NULL, null=True, blank=True, related_name='offerings')
     description = models.TextField(blank=True, help_text="Course description")
     program_content = models.TextField(blank=True, help_text="Detailed program content")

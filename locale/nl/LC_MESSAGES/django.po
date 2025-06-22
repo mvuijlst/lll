@@ -1,0 +1,359 @@
+# Dutch translations for UGent Academies website.
+# This file is distributed under the same license as the UGent Academies package.
+msgid ""
+msgstr ""
+"Project-Id-Version: UGent Academies\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-22 21:38+0200\n"
+"PO-Revision-Date: 2025-06-22 21:38+0200\n"
+"Last-Translator: Copilot\n"
+"Language-Team: Dutch\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
+
+#: .\academies\templates\academies\academy_detail.html:4
+#: .\academies\templates\academies\base.html:7
+#: .\academies\templates\academies\base.html:199
+#: .\academies\templates\academies\base.html:296
+#: .\academies\templates\academies\language_switcher.html:4
+#: .\academies\templates\academies\language_test.html:4
+#: .\academies\templates\academies\offering_detail.html:4
+#: .\academies\templates\academies\offering_list.html:4
+#: .\academies\templates\academies\teacher_detail.html:4
+#: .\academies\templates\academies\teacher_list.html:4
+msgid "UGent Academies"
+msgstr "UGent Academies"
+
+#: .\academies\templates\academies\academy_detail.html:22
+msgid "Explore our specialized courses and programs"
+msgstr "Verken onze gespecialiseerde cursussen en programma's"
+
+#: .\academies\templates\academies\academy_detail.html:43
+#: .\academies\templates\academies\base.html:209
+#: .\academies\templates\academies\language_test.html:19
+#: .\academies\templates\academies\offering_detail.html:11
+#: .\academies\templates\academies\teacher_detail.html:8
+msgid "Academies"
+msgstr "Academies"
+
+#: .\academies\templates\academies\academy_detail.html:58
+msgid "offering"
+msgstr "opleiding"
+
+#: .\academies\templates\academies\academy_detail.html:61
+#: .\academies\templates\academies\academy_detail.html:197
+msgid "category"
+msgstr "categorie"
+
+#: .\academies\templates\academies\academy_detail.html:70
+msgid "Update"
+msgstr "Bijwerken"
+
+#: .\academies\templates\academies\academy_detail.html:70
+msgid "Add"
+msgstr "Toevoegen"
+
+#: .\academies\templates\academies\academy_detail.html:70
+msgid "Logo"
+msgstr "Logo"
+
+#: .\academies\templates\academies\academy_detail.html:76
+msgid "Website"
+msgstr "Website"
+
+#: .\academies\templates\academies\academy_detail.html:82
+msgid "Program"
+msgstr "Programma"
+
+#: .\academies\templates\academies\academy_detail.html:95
+msgid "Categories"
+msgstr "Categorieën"
+
+#: .\academies\templates\academies\academy_detail.html:97
+msgid "All"
+msgstr "Alle"
+
+#: .\academies\templates\academies\academy_detail.html:186
+msgid "Details"
+msgstr "Details"
+
+#: .\academies\templates\academies\academy_detail.html:197
+msgid "No offerings in"
+msgstr "Geen opleidingen in"
+
+#: .\academies\templates\academies\academy_detail.html:198
+msgid "Try selecting a different category or view all offerings."
+msgstr "Probeer een andere categorie te selecteren of bekijk alle opleidingen."
+
+#: .\academies\templates\academies\academy_detail.html:200
+msgid "View All Offerings"
+msgstr "Alle Opleidingen"
+
+#: .\academies\templates\academies\academy_detail.html:202
+msgid "No offerings available"
+msgstr "Geen opleidingen beschikbaar"
+
+#: .\academies\templates\academies\academy_detail.html:203
+msgid "This academy doesn't have any offerings yet."
+msgstr "Deze academie heeft nog geen opleidingen."
+
+#: .\academies\templates\academies\academy_detail.html:217
+#: .\academies\templates\academies\offering_list.html:172
+#: .\academies\templates\academies\teacher_list.html:72
+msgid "Previous"
+msgstr "Vorige"
+
+#: .\academies\templates\academies\academy_detail.html:239
+#: .\academies\templates\academies\offering_list.html:194
+#: .\academies\templates\academies\teacher_list.html:90
+msgid "Next"
+msgstr "Volgende"
+
+#: .\academies\templates\academies\base.html:214
+#: .\academies\templates\academies\language_test.html:20
+#: .\academies\templates\academies\offering_list.html:4
+#: .\academies\templates\academies\offering_list.html:11
+msgid "All Offerings"
+msgstr "Alle Opleidingen"
+
+#: .\academies\templates\academies\base.html:219
+#: .\academies\templates\academies\language_test.html:21
+#: .\academies\templates\academies\teacher_detail.html:9
+#: .\academies\templates\academies\teacher_list.html:4
+#: .\academies\templates\academies\teacher_list.html:15
+msgid "Teachers"
+msgstr "Lesgevers"
+
+#: .\academies\templates\academies\base.html:225
+#: .\academies\templates\academies\language_test.html:22
+msgid "Search courses, teachers..."
+msgstr "Zoek cursussen, docenten..."
+
+#: .\academies\templates\academies\base.html:238 .\academy_site\settings.py:121
+msgid "Dutch"
+msgstr "Nederlands"
+
+#: .\academies\templates\academies\base.html:241 .\academy_site\settings.py:120
+msgid "English"
+msgstr "Engels"
+
+#: .\academies\templates\academies\base.html:269
+msgid "Language Settings"
+msgstr "Taalinstellingen"
+
+#: .\academies\templates\academies\base.html:297
+#: .\academies\templates\academies\language_test.html:23
+msgid "Lifelong learning opportunities from Ghent University"
+msgstr "Levenslang leren bij Universiteit Gent"
+
+#: .\academies\templates\academies\language_switcher.html:4
+#: .\academies\templates\academies\language_switcher.html:12
+msgid "Switch Language"
+msgstr "Schakel Taal"
+
+#: .\academies\templates\academies\language_switcher.html:15
+msgid "Select your preferred language:"
+msgstr "Selecteer je voorkeurtaal:"
+
+#: .\academies\templates\academies\language_switcher.html:29
+msgid "Current"
+msgstr "Huidig"
+
+#: .\academies\templates\academies\language_switcher.html:38
+msgid "Back"
+msgstr "Terug"
+
+#: .\academies\templates\academies\language_switcher.html:42
+msgid "Change Language"
+msgstr "Taal wijzigen"
+
+#: .\academies\templates\academies\language_test.html:4
+msgid "Language Test"
+msgstr "Taaltest"
+
+#: .\academies\templates\academies\language_test.html:12
+msgid "Language Test Page"
+msgstr "Pagina Taaltest"
+
+#: .\academies\templates\academies\language_test.html:15
+msgid "Current language"
+msgstr "Huidige taal"
+
+#: .\academies\templates\academies\language_test.html:17
+msgid "Translated content examples"
+msgstr "Voorbeelden van vertaalde inhoud"
+
+#: .\academies\templates\academies\language_test.html:26
+msgid "Available languages"
+msgstr "Beschikbare talen"
+
+#: .\academies\templates\academies\language_test.html:36
+msgid "You can switch language using the globe icon in the top navigation bar."
+msgstr ""
+"Je kan van taal wisselen met behulp van het wereldbolpictogram in de "
+"bovenste navigatiebalk."
+
+#: .\academies\templates\academies\offering_detail.html:40
+msgid "Active"
+msgstr "Actief"
+
+#: .\academies\templates\academies\offering_detail.html:42
+msgid "Inactive"
+msgstr "Inactief"
+
+#: .\academies\templates\academies\offering_detail.html:69
+msgid "Description"
+msgstr "Beschrijving"
+
+#: .\academies\templates\academies\offering_detail.html:76
+msgid "Program Content"
+msgstr "Programma Inhoud"
+
+#: .\academies\templates\academies\offering_detail.html:83
+msgid "Remarks"
+msgstr "Opmerkingen"
+
+#: .\academies\templates\academies\offering_detail.html:92
+msgid "Sessions & Dates"
+msgstr "Sessies & Data"
+
+#: .\academies\templates\academies\offering_detail.html:101
+msgid "Upcoming Sessions"
+msgstr "Komende lessen"
+
+#: .\academies\templates\academies\offering_detail.html:130
+msgid "Register Now"
+msgstr "Nu Inschrijven"
+
+#: .\academies\templates\academies\offering_detail.html:154
+msgid "All Sessions"
+msgstr "Alle lessen"
+
+#: .\academies\templates\academies\offering_detail.html:181
+msgid "No upcoming sessions available at the moment."
+msgstr "Er zijn momenteel geen opleidingen beschikbaar."
+
+#: .\academies\templates\academies\offering_detail.html:190
+msgid "Related Links"
+msgstr "Gerelateerde Links"
+
+#: .\academies\templates\academies\offering_list.html:12
+msgid "Browse all available courses across academies"
+msgstr "Bekijk alle beschikbare cursussen van alle academies"
+
+#: .\academies\templates\academies\offering_list.html:17
+msgid "Offering"
+msgstr "Opleiding"
+
+#: .\academies\templates\academies\offering_list.html:30
+msgid "Search"
+msgstr "Zoeken"
+
+#: .\academies\templates\academies\offering_list.html:32
+msgid "Search courses..."
+msgstr "Zoek cursussen..."
+
+#: .\academies\templates\academies\offering_list.html:35
+msgid "Academy"
+msgstr "Academie"
+
+#: .\academies\templates\academies\offering_list.html:37
+msgid "All Academies"
+msgstr "Alle Academies"
+
+#: .\academies\templates\academies\offering_list.html:47
+msgid "Language"
+msgstr "Taal"
+
+#: .\academies\templates\academies\offering_list.html:49
+msgid "All Languages"
+msgstr "Alle Talen"
+
+#: .\academies\templates\academies\offering_list.html:60
+msgid "Filter"
+msgstr "Filteren"
+
+#: .\academies\templates\academies\offering_list.html:123
+msgid "more session"
+msgstr "meer sessie"
+
+#: .\academies\templates\academies\offering_list.html:136
+msgid "session"
+msgstr "sessie"
+
+#: .\academies\templates\academies\offering_list.html:141
+msgid "View Details"
+msgstr "Details Bekijken"
+
+#: .\academies\templates\academies\offering_list.html:151
+msgid "No offerings found"
+msgstr "Geen opleidingen gevonden"
+
+#: .\academies\templates\academies\offering_list.html:153
+msgid "No offerings match your current filters."
+msgstr "Geen opleidingen komen overeen met je huidige filters."
+
+#: .\academies\templates\academies\offering_list.html:155
+msgid "Clear Filters"
+msgstr "Filters Wissen"
+
+#: .\academies\templates\academies\offering_list.html:158
+msgid "There are no offerings available at the moment."
+msgstr "Er zijn momenteel geen opleidingen beschikbaar."
+
+#: .\academies\templates\academies\teacher_detail.html:27
+msgid "View Full Profile"
+msgstr "Volledig Profiel Bekijken"
+
+#: .\academies\templates\academies\teacher_detail.html:38
+msgid "Biography"
+msgstr "Biografie"
+
+#: .\academies\templates\academies\teacher_detail.html:48
+msgid "Courses Taught"
+msgstr "Gegeven opleidingen"
+
+#: .\academies\templates\academies\teacher_detail.html:89
+msgid "No courses currently assigned."
+msgstr "Momenteel geen opleidingen toegewezen."
+
+#: .\academies\templates\academies\teacher_list.html:10
+msgid "Our Teachers"
+msgstr "Onze lesgevers"
+
+#: .\academies\templates\academies\teacher_list.html:11
+msgid "Meet the experts who deliver our courses"
+msgstr "Maak kennis met de experts die onze cursussen verzorgen"
+
+#: .\academies\templates\academies\teacher_list.html:38
+msgid "course"
+msgstr "cursus"
+
+#: .\academies\templates\academies\teacher_list.html:45
+msgid "View Profile"
+msgstr "Profiel Bekijken"
+
+#: .\academies\templates\academies\teacher_list.html:50
+msgid "Profile"
+msgstr "Profiel"
+
+#: .\academies\templates\academies\teacher_list.html:59
+msgid "No teachers found"
+msgstr "Geen lesgevers gevonden"
+
+#: .\academies\templates\academies\teacher_list.html:60
+msgid "There are no teachers available at the moment."
+msgstr "Er zijn momenteel geen lesgevers beschikbaar."
+
+#~ msgid "Academies | UGent"
+#~ msgstr "Academies | UGent"
+
+#~ msgid "Discover UGent Academies"
+#~ msgstr "Ontdek UGent Academies"
+
+#~ msgid "View Academy"
+#~ msgstr "Bekijk Academie"

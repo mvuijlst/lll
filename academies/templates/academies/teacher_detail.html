@@ -1,12 +1,12 @@
 {% extends 'academies/base.html' %}
+{% load i18n %}
 
-{% block title %}{{ teacher.name }} - UGent Academies{% endblock %}
+{% block title %}{{ teacher.name }} - {% trans "UGent Academies" %}{% endblock %}
 
 {% block content %}
 <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{% url 'academies:academy_list' %}">Academies</a></li>
-        <li class="breadcrumb-item"><a href="{% url 'academies:teacher_list' %}">Teachers</a></li>
+    <ol class="breadcrumb">        <li class="breadcrumb-item"><a href="{% url 'academies:academy_list' %}">{% trans "Academies" %}</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'academies:teacher_list' %}">{% trans "Teachers" %}</a></li>
         <li class="breadcrumb-item active">{{ teacher.name }}</li>
     </ol>
 </nav>
@@ -24,7 +24,7 @@
                 {% if teacher.profile_url %}
                 <a href="{{ teacher.profile_url }}" target="_blank" 
                    class="btn btn-primary">
-                    <i class="bi bi-link-45deg me-1"></i>View Full Profile
+                    <i class="bi bi-link-45deg me-1"></i>{% trans "View Full Profile" %}
                 </a>
                 {% endif %}
             </div>
@@ -35,7 +35,7 @@
         {% if teacher.bio %}
         <div class="card mb-4">
             <div class="card-header">
-                <h5 class="mb-0"><i class="bi bi-person-lines-fill me-2"></i>Biography</h5>
+                <h5 class="mb-0"><i class="bi bi-person-lines-fill me-2"></i>{% trans "Biography" %}</h5>
             </div>
             <div class="card-body">
                 {{ teacher.bio|linebreaks }}
@@ -45,8 +45,7 @@
         
         <div class="card">
             <div class="card-header">
-                <h5 class="mb-0">
-                    <i class="bi bi-book me-2"></i>Courses Taught
+                <h5 class="mb-0">                    <i class="bi bi-book me-2"></i>{% trans "Courses Taught" %}
                     <span class="badge bg-primary ms-2">{{ variations.count }}</span>
                 </h5>
             </div>
@@ -87,7 +86,7 @@
                 {% else %}
                     <p class="text-muted mb-0">
                         <i class="bi bi-info-circle me-2"></i>
-                        No courses currently assigned.
+                        {% trans "No courses currently assigned." %}
                     </p>
                 {% endif %}
             </div>

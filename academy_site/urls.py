@@ -18,11 +18,20 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
+    # Language switching URL - needs to be outside i18n_patterns
+    path('i18n/', include('django.conf.urls.i18n')),
+]
+
+# Add language prefix to all the app URLs
+urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
     path('', include('academies.urls')),
-]
+    # Use prefix_default_language=False if you don't want /en/ prefix for English
+    prefix_default_language=True
+)
 
 # Serve media files during development
 if settings.DEBUG:

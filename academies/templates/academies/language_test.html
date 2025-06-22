@@ -1,0 +1,43 @@
+{% extends 'academies/base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Language Test" %} | {% trans "UGent Academies" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h2>{% trans "Language Test Page" %}</h2>
+                </div>
+                <div class="card-body">
+                    <h3>{% trans "Current language" %}: {{ LANGUAGE_CODE }}</h3>
+                    
+                    <h4 class="mt-4">{% trans "Translated content examples" %}:</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">{% trans "Academies" %}</li>
+                        <li class="list-group-item">{% trans "All Offerings" %}</li>
+                        <li class="list-group-item">{% trans "Teachers" %}</li>
+                        <li class="list-group-item">{% trans "Search courses, teachers..." %}</li>
+                        <li class="list-group-item">{% trans "Lifelong learning opportunities from Ghent University" %}</li>
+                    </ul>
+                    
+                    <h4 class="mt-4">{% trans "Available languages" %}:</h4>
+                    <ul class="list-group">
+                        {% for lang_code, lang_name in LANGUAGES %}
+                        <li class="list-group-item {% if lang_code == LANGUAGE_CODE %}bg-light{% endif %}">
+                            {{ lang_code }}: {{ lang_name }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    
+                    <div class="mt-4">
+                        <p>{% trans "You can switch language using the globe icon in the top navigation bar." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

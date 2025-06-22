@@ -4,6 +4,8 @@ from django.core.paginator import Paginator
 from django.utils import timezone
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
+from django.conf import settings
 from .models import Academy, Offering, Category, Language, Location, Teacher, Variation
 from .forms import AcademyLogoUploadForm
 
@@ -22,23 +24,23 @@ def academy_list(request):
 def academy_detail(request, pk):
     """Display detailed view of an academy with its offerings and categories."""
     academy = get_object_or_404(Academy, pk=pk)
-    
-    # Get offerings with related data
+      # Get offerings with related data
     offerings = academy.offerings.select_related(
         'category', 'language'
     ).prefetch_related(
-        'variations__location'
+        'variations__location', 'categories'
     ).filter(is_active=True).order_by('title')
     
     # Get categories for this academy
     categories = academy.categories.annotate(
         offering_count=Count('offerings', filter=Q(offerings__is_active=True))
     ).order_by('name')
-    
-    # Filter by category if specified
+      # Filter by category if specified
     category_filter = request.GET.get('category')
     if category_filter:
-        offerings = offerings.filter(category__name=category_filter)
+        offerings = offerings.filter(
+            Q(category__name=category_filter) | Q(categories__name=category_filter)
+        ).distinct()
     
     # Pagination
     paginator = Paginator(offerings, 12)  # Show 12 offerings per page
@@ -59,7 +61,7 @@ def offering_list(request):
     offerings = Offering.objects.select_related(
         'academy', 'category', 'language'
     ).prefetch_related(
-        'variations__location'
+        'variations__location', 'categories'
     ).filter(is_active=True)
     
     # Search functionality
@@ -106,6 +108,21 @@ def offering_list(request):
     })
 
 
+# Add a language test view
+def language_test(request):
+    """A simple view to test language switching functionality."""
+    return render(request, 'academies/language_test.html', {})
+
+# Add a dedicated language switcher page
+def language_switcher(request):
+    """A dedicated page for switching languages."""
+    redirect_to = request.GET.get('next', '/')
+    return render(request, 'academies/language_switcher.html', {
+        'redirect_to': redirect_to,
+        'languages': settings.LANGUAGES
+    })
+
+
 def offering_detail(request, pk):
     """Display detailed view of a specific offering."""
     offering = get_object_or_404(
@@ -114,7 +131,8 @@ def offering_detail(request, pk):
         ).prefetch_related(
             'variations__location',
             'variations__variation_teachers__teacher',
-            'links'
+            'links',
+            'categories'
         ),
         pk=pk,
         is_active=True
@@ -181,16 +199,18 @@ def search_results(request):
             'query': query,
             'no_query': True
         })
-    
-    # Search offerings
+      # Search offerings
     offerings = Offering.objects.select_related(
         'academy', 'category'
+    ).prefetch_related(
+        'categories'
     ).filter(
         Q(title__icontains=query) |
         Q(description__icontains=query) |
-        Q(program_content__icontains=query),
+        Q(program_content__icontains=query) |
+        Q(categories__name__icontains=query),
         is_active=True
-    ).order_by('academy__name', 'title')[:20]
+    ).distinct().order_by('academy__name', 'title')[:20]
     
     # Search academies
     academies = Academy.objects.filter(

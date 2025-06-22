@@ -202,17 +202,49 @@ class Command(BaseCommand):
             if created:
                 created_count += 1
             else:
-                updated_count += 1
-                
-            # Create categories for this offering if they exist
+                updated_count += 1            # Create categories for this offering if they exist
             if 'categories' in item and item['categories']:
-                for category_name in item['categories']:
-                    try:
-                        category = Category.objects.get(name=category_name, academy=academy)
-                        offering.category = category
-                        offering.save()
-                        break  # Just use the first category for now
-                    except Category.DoesNotExist:
-                        continue
+                for full_category_name in item['categories']:
+                    # Format in JSON is typically "Academy Name - Category Name"
+                    # Try to extract just the category name
+                    if ' - ' in full_category_name:
+                        category_name = full_category_name.split(' - ')[1].strip()
+                    else:
+                        category_name = full_category_name.strip()
+                        
+                    # Try to find the category by name for this academy
+                    matching_categories = Category.objects.filter(
+                        name__icontains=category_name, 
+                        academy=academy
+                    )
+                    
+                    if matching_categories.exists():
+                        # Use the first matching category
+                        category = matching_categories.first()
+                        # Add to the new many-to-many relationship
+                        offering.categories.add(category)
+                        # Also set the old single category field for the first category only
+                        if offering.category is None:
+                            offering.category = category
+                            offering.save()
+                        self.stdout.write(self.style.SUCCESS(
+                            f"Added category '{category.name}' to offering '{offering.title}'"
+                        ))
+                    else:
+                        # If category doesn't exist yet, create it
+                        category = Category.objects.create(
+                            name=category_name,
+                            academy=academy
+                        )
+                        # Add to the new many-to-many relationship
+                        offering.categories.add(category)
+                        # Also set the old single category field for the first category only
+                        if offering.category is None:
+                            offering.category = category
+                            offering.save()
+                        self.stdout.write(self.style.SUCCESS(
+                            f"Created and added category '{category.name}' to offering '{offering.title}'"
+                        ))
+                        
                         
         self.stdout.write(f'Created {created_count} offerings, updated {updated_count} offerings, skipped {skipped_count} offerings')

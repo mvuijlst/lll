@@ -12,4 +12,6 @@ urlpatterns = [
     path('teachers/', views.teacher_list, name='teacher_list'),
     path('teacher/<int:pk>/', views.teacher_detail, name='teacher_detail'),
     path('search/', views.search_results, name='search_results'),
+    path('language-test/', views.language_test, name='language_test'),  # Add test view
+    path('language-switcher/', views.language_switcher, name='language_switcher'),  # Add language switcher
 ]

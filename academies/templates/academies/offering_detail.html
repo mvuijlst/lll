@@ -1,13 +1,14 @@
 {% extends 'academies/base.html' %}
+{% load i18n %}
 
-{% block title %}{{ offering.title }} - UGent Academies{% endblock %}
+{% block title %}{{ offering.title }} - {% trans "UGent Academies" %}{% endblock %}
 
 {% block content %}
 <div style="--academy-color: {{ offering.academy.primary_color }}; --academy-light: {{ offering.academy.light_color }}; --academy-contrast: {{ offering.academy.contrast_color }};">
 
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{% url 'academies:academy_list' %}">Academies</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'academies:academy_list' %}">{% trans "Academies" %}</a></li>
         <li class="breadcrumb-item">
             <a href="{% url 'academies:academy_detail' offering.academy.pk %}" class="academy-text">
                 {{ offering.academy.name }}
@@ -36,15 +37,20 @@
                             {% endif %}
                         </p>
                     </div>
-                    {% if offering.is_active %}
-                    <span class="badge bg-success">Active</span>
+                    {% if offering.is_active %}                    <span class="badge bg-success">{% trans "Active" %}</span>
                     {% else %}
-                    <span class="badge bg-secondary">Inactive</span>
+                    <span class="badge bg-secondary">{% trans "Inactive" %}</span>
                     {% endif %}
-                </div>
-
-                <div class="row mb-4">
-                    {% if offering.category %}
+                </div>                <div class="row mb-4">
+                    {% if offering.categories.exists %}
+                    <div class="col-auto">
+                        {% for category in offering.categories.all %}
+                        <span class="badge academy-badge me-1">
+                            <i class="bi bi-folder me-1"></i>{{ category.name }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                    {% elif offering.category %}
                     <div class="col-auto">
                         <span class="badge academy-badge">
                             <i class="bi bi-folder me-1"></i>{{ offering.category.name }}
@@ -58,25 +64,23 @@
                         </span>
                     </div>
                     {% endif %}
-                </div>
-
-                {% if offering.description %}
+                </div>                {% if offering.description %}
                 <div class="mb-4">
-                    <h3 class="h5 academy-text">Description</h3>
+                    <h3 class="h5 academy-text">{% trans "Description" %}</h3>
                     <div class="text-muted">{{ offering.description|linebreaks }}</div>
                 </div>
                 {% endif %}
 
                 {% if offering.program_content %}
                 <div class="mb-4">
-                    <h3 class="h5 academy-text">Program Content</h3>
+                    <h3 class="h5 academy-text">{% trans "Program Content" %}</h3>
                     <div class="text-muted">{{ offering.program_content|linebreaks }}</div>
                 </div>
                 {% endif %}
 
                 {% if offering.remarks %}
                 <div class="mb-4">
-                    <h3 class="h5 academy-text">Remarks</h3>
+                    <h3 class="h5 academy-text">{% trans "Remarks" %}</h3>
                     <div class="alert academy-bg-light">{{ offering.remarks|linebreaks }}</div>
                 </div>
                 {% endif %}
@@ -85,8 +89,7 @@
     </div>    <div class="col-lg-4">
         <div class="card">
             <div class="card-header academy-bg">
-                <h5 class="mb-0">
-                    <i class="bi bi-calendar-event me-2"></i>Sessions & Dates
+                <h5 class="mb-0">                    <i class="bi bi-calendar-event me-2"></i>{% trans "Sessions & Dates" %}
                     <span class="badge bg-light text-dark ms-2">{{ variations.count }}</span>
                 </h5>
             </div>
@@ -95,7 +98,7 @@
                     <!-- Upcoming Sessions -->
                     {% if upcoming_variations %}
                     <h6 class="text-success mb-3">
-                        <i class="bi bi-clock me-1"></i>Upcoming Sessions
+                        <i class="bi bi-clock me-1"></i>{% trans "Upcoming Sessions" %}
                     </h6>
                     {% for variation in upcoming_variations %}
                     <div class="variation-item academy-themed mb-3 p-3 bg-light rounded">
@@ -124,7 +127,7 @@
                         {% if variation.registration_url %}
                         <a href="{{ variation.registration_url }}" target="_blank" 
                            class="btn academy-button btn-sm">
-                            <i class="bi bi-person-plus me-1"></i>Register Now
+                            <i class="bi bi-person-plus me-1"></i>{% trans "Register Now" %}
                         </a>
                         {% endif %}
                         
@@ -148,7 +151,7 @@
                     {% if variations.count > upcoming_variations.count %}
                     <hr>
                     <h6 class="text-muted mb-3">
-                        <i class="bi bi-list me-1"></i>All Sessions
+                        <i class="bi bi-list me-1"></i>{% trans "All Sessions" %}
                     </h6>
                     {% for variation in variations %}
                     <div class="variation-item academy-themed mb-2 {% if variation not in upcoming_variations %}opacity-75{% endif %}">
@@ -175,7 +178,7 @@
                 {% else %}
                     <p class="text-muted mb-0">
                         <i class="bi bi-info-circle me-2"></i>
-                        No upcoming sessions available at the moment.
+                        {% trans "No upcoming sessions available at the moment." %}
                     </p>
                 {% endif %}
             </div>
@@ -184,7 +187,7 @@
         {% if offering.links.exists %}
         <div class="card mt-3">
             <div class="card-header academy-bg-light">
-                <h6 class="mb-0 academy-text"><i class="bi bi-link-45deg me-2"></i>Related Links</h6>
+                <h6 class="mb-0 academy-text"><i class="bi bi-link-45deg me-2"></i>{% trans "Related Links" %}</h6>
             </div>
             <div class="card-body">
                 {% for link in offering.links.all %}
