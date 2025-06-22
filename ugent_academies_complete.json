@@ -1,810 +1,569 @@
 {
   "academies": [
     {
-      "name": "Humanities Academie",
-      "base_url": "https://humanitiesacademie.ugent.be",
-      "program_url": "https://humanitiesacademie.ugent.be/programma",
+      "name": "Gandaius Permanente Vorming",
+      "base_url": "https://gandaiusacademy.ugent.be",
+      "program_url": "https://gandaiusacademy.ugent.be/programma",
       "categories": [
-        "Postgraduaatsopleidingen",
+        "Rechtsdomeinen",
+        "Criminologische wetenschappen",
+        "Bemiddeling",
+        "Gerechtsdeskundige",
         "Micro-credentials",
-        "Studiedagen",
-        "Lezingen",
-        "Aanbevolen door Humanities Academie"
+        "Dashboard",
+        "Home",
+        "Praktische hulp",
+        "Privacy policy",
+        "Zoeken",
+        "Inlichtingenstudies",
+        "Haven",
+        "Webinars / on demand",
+        "Overslaan en naar de inhoud gaan",
+        "EN"
       ]
     }
   ],
   "offerings": [
     {
-      "url": "https://humanitiesacademie.ugent.be/MC/oekraine-geschiedenis-taal-identiteit",
-      "title": "Micro-credential Oekraïne: geschiedenis, taal, identiteit",
+      "url": "https://gandaiusacademy.ugent.be/programma/hulppersonen",
+      "title": "SUMMER ACADEMY - De rechtstreekse buitencontractuele aansprakelijkheid van hulppersonen",
       "fields": {
-        "title": "Oekraïne: geschiedenis, taal, identiteit (micro-credential)",
-        "field-course-id": "MC3",
+        "title": "SUMMER ACADEMY - De rechtstreekse buitencontractuele aansprakelijkheid van hulppersonen",
+        "field-course-id": "GA147-Hulppersonen",
         "field-course-language": "Nederlands",
         "field-course-category": {
-          "text": "Micro-credentials",
+          "text": "Rechtsdomeinen",
           "links": [
             {
-              "text": "Micro-credentials",
-              "url": "https://humanitiesacademie.ugent.be/programma/micro-credentials"
+              "text": "Rechtsdomeinen",
+              "url": "https://gandaiusacademy.ugent.be/programma/rechtsdomeinen"
             }
           ]
         },
-        "field-course-desc": "De kwesties van de Oekraïense geschiedenis, taal en identiteit zijn tegenwoordig uiterst relevant. Wil je de aanhoudende ideologische (en reële) oorlog tussen Rusland en Oekraïne beter begrijpen? Kennis verzamelen om een beter begrip te krijgen van de Oekraïense vluchtelingencrisis in België? Dan is deze opleiding zeker iets voor jou. Met de opgedane kennis zal je na deze lessen een eigen, onderbouwde positie kunnen innemen in de politieke en maatschappelijke discussie over de Oekraïense kwestie.Deze cursus behandelt de belangrijkste standpunten over volgende vragen:Zijn Oekraïners (vooral Russisch-sprekenden) en Russen één of twee volkeren?Zijn Oekraïens en Russisch twee aparte talen, of is Oekraïens een kunstmatige taal die gecreëerd is op basis van zuidwestelijke Russische dialecten vermengd met Pools?Is de Oekraïense staat een kunstmatige, mislukte staat gecreëerd door de westerse vijanden van Rusland, of een jonge pro-Europese democratie? Of nog iets anders?Is de geschiedenis van Oekraïne en Rusland één gemeenschappelijke geschiedenis of de geschiedenis van een eeuwenoude oorlog tussen twee volkeren en koloniale onderwerping door het ene volk aan het andere?Wat is een micro-credential?",
-        "field-course-program": "Programma onder voorbehoudWaar en wanneer?de werkcolleges vinden plaats opcampus Boekentoren, leslokaal 1.3 Plateau-Rozierin heteerste semesteropwoensdag, van 10u00 tot 13uOnderwijstaal?Nederlandskennis van het Russisch is mooi meegenomen, maar zeker niet verplichtvakliteratuur in het Nederlands en Engelsbronnen in het Russisch, Oekraïens, Pools, ... voor wie deze talen beheerstInhoud?Je krijgt een dieper inzicht in:de belangrijkste vraagstukken van de geschiedenis van Oekraïne, de taalsituatie en de identiteitsproblemende dynamiek tussen politiek, taal, maatschappij en cultuur in OekraïneJe kan:ideologische standpunten herkennen in politieke toespraken en journalistieke teksten en opiniestukken, maar ook in de (pseudo-) wetenschappelijke literatuureen standpunt formuleren over de ideologische geschillen tussen Rusland en Oekraïneeen presentatie geven over aparte vraagstukken van de Oekraïense geschiedenis en natievormingJe verwerft:basiskennis over de Oekraïense standpunten ten opzichte van de belangrijkste personen en gebeurtenissenstudiefiche Oekraïne: historiografie, taal, natievormingEvaluatie?mondeling examen op basis van een op voorhand gegeven vragenlijstactieve deelname in een aantal seminaries: presentaties over bepaalde vraagstukken van de Oekraïense geschiedenis, taalsituatie en identiteitkorte papers op basis van deze presentatiesToelating?Een bepaalde voorkennis over de geschiedenis van Rusland is nuttig/nodig als basis voor de uitleg in de lessen en om de ingewikkelde vraagstukken te behandelen.Niet zeker of deze opleiding iets voor jou is? Neem zeker contact op methumanitiesacademie@ugent.bealvorens in te schrijven.",
-        "field-course-remarks": "Er worden maximum 30 deelnemers aanvaard.Deze opleiding is een initiatief van devakgroep Talen en Culturen, opleiding Oost-Europese Talen en Culturen.Meer over Oekraïne? Samen metBibliotheek De Krookstellen we een dynamischeleeslijstop van zowel fictie als non-fictie.bekijk de leeslijst op de website van Bibliotheek De Krook",
+        "field-course-desc": "Boek 6 BW is op 1 juli 2024 gepubliceerd en trad in werking op 1 januari 2025. De belangrijkste hervorming is ongetwijfeld de afschaffing van de zogenaamde quasi-immuniteit van de uitvoeringsagent. De uitvoeringsagent die voortaan de hulppersoon heet, heeft vele gezichten: de werknemer, de onderaannemer, de bestuurder, de ambtenaar, de vrijwilliger, kortom elkeen die aan de uitvoering van andermans contractuele verbintenis meewerkt. Ook uzelf behoort daar wellicht toe.In deze sessie gaan Ignace Claeys en Camille Desmet op diverse aspecten van deze nieuwe regeling in. De sprekers schreven ook al een uitgebreide bijdrage hierover in het Rechtskundig Weekblad van juni (2024).Ze bespreken achtereenvolgens:hoe de nieuwe regeling algemeen in elkaar steekt en hoe ze zich verhoudt ten aanzien van de (voortaan toegelaten) samenloop van contractuele en buitencontractuele aansprakelijkheid,wie zoal in aanmerking komt voor het statuut van de hulppersoon,met welke andere regels de nieuwe aansprakelijkheidsregel is te combineren, zoals deze inzake de aansprakelijkheid van werknemers en bestuurders,hoe de nieuwe regels in de tijd werken,...Een aantal praktijkgevallen passeert ook uitgebreid de revue.",
+        "field-course-program": "Omdat de studieavond van 3 september bijzonder in de smaak viel en relevant blijft, bieden wij deze opnieuw aan onder de vorm van een webinar in onze Summer Academy. U kan de opname bij u thuis op een moment naar keuze bekijken.Vergeet niet de controlevragen te beantwoorden teneinde uw aanwezigheidsattest te ontvangen.",
+        "field-course-remarks": "De KMO-portefeuille kan aangewend worden voor de betaling. Gebruik hiervoor accreditatienummer DV.O103194 (Universiteit Gent)",
         "field-course-img": "",
         "thumbnail": "",
         "variations": {
-          "title": "Oekraïne: geschiedenis, taal, identiteit (micro-credential)",
+          "title": "SUMMER ACADEMY - De rechtstreekse buitencontractuele aansprakelijkheid van hulppersonen",
           "teachers": {
-            "text": "Prof. dr. Aleksey Yudin",
+            "text": "Prof. dr. Ignace Claeys, Mr. Camille Desmet",
             "links": [
               {
-                "text": "Prof. dr. Aleksey Yudin",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/aleksey-yudin"
+                "text": "Prof. dr. Ignace Claeys",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/ignace-claeys"
+              },
+              {
+                "text": "Mr. Camille Desmet",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/camille-desmet"
               }
             ]
           },
-          "description": {
-            "text": "Start hier jeinschrijvingsaanvraag.",
-            "links": [
-              {
-                "text": "inschrijvingsaanvraag",
-                "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2025&arCode=ACOEKR"
-              }
-            ]
-          },
-          "price": "€ 370,50",
-          "lesson_dates": "22/09/2025 - 10:00 – 28/09/2026 - 12:45",
-          "location": {
-            "text": "Campus Boekentoren",
-            "url": "https://humanitiesacademie.ugent.be/locaties/campus-boekentoren"
-          },
+          "description": "Online deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25 om 23u59)",
+          "price": "€ 100,00",
+          "lesson_dates": "01/06/2025 09:00 – 30/09/2025 23:59",
           "field-teachers": {
-            "text": "Prof. dr. Aleksey Yudin",
+            "text": "Prof. dr. Ignace Claeys, Mr. Camille Desmet",
             "links": [
               {
-                "text": "Prof. dr. Aleksey Yudin",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/aleksey-yudin"
+                "text": "Prof. dr. Ignace Claeys",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/ignace-claeys"
+              },
+              {
+                "text": "Mr. Camille Desmet",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/camille-desmet"
               }
             ]
           },
-          "field-lesson-dates": "22/09/2025 - 10:00 – 28/09/2026 - 12:45",
-          "field-location-ref": {
-            "text": "Campus Boekentoren",
-            "url": "https://humanitiesacademie.ugent.be/locaties/campus-boekentoren"
-          },
-          "field-description": {
-            "text": "Start hier jeinschrijvingsaanvraag.",
-            "links": [
-              {
-                "text": "inschrijvingsaanvraag",
-                "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2025&arCode=ACOEKR"
-              }
-            ]
-          },
-          "combined_text": "Oekraïne: geschiedenis, taal, identiteit (micro-credential)Lesgever(s)Prof. dr. Aleksey YudinBeschrijvingStart hier jeinschrijvingsaanvraag.InschrijvenPrijs€ 370,5022/09/2025 - 10:00 – 28/09/2026 - 12:45| voeg toe aan kalenderCampus Boekentoren"
+          "field-lesson-dates": "01/06/2025 09:00 – 30/09/2025 23:59",
+          "field-description": "Online deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25 om 23u59)",
+          "combined_text": "SUMMER ACADEMY - De rechtstreekse buitencontractuele aansprakelijkheid van hulppersonenOnline beschikbaarLesgever(s)Prof. dr. Ignace ClaeysMr. Camille DesmetNummerOVB, IGO (NKNot, IBJ op aanvraag)Toegekende punten2BeschrijvingOnline deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25 om 23u59)ToelatingsvoorwaardenDe KMO-portefeuille kan aangewend worden voor de betaling. Gebruik hiervoor accreditatienummer DV.O103194 (Universiteit Gent)OpmerkingenErkend door OVB en IGO. Erkenning als permanente vorming door IBJ en NKNOT kan via individuele aanvraag.InschrijvenPrijs€ 100,00Eventuele kortingsprijs afh. van uw profiel (zie winkelmandje)01/06/2025 09:00 – 30/09/2025 23:59| voeg toe aan kalenderToevoegen aan winkelmandje"
         },
         "field-teachers": {
-          "text": "Prof. dr. Aleksey Yudin",
+          "text": "Prof. dr. Ignace Claeys",
           "links": [
             {
-              "text": "Prof. dr. Aleksey Yudin",
-              "url": "https://humanitiesacademie.ugent.be/lesgever/aleksey-yudin"
+              "text": "Prof. dr. Ignace Claeys",
+              "url": "https://gandaiusacademy.ugent.be/lesgever/ignace-claeys"
             }
           ]
         },
+        "field-ebp-num": "OVB, IGO (NKNot, IBJ op aanvraag)",
+        "field-ebp-points": "2",
         "field-previous-lessons-required": "",
-        "field-description": {
-          "text": "Start hier jeinschrijvingsaanvraag.",
-          "links": [
-            {
-              "text": "inschrijvingsaanvraag",
-              "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2025&arCode=ACOEKR"
-            }
-          ]
-        },
-        "price": "€ 370,50",
-        "field-lesson-dates": "22/09/2025 - 10:00 – 28/09/2026 - 12:45",
-        "field-location-ref": "Campus Boekentoren"
+        "field-description": "Online deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25 om 23u59)",
+        "field-target-audience": "De KMO-portefeuille kan aangewend worden voor de betaling. Gebruik hiervoor accreditatienummer DV.O103194 (Universiteit Gent)",
+        "field-remarks": "Erkend door OVB en IGO. Erkenning als permanente vorming door IBJ en NKNOT kan via individuele aanvraag.",
+        "price": "€ 100,00",
+        "field-lesson-dates": "01/06/2025 09:00 – 30/09/2025 23:59"
       },
-      "academy": "Humanities Academie",
+      "academy": "Gandaius Permanente Vorming",
       "categories": [
-        "Micro-credentials"
+        "Rechtsdomeinen",
+        "Webinars / on demand"
       ]
     },
     {
-      "url": "https://humanitiesacademie.ugent.be/MC/tusomeni-kiswahili",
-      "title": "Micro-credential Tusomeni Kiswahili",
+      "url": "https://gandaiusacademy.ugent.be/programma/bw-summer",
+      "title": "SUMMER ACADEMY - Overzicht van het nieuwe Burgerlijk Wetboek (in 2 lesdelen)",
       "fields": {
-        "title": "Tusomeni Kiswahili (micro-credential)",
-        "field-course-id": "MC5",
+        "title": "SUMMER ACADEMY - Overzicht van het nieuwe Burgerlijk Wetboek (lesdeel 2)",
+        "field-course-id": "GA121-BW",
         "field-course-language": "Nederlands",
         "field-course-category": {
-          "text": "Micro-credentials",
+          "text": "Rechtsdomeinen",
           "links": [
             {
-              "text": "Micro-credentials",
-              "url": "https://humanitiesacademie.ugent.be/programma/micro-credentials"
+              "text": "Rechtsdomeinen",
+              "url": "https://gandaiusacademy.ugent.be/programma/rechtsdomeinen"
             }
           ]
         },
-        "field-course-desc": "Swahili heeft 100 tot 150 miljoen sprekers en is één van de belangrijkste en grootste talen van Afrika en de wereld. In deze micro-credential leer je Oost-Afrika’s voertaal praktisch verwerven, grammaticaal doorgronden en cultureel kaderen.Een ideale opleiding voor wie professioneel of privé met Swahilisprekers in contact komt, interesse heeft voor Afrika en/of geboeid is door talen en taalkunde in het algemeen.Zowel voor wie de taal van zijn ouders en/of grootouders beter wil leren kennen, als voor wie op reis (safariin het Swahili) wil in Tanzania of Kenia.Zowel voor de militair die zich wil voorbereiden op missies in Oost-Afrika als voor de leerkracht die graag de taal van zijn partner beter wil begrijpen.Zowel voor de dierenarts met interesse in wildlife en natuurbehoud als voor de arts of verpleegkundige die in Oost-Afrika stage loopt.Zowel voor de ingenieur die meer wil weten over de taal die hij hoorde toen hij in Congo werkte als voor de inlichtingenofficier van de Dienst voor de Veiligheid van de Staat die de taal van enkele van zijn consultanten beter wil beheersen.Wat is een micro-credential?Na de opleiding kan je:zinnen en regelmatig voorkomende uitdrukkingen begrijpen die verband houden met persoonsgegevens, familie, winkelen, plaatselijke geografie, werk, …communiceren binnen simpele en alledaagse contexten die een eenvoudige en directe uitwisseling over vertrouwde en alledaagse kwesties vereisen;in eenvoudige bewoordingen aspecten van de eigen achtergrond, de onmiddellijke omgeving en kwesties op het gebied van diverse behoeften beschrijven.Bovendien heb je:taalkundig inzicht in de grammaticale structuur van het Swahili, wat kan dienen als basis voor de studie van andere Afrikaanse talen, in het bijzonder Bantoetalen;een basisinzicht in de geschiedenis, culturen en literaturen van Swahilisprekers.",
-        "field-course-program": "Programma onder voorbehoudPraktisch?Er zijntwee vaste lesmomentenper week.12werkcollegesper semester:semester 1: dinsdag van 10u tot 13uon campus, lokaal 2.2 Plateau-Rozier, campus Boekentoren (semester 2: lokaal 2.3)livestream en lesopnames12oefeningensessiespersemester:semester 1: donderdag van 8u30 tot 11u30, lokaal 2.22 Blandijn, campus Boekentorensemester 2: donderdag van 14u30 tot 17u30, lokaal 2.3 Plateau-Rozier, campus BoekentorenOnderwijstaal?Nederlands en EngelsInhoud?Deze MC duidt de rol van het Swahili alslingua francain Oost-Afrika en de bredere wereld enerzijds en als erfgenaam van de klassieke Swahilicultuur anderzijds.Tijdens de werkcolleges ligt de focus op het verwerven van een wetenschappelijk gefundeerd inzicht in de basisstructuren van de Swahiligrammatica, in het bijzonder met betrekking tot de morfologie, de syntaxis en de interactie tussen beide domeinen.Tijdens de oefeningensessies ligt de nadruk op het ontwikkelen van spreek-, luister-, lees- en schrijfvaardigheid in het Swahili, met als einddoel het bereiken van het niveau A2 van het Europees Referentiekader voor Moderne Vreemde Talen (ERK).studiefiche Swahili Istudiefiche Swahili IIEvaluatie?schriftelijk en mondeling examenToelating?Geen voorkennis van het Swahili vereist!",
-        "field-course-remarks": "Het is in het belang van elke deelnemer om de lessenreeks van bij het begin te volgen.",
+        "field-course-desc": "Sinds 2019 bouwt de wetgever aan een volledig nieuw Burgerlijk Wetboek. Na een voorzichtige start nam het project de voorbije twee jaar een hoge vlucht met een nieuw verbintenissen- en buitencontractueel aansprakelijkheidsrecht en een concreet voorstel voor een nieuwe regeling inzake bijzondere contracten.De studiedag van 6 november bood een overzicht van het volledige nieuwe wetboek. Tijdens acht beknopte sessies verneemt u de essentie van alle boeken van het nieuwe BW, en krijgt u waar mogelijk inzage in de eerste toepassingen in de rechtspraak, zodat u na afloop weer “mee” bent. Voor de uiteenzettingen kunnen we beroep doen op de allergrootste experts die de UGent voor elk van de betrokken boeken in huis heeft.",
+        "field-course-program": "Deel 1:Inleiding, opbouw van het nieuwe wetboek en Boek 1 BW Algemene bepalingen-Prof. dr. Frederik PeeraerBoek 3 BW Goederen-Prof. dr. Annelies Wylleman en prof. dr. Joke BaeckBoek 5 BW Verbintenissen-Prof. dr. Ignace ClaeysBoek 6 BW Buitencontractuele aansprakelijkheid-Prof. dr. Marc KruithofQ&ADeel 2:Boek 7 BW Bijzondere contracten-Prof. dr. Maarten DambreBoek 4 BW Nalatenschappen, schenkingen en testamenten en Boek 2, titel 3 Relatievermogensrecht-Prof. dr. Jan Bael en prof. dr. Els VynckeBoek 8 BW Bewijs-Prof. dr. Wannes VandenbusscheBoek 9 BW Zekerheden-Prof. dr. Joke Baeck en prof. dr. Diederik BrulootQ&A",
+        "field-course-remarks": "Omdat de studiedag van 6 november 2024 bijzonder in de smaak viel en relevant blijft, bieden wij deze opnieuw aan onder de vorm van 2 webinars in onze Summer Academy. U kan de opnames bij u thuis op een moment naar keuze bekijken.Vergeet niet de controlevragen te beantwoorden teneinde uw aanwezigheidsattest te ontvangen.Voor deze studiedag werden erkenningen/tussenkomst aangevraagd bij de Nationale Kamer van Notarissen, het Instituut voor Gerechtelijke Opleiding en de Orde van Vlaamse Balies.",
         "field-course-img": "",
         "thumbnail": "",
         "variations": {
-          "title": "Tusomeni Kiswahili (micro-credential)",
+          "title": "SUMMER ACADEMY - Overzicht van het nieuwe Burgerlijk Wetboek (lesdeel 1)",
           "teachers": {
-            "text": "Prof. dr. Koen Bostoen",
+            "text": "Prof. dr. Annelies Wylleman, Prof. dr. Joke Baeck, Prof. dr. Ignace Claeys, Prof. dr. Marc Kruithof, Prof. dr. Frederik Peeraer",
             "links": [
               {
-                "text": "Prof. dr. Koen Bostoen",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/koen-bostoen"
+                "text": "Prof. dr. Annelies Wylleman",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/annelies-wylleman"
+              },
+              {
+                "text": "Prof. dr. Joke Baeck",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/joke-baeck"
+              },
+              {
+                "text": "Prof. dr. Ignace Claeys",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/ignace-claeys"
+              },
+              {
+                "text": "Prof. dr. Marc Kruithof",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/marc-kruithof"
+              },
+              {
+                "text": "Prof. dr. Frederik Peeraer",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/frederik-peeraer"
               }
             ]
           },
-          "description": {
-            "text": "inschrijven(kan vanaf 1 augustus)",
-            "links": [
-              {
-                "text": "inschrijven",
-                "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2024&arCode=ACSWAH"
-              }
-            ]
-          },
-          "price": "€ 442,00",
-          "lesson_dates": "22/09/2025 - 08:30 – 28/09/2026 - 16:00",
-          "location": {
-            "text": "Campus Boekentoren",
-            "url": "https://humanitiesacademie.ugent.be/locaties/campus-boekentoren"
-          },
+          "description": "Inleiding, opbouw van het nieuwe wetboek en Boek 1 BW Algemene bepalingen-Prof. dr. Frederik PeeraerBoek 3 BW Goederen-Prof. dr. Annelies Wylleman en prof. dr. Joke BaeckBoek 5 BW Verbintenissen-Prof. dr. Ignace ClaeysBoek 6 BW Buitencontractuele aansprakelijkheid-Prof. dr. Marc KruithofQ&AOnline deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25 om 23u59)",
+          "price": "€ 100,00",
+          "lesson_dates": "02/06/2025 09:00 – 30/09/2025 23:59",
           "field-teachers": {
-            "text": "Prof. dr. Koen Bostoen",
+            "text": "Prof. dr. Annelies Wylleman, Prof. dr. Joke Baeck, Prof. dr. Ignace Claeys, Prof. dr. Marc Kruithof, Prof. dr. Frederik Peeraer",
             "links": [
               {
-                "text": "Prof. dr. Koen Bostoen",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/koen-bostoen"
+                "text": "Prof. dr. Annelies Wylleman",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/annelies-wylleman"
+              },
+              {
+                "text": "Prof. dr. Joke Baeck",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/joke-baeck"
+              },
+              {
+                "text": "Prof. dr. Ignace Claeys",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/ignace-claeys"
+              },
+              {
+                "text": "Prof. dr. Marc Kruithof",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/marc-kruithof"
+              },
+              {
+                "text": "Prof. dr. Frederik Peeraer",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/frederik-peeraer"
               }
             ]
           },
-          "field-lesson-dates": "22/09/2025 - 08:30 – 28/09/2026 - 16:00",
-          "field-location-ref": {
-            "text": "Campus Boekentoren",
-            "url": "https://humanitiesacademie.ugent.be/locaties/campus-boekentoren"
-          },
-          "field-description": {
-            "text": "inschrijven(kan vanaf 1 augustus)",
-            "links": [
-              {
-                "text": "inschrijven",
-                "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2024&arCode=ACSWAH"
-              }
-            ]
-          },
-          "combined_text": "Tusomeni Kiswahili (micro-credential)Lesgever(s)Prof. dr. Koen BostoenBeschrijvinginschrijven(kan vanaf 1 augustus)InschrijvenPrijs€ 442,0022/09/2025 - 08:30 – 28/09/2026 - 16:00| voeg toe aan kalenderCampus Boekentoren"
+          "field-lesson-dates": "02/06/2025 09:00 – 30/09/2025 23:59",
+          "field-description": "Inleiding, opbouw van het nieuwe wetboek en Boek 1 BW Algemene bepalingen-Prof. dr. Frederik PeeraerBoek 3 BW Goederen-Prof. dr. Annelies Wylleman en prof. dr. Joke BaeckBoek 5 BW Verbintenissen-Prof. dr. Ignace ClaeysBoek 6 BW Buitencontractuele aansprakelijkheid-Prof. dr. Marc KruithofQ&AOnline deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25 om 23u59)",
+          "combined_text": "SUMMER ACADEMY - Overzicht van het nieuwe Burgerlijk Wetboek (lesdeel 1)Online beschikbaarLesgever(s)Prof. dr. Annelies WyllemanProf. dr. Joke BaeckProf. dr. Ignace ClaeysProf. dr. Marc KruithofProf. dr. Frederik PeeraerNummerOVB, IGO (NKNot, NKGDW, IBJ op aanvraag)Toegekende punten3BeschrijvingInleiding, opbouw van het nieuwe wetboek en Boek 1 BW Algemene bepalingen-Prof. dr. Frederik PeeraerBoek 3 BW Goederen-Prof. dr. Annelies Wylleman en prof. dr. Joke BaeckBoek 5 BW Verbintenissen-Prof. dr. Ignace ClaeysBoek 6 BW Buitencontractuele aansprakelijkheid-Prof. dr. Marc KruithofQ&AOnline deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25 om 23u59)OpmerkingenErkend door OVB en IGO. Erkenning als permanente vorming door IBJ, NKNOT en NKGDW kan via individuele aanvraag.De KMO-portefeuille kan aangewend worden voor de betaling. Gebruik hiervoor accreditatienummer DV.O103194 (Universiteit Gent) - Thema: Innovatie.InschrijvenPrijs€ 100,00Eventuele kortingsprijs afh. van uw profiel (zie winkelmandje)02/06/2025 09:00 – 30/09/2025 23:59| voeg toe aan kalenderToevoegen aan winkelmandje"
         },
         "field-teachers": {
-          "text": "Prof. dr. Koen Bostoen",
+          "text": "Prof. dr. Maarten Dambre",
           "links": [
             {
-              "text": "Prof. dr. Koen Bostoen",
-              "url": "https://humanitiesacademie.ugent.be/lesgever/koen-bostoen"
+              "text": "Prof. dr. Maarten Dambre",
+              "url": "https://gandaiusacademy.ugent.be/lesgever/maarten-dambre"
             }
           ]
         },
+        "field-ebp-num": "OVB, IGO (NKNot, NKGDW, IBJ op aanvraag)",
+        "field-ebp-points": "3",
         "field-previous-lessons-required": "",
-        "field-description": {
-          "text": "inschrijven(kan vanaf 1 augustus)",
-          "links": [
-            {
-              "text": "inschrijven",
-              "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2024&arCode=ACSWAH"
-            }
-          ]
-        },
-        "price": "€ 442,00",
-        "field-lesson-dates": "22/09/2025 - 08:30 – 28/09/2026 - 16:00",
-        "field-location-ref": "Campus Boekentoren"
+        "field-description": "Boek 7 BW Bijzondere contracten-Prof. dr. Maarten DambreBoek 4 BW Nalatenschappen, schenkingen en testamenten en Boek 2, titel 3 Relatievermogensrecht-Prof. dr. Jan Bael en prof. dr. Els VynckeBoek 8 BW Bewijs-Prof. dr. Wannes VandenbusscheBoek 9 BW Zekerheden-Prof. dr. Joke Baeck en prof. dr. Diederik BrulootQ&A",
+        "field-remarks": "Online deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25 om 23u59)Erkend door OVB en IGO. Erkenning als permanente vorming door IBJ, NKNOT en NKGDW kan via individuele aanvraag.De KMO-portefeuille kan aangewend worden voor de betaling. Gebruik hiervoor accreditatienummer DV.O103194 (Universiteit Gent) - Thema: Innovatie.",
+        "price": "€ 100,00",
+        "field-lesson-dates": "02/06/2025 09:00 – 30/09/2025 23:59"
       },
-      "academy": "Humanities Academie",
+      "academy": "Gandaius Permanente Vorming",
       "categories": [
-        "Micro-credentials"
+        "Rechtsdomeinen",
+        "Webinars / on demand"
       ]
     },
     {
-      "url": "https://humanitiesacademie.ugent.be/MC/low-countries-studies",
-      "title": "Micro-credential Low Countries Studies",
+      "url": "https://gandaiusacademy.ugent.be/programma/rechtsdomeinen/2024-2025financieel-summeracademy",
+      "title": "SUMMER ACADEMY - Financieel Recht",
       "fields": {
-        "title": "Micro-credential Low Countries Studies",
-        "field-course-id": "MC13",
+        "title": "Non-traditional financial assets, MiCAR and DLT Pilot Regime",
+        "field-course-id": "GA116-Financieel-SummerAcademy-Beleggersbescherming",
         "field-course-language": "Nederlands",
         "field-course-category": {
-          "text": "Micro-credentials",
+          "text": "Rechtsdomeinen",
           "links": [
             {
-              "text": "Micro-credentials",
-              "url": "https://humanitiesacademie.ugent.be/programma/micro-credentials"
+              "text": "Rechtsdomeinen",
+              "url": "https://gandaiusacademy.ugent.be/programma/rechtsdomeinen"
             }
           ]
         },
-        "field-course-desc": "Imagine: you move, for whatever reason, to a foreign country and suddenly find yourself part of a society you know nothing about. You are unfamiliar with its customs, history, culture... . A course to learn more about the country where you are staying would be welcome, wouldn't it? Low Countries Studies aims to reach those people who are finding themselves in this situation in Flanders and is, in other words, meant for people from abroad who want to get to know their new homeland. Of course, anyone wanting to learn more about Flanders, Belgium and the Netherlands is welcome, too!Various aspects of Flemish society are treated during this course: you not only gain insight into the history, but also into the actuality of Belgium, and more broadly, the Low Countries. By learning more about the historical, social, economic, political and cultural situation of the Low Countries, you also learn to reflect on your own cultural identity.In the past few years Low Countries Studies has been a success and welcomes participants originating from over fifty different countries all over the world, from Australia to Zambia.",
-        "field-course-program": "Practical information12 lectureson different aspects of life in Flanders, Belgium and the NetherlandsOn Wednesday evenings14 February to 15 May 2024 from 17:30-18:45 and from 19:00-20:15in Ghent, Blandijnberg 2 and Hoveniersbergpossibility to ask questions and debate with the lecturer and other participantspossibility to take part in extra-curricular activitiesContent:Basic introduction to the Dutch languageby Jacques Van Keymeulen (Faculty of Arts)The Urban Roots of Medieval Europe: the contribution of the cities of Flandersby Marc Boone (Faculty of Arts)Geography and landscapes of the Low Countriesby Marc Antrop (Faculty of Sciences)Rubens or Rembrandt? Art, Politics and the Roots of Belgium and the Netherlands in the 16th and 17th centuriesby Jonas Roelens (Faculty of Arts)Literature and Rebellion in Ghent since the Middle Agesby Lars Bernaerts and Kornee van der Haven (Faculty of Arts)The Media in Flandersby Maxine De Wulf Helskens (Faculty of Arts)The Belgian federation: origins, functioning, prospectsby Maxime Vandenberghe (Faculty of Political and Social Sciences)Polyphonic Music in the Low Countriesby Francis Maes (Faculty of Arts)The position of Flanders in the Belgian Economyby Marc De Clercq (Faculty of Economics and Business Administration)Ending life and procreating in Flanders and in the Netherlandsby Freddy Mortier (Faculty of Arts)The Low Countries and (post)colonial historyby to be determinedThe Language of Whiteness in Dutch and Beyondby Sibo KanobanaEvaluationparticipation in discussions after the lectures and in the online discussion groupshort essay (about 4000 words); two options:either you write a reflection on the entire programme: what was interesting, what are the most striking differences with your home country, which subjects were clearly lacking (always thoroughly substantiated);or you write an essay on one topic from the course, comparing thoroughly the situation in Belgium with the situation in your home country. The comparison must be accompanied by a reflection on the differences. The essays are expected at the latest on Tuesday, 31 May, 23:59and should be handed in via Ufora (A005539A - Low Countries Studies). Under the tab ‘Ufora-tools’ there is an ‘Assignment’ called ‘Essay’.more information:course specificationsAdmissionNo special requirementsIf you hesitate whether this course fits you, pleasecontact us.",
-        "field-course-remarks": "Micro-credential versus lecture seriesIf you are interested in (parts of) this course, but youdo not want to participate in the evaluationor youdo not wish to receive a certificate, it is also possible to follow the lectures separately andwithout evaluation. In this case, you need to register on the infopageLow Countries Studies, lectures.",
+        "field-course-desc": "We hernemen 2 lessen uit onze specialisatieopleiding Financieel recht, met name Beleggersbescherming en Non-traditional financial assets.",
+        "field-course-program": "Les 1: BeleggersbeschermingDeze sessie uit de specialisatieopleiding Financieel recht beoogt een overzicht te geven van de regelen die ertoe strekken de belegger te beschermen. In het bijzonder wordt aandacht besteed aan de gedragsregelen die toepassing vinden bij de aanbieden van beleggingsdiensten (in het bijzonder de zorgplicht) en aan de initiatieven die de FSMA heeft genomen om de commercialisering van te complexe of te risicovolle instrumenten aan banden te leggen (banning en moratorium). Daarbij wordt ook ingegaan op mogelijke privaatrechtelijke gevolgen van de miskenning van de regel.Les 2: Non-traditional financial assets, MiCAR and DLT Pilot RegimeIn this session, the legal qualification and treatment of non-traditional financial asset will be analyzed. First, it will be examined to what extent non-traditional financial assets (and service providers with respect to these assets) can be brought within the scope of application of \"traditional\" financial legislation, either by fully submitting these assets to traditional financial legislation or by tailoring some rules to the peculiar nature of the employed technologies. Secondly, it will be studied how recent initiatives at the EU-level have sought to regulate non-traditional financial assets that are not covered by traditional financial legislation. Thirdly, the initiatives at the Belgian level with respect to non-traditional financial assets will be assessed.",
+        "field-course-remarks": "DeKMO-portefeuillekan voor de betaling van het inschrijvingsgeld worden aangewend (Thema: Innovatie). Voor initiatieven in het kader van levenslang leren, waarvoor je inschrijft bij de academie, gebruik je het UGent-erkenningsnummer DV.O103194.Voor deze studiedag werden erkenningen aangevraagd bij de Orde van Vlaamse Balies (OVB).Online deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25).",
         "field-course-img": "",
         "thumbnail": "",
-        "variations": {
-          "title": "Micro-credential Low Countries Studies",
-          "description": {
-            "text": "register hereWith this micro-credentialyou obtain advanced knowledge of various aspects of the historical, social, economic, political and cultural situation of the Low Countries, past and presentyou will be able to collect, select and critically process relevant (historical) scientific information in the field of various aspects of the Low Countries in the present and the past and you can reflect on it, synthesize the results, report and communicate on the findingsyou recognize the influence of your own ideas and presuppositions on the analysis of historical, social, economic, political and cultural situations of a (possibly  temporary) host countryyou will be receptive to the value of diversity in multicultural contexts",
-            "links": [
-              {
-                "text": "register here",
-                "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2024&arCode=ACLCST"
-              }
-            ]
-          },
-          "price": "€ 329,40",
-          "lesson_dates": "10/02/2025 17:30 – 12/05/2025 20:15",
-          "location": {
-            "text": "Blandijn",
-            "url": "https://humanitiesacademie.ugent.be/locaties/blandijn"
-          },
-          "field-lesson-dates": "10/02/2025 17:30 – 12/05/2025 20:15",
-          "field-location-ref": {
-            "text": "Blandijn",
-            "url": "https://humanitiesacademie.ugent.be/locaties/blandijn"
-          },
-          "field-description": {
-            "text": "register hereWith this micro-credentialyou obtain advanced knowledge of various aspects of the historical, social, economic, political and cultural situation of the Low Countries, past and presentyou will be able to collect, select and critically process relevant (historical) scientific information in the field of various aspects of the Low Countries in the present and the past and you can reflect on it, synthesize the results, report and communicate on the findingsyou recognize the influence of your own ideas and presuppositions on the analysis of historical, social, economic, political and cultural situations of a (possibly  temporary) host countryyou will be receptive to the value of diversity in multicultural contexts",
-            "links": [
-              {
-                "text": "register here",
-                "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2024&arCode=ACLCST"
-              }
-            ]
-          },
-          "combined_text": "Micro-credential Low Countries StudiesBeschrijvingregister hereWith this micro-credentialyou obtain advanced knowledge of various aspects of the historical, social, economic, political and cultural situation of the Low Countries, past and presentyou will be able to collect, select and critically process relevant (historical) scientific information in the field of various aspects of the Low Countries in the present and the past and you can reflect on it, synthesize the results, report and communicate on the findingsyou recognize the influence of your own ideas and presuppositions on the analysis of historical, social, economic, political and cultural situations of a (possibly  temporary) host countryyou will be receptive to the value of diversity in multicultural contextsInschrijvenPrijs€ 329,4010/02/2025 17:30 – 12/05/2025 20:15| voeg toe aan kalenderBlandijn"
-        },
-        "field-previous-lessons-required": "",
-        "field-description": {
-          "text": "register hereWith this micro-credentialyou obtain advanced knowledge of various aspects of the historical, social, economic, political and cultural situation of the Low Countries, past and presentyou will be able to collect, select and critically process relevant (historical) scientific information in the field of various aspects of the Low Countries in the present and the past and you can reflect on it, synthesize the results, report and communicate on the findingsyou recognize the influence of your own ideas and presuppositions on the analysis of historical, social, economic, political and cultural situations of a (possibly  temporary) host countryyou will be receptive to the value of diversity in multicultural contexts",
+        "field-course-partners": {
+          "text": "",
           "links": [
             {
-              "text": "register here",
-              "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2024&arCode=ACLCST"
+              "text": "",
+              "url": "https://www.ugent.be/re/mpor/nl/onderzoeksgroepen/instituut-financieel-recht"
             }
           ]
         },
-        "price": "€ 329,40",
-        "field-lesson-dates": "10/02/2025 17:30 – 12/05/2025 20:15",
-        "field-location-ref": "Blandijn"
+        "field-partner-logo": "",
+        "variations": {
+          "title": "Beleggersbescherming",
+          "teachers": {
+            "text": "Prof. dr. Reinhard Steennot",
+            "links": [
+              {
+                "text": "Prof. dr. Reinhard Steennot",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/reinhard-steennot"
+              }
+            ]
+          },
+          "description": "Deze sessie uit de specialisatieopleiding Financieel recht beoogt een overzicht te geven van de regelen die ertoe strekken de belegger te beschermen. In het bijzonder wordt aandacht besteed aan de gedragsregelen die toepassing vinden bij de aanbieden van beleggingsdiensten (in het bijzonder de zorgplicht) en aan de initiatieven die de FSMA heeft genomen om de commercialisering van te complexe of te risicovolle instrumenten aan banden te leggen (banning en moratorium). Daarbij wordt ook ingegaan op mogelijke privaatrechtelijke gevolgen van de miskenning van de regel.",
+          "price": "€ 150,00",
+          "lesson_dates": "05/06/2025 09:00 – 30/09/2025 23:59",
+          "field-teachers": {
+            "text": "Prof. dr. Reinhard Steennot",
+            "links": [
+              {
+                "text": "Prof. dr. Reinhard Steennot",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/reinhard-steennot"
+              }
+            ]
+          },
+          "field-lesson-dates": "05/06/2025 09:00 – 30/09/2025 23:59",
+          "field-description": "Deze sessie uit de specialisatieopleiding Financieel recht beoogt een overzicht te geven van de regelen die ertoe strekken de belegger te beschermen. In het bijzonder wordt aandacht besteed aan de gedragsregelen die toepassing vinden bij de aanbieden van beleggingsdiensten (in het bijzonder de zorgplicht) en aan de initiatieven die de FSMA heeft genomen om de commercialisering van te complexe of te risicovolle instrumenten aan banden te leggen (banning en moratorium). Daarbij wordt ook ingegaan op mogelijke privaatrechtelijke gevolgen van de miskenning van de regel.",
+          "combined_text": "BeleggersbeschermingOnline beschikbaarLesgever(s)Prof. dr. Reinhard SteennotNummerOVB: C-2024-2367Toegekende punten3BeschrijvingDeze sessie uit de specialisatieopleiding Financieel recht beoogt een overzicht te geven van de regelen die ertoe strekken de belegger te beschermen. In het bijzonder wordt aandacht besteed aan de gedragsregelen die toepassing vinden bij de aanbieden van beleggingsdiensten (in het bijzonder de zorgplicht) en aan de initiatieven die de FSMA heeft genomen om de commercialisering van te complexe of te risicovolle instrumenten aan banden te leggen (banning en moratorium). Daarbij wordt ook ingegaan op mogelijke privaatrechtelijke gevolgen van de miskenning van de regel.OpmerkingenOnline deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25).InschrijvenPrijs€ 150,00Eventuele kortingsprijs afh. van uw profiel (zie winkelmandje)05/06/2025 09:00 – 30/09/2025 23:59| voeg toe aan kalenderToevoegen aan winkelmandje"
+        },
+        "field-teachers": {
+          "text": "Prof. dr. Evariest Callens",
+          "links": [
+            {
+              "text": "Prof. dr. Evariest Callens",
+              "url": "https://gandaiusacademy.ugent.be/lesgever/evariest-callens"
+            }
+          ]
+        },
+        "field-ebp-num": "OVB: C-2024-2367",
+        "field-ebp-points": "3",
+        "field-previous-lessons-required": "",
+        "field-description": "In this session, the legal qualification and treatment of non-traditional financial asset will be analyzed. First, it will be examined to what extent non-traditional financial assets (and service providers with respect to these assets) can be brought within the scope of application of \"traditional\" financial legislation, either by fully submitting these assets to traditional financial legislation or by tailoring some rules to the peculiar nature of the employed technologies. Secondly, it will be studied how recent initiatives at the EU-level have sought to regulate non-traditional financial assets that are not covered by traditional financial legislation. Thirdly, the initiatives at the Belgian level with respect to non-traditional financial assets will be assessed.",
+        "field-remarks": "Online deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25).",
+        "price": "€ 150,00",
+        "field-lesson-dates": "05/06/2025 09:00 – 30/09/2025 23:59"
       },
-      "academy": "Humanities Academie",
+      "academy": "Gandaius Permanente Vorming",
       "categories": [
-        "Micro-credentials"
+        "Rechtsdomeinen",
+        "Webinars / on demand"
       ]
     },
     {
-      "url": "https://humanitiesacademie.ugent.be/MC/de-vergeten-literatuur",
-      "title": "Micro-credential De vergeten literatuur",
+      "url": "https://gandaiusacademy.ugent.be/programma/rechtsdomeinen/2024-2025-ga134-omgeving-summeracademy-summer-academy-omgevingsrecht",
+      "title": "SUMMER ACADEMY - Omgevingsrecht",
       "fields": {
-        "title": "Micro-credential De vergeten literatuur",
-        "field-course-id": "MC6",
+        "title": "SUMMER ACADEMY - Milieuschade claimen bij de rechter: moet de vervuiler écht betalen? (deel 2)",
+        "field-course-id": "GA134-Omgeving-SummerAcademy",
         "field-course-language": "Nederlands",
         "field-course-category": {
-          "text": "Micro-credentials",
+          "text": "Rechtsdomeinen",
           "links": [
             {
-              "text": "Micro-credentials",
-              "url": "https://humanitiesacademie.ugent.be/programma/micro-credentials"
+              "text": "Rechtsdomeinen",
+              "url": "https://gandaiusacademy.ugent.be/programma/rechtsdomeinen"
             }
           ]
         },
-        "field-course-desc": "Hoe komt het dat we bij Latijnse literatuur alleen aan het oude Rome denken, terwijl het Latijn tot ver in de 17de eeuw de belangrijkste literaire taal was voor grote delen van Europa? Wat betekent het te schrijven in een taal die niet je moedertaal is en die zelfs niemands moedertaal is? Deze vragen staan (onder andere) centraal in de micro-credentialDe vergeten literatuur.Wat is een micro-credential?Via deze opleiding verwerf je kennis over:de Latijnse literatuur als een Europese literatuur;de belangrijkste periodes in de Latijnse literatuurgeschiedenis en teksten/auteurs die representatief zijn voor elk van deze periodes;de manier waarop de Latijnse literatuur binnen de Europese literatuurgeschiedenis functioneerde.Je kan bovendien:Latijnse schrijvers en teksten situeren binnen de Latijnse literatuurgeschiedenis van Europa en tegen de historische achtergrond van hun periode;eigenschappen van de verschillende periodes in de Latijnse literatuurgeschiedenis herkennen en aanduiden in Latijnse teksten;Ten slotte krijg je:inzicht in de specifieke achtergrondkennis die nodig is om Latijnse literatuur uit verschillende periodes te lezen en begrijpen en je weet hoe deze kennis zelfstandig te verwerven.Voor wie?Voor iedereen die geïnteresseerd is in literatuurgeschiedenis en verder wil kijken dan de nationale grenzen, die nog steeds het beeld van de Europese literaturen bepalen.Voorleerkrachtensecundair onderwijs. Denieuwe leerplanneneisen namelijk dat meer aandacht uitgaat naar de diachronie van Latijn binnen de Europese geschiedenis.",
-        "field-course-program": "Praktisch?12 hoor- en werkcollegestweede semesterdonderdag 13u00 - 16u00on campus:Campus Boekentoren, leslokaal 0.3 BlandijnInhoud?Het aandeel van de Oudheid binnen de totale literaire productie in het Latijn beslaat in feite niet meer dan een miniem fragment. De overgrote meerderheid werd geschreven tijdens het anderhalf millennium na de Oudheid.De micro-credential “De vergeten Literatuur” wil een (selectief) overzicht geven van wat de Latijnse literatuur uit de voorbije 1500 jaar te bieden heeft, maar gaat ook in op vragen als ‘Wat betekenen een kosmopolitische taal en haar literatuur?’. Op die manier wil de opleiding niet alleen verhelpen aan het vertekende beeld van wat Latijnse literatuur voorstelt, maar geeft ze ook inzicht in de achtergronden bij de problematische verhouding van het moderne Europa met de kosmopolitische taal van haar eigen verleden.Er wordt tijdens de colleges steeds een beknopte inleiding gegeven, die zowel de historische achtergrond duidt als meer theoretische aspecten belicht. Het gaat in deze opleiding echter vooral omactieve lectuur van tekstfragmenten, zowel in het Latijn als in vertaling, wat een sterke interactieve dialoog in kleine groepjes en in de totale groep vraagt. Om deel te kunnen nemen aan de interactieve lectuurmethode moet ook zelfstandig lectuur worden doorgenomen, ter beschikking gesteld door de docent.studiefiche Latijnse traditie in EuropaEvaluatie?leesmap met daarin eigen nota’s, impressies en reflecties (portfolio)korte literaire reflectieover een beperkte selectie uit de teksten die tijdens de colleges aan bod kwamenmondeling evaluatiegesprek op afspraakmet als uitgangspunt het eigen portfolio en de eigen literaire reflectieToelating?geen voorkennis Latijn vereistactieve kennis van het Nederlandspassieve kennis van het Engels (en in mindere mate van het Frans en het Duits), met het oog op achtergrondliteratuur en vertalingen van Latijnse teksten",
+        "field-course-desc": "Vernieuwend, verdiepend en relevantGandaius Academy biedt jaarlijks in samenwerking met de Vlaamse Vereniging voor Omgevingsrecht (VVOR) een lessenreeks 'Omgevingsrecht' aan. Op een interactieve manier worden de deelnemers wegwijs gemaakt in het omgevingsrecht en omgevingsbeleid. Zowel theorie, praktijk, recht en techniek komen van A tot Z aan bod.In onze SUMMER ACADEMY hernemen we 2 bijzonder succesvolle studiedagen:De omgevingsvergunning: een stand van zakenDonderdag 24 oktober 2024Milieuschade claimen bij de rechter: moet de vervuiler écht betalen?Donderdag 15 mei 2025Jaarprogramma 'Omgevingsrecht' van 2025Na het succes van de voorgaande editie bouwen we met het jaarprogramma van 2025 verder op actuele ontwikkelingen in wetgeving, rechtspraak en bredere maatschappelijke tendensen. Dit programma biedt een unieke kans om kennis en inzicht te verdiepen in de meest prangende thema’s binnen het omgevingsrecht. Dit najaar vinden er nog diverse studiedagen plaats waarvoor u kan inschrijven via volgendelink:Omgevingsvergunning 2.0(Donderdag 25 september 2025)Chemische verontreiniging(Donderdag 23 oktober 2025)Bouwshift en ruimtelijke ordening(Donderdag 27 november 2025)Bodem, grondverzet en afval(Donderdag 11 december 2025)",
+        "field-course-remarks": "De opnames werden in 2 lesdelen van elk 3uur opgedeeld.U kan deze naar wens aansluitend of met pauzes bekijken.DeKMO-portefeuillekan voor de betaling van het inschrijvingsgeld worden aangewend (Thema: Innovatie). Voor initiatieven in het kader van levenslang leren, waarvoor je inschrijft bij de academie, gebruik je het UGent-erkenningsnummer DV.O103194.",
         "field-course-img": "",
         "thumbnail": "",
         "variations": {
-          "title": "Micro-credential De vergeten literatuur",
-          "teachers": {
-            "text": "Prof. dr. Wim Verbaal",
-            "links": [
-              {
-                "text": "Prof. dr. Wim Verbaal",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/wim-verbaal"
-              }
-            ]
-          },
-          "description": {
-            "text": "inschrijven(mogelijk vanaf 1 augustus)",
-            "links": [
-              {
-                "text": "inschrijven",
-                "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2024&arCode=ACVELI"
-              }
-            ]
-          },
-          "price": "€ 357,00",
-          "lesson_dates": "10/02/2025 08:30 – 05/07/2025 19:00",
-          "location": {
-            "text": "Campus Boekentoren",
-            "url": "https://humanitiesacademie.ugent.be/locaties/campus-boekentoren"
-          },
-          "field-teachers": {
-            "text": "Prof. dr. Wim Verbaal",
-            "links": [
-              {
-                "text": "Prof. dr. Wim Verbaal",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/wim-verbaal"
-              }
-            ]
-          },
-          "field-lesson-dates": "10/02/2025 08:30 – 05/07/2025 19:00",
-          "field-location-ref": {
-            "text": "Campus Boekentoren",
-            "url": "https://humanitiesacademie.ugent.be/locaties/campus-boekentoren"
-          },
-          "field-description": {
-            "text": "inschrijven(mogelijk vanaf 1 augustus)",
-            "links": [
-              {
-                "text": "inschrijven",
-                "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2024&arCode=ACVELI"
-              }
-            ]
-          },
-          "combined_text": "Micro-credential De vergeten literatuurLesgever(s)Prof. dr. Wim VerbaalBeschrijvinginschrijven(mogelijk vanaf 1 augustus)InschrijvenPrijs€ 357,0010/02/2025 08:30 – 05/07/2025 19:00| voeg toe aan kalenderCampus Boekentoren"
+          "title": "SUMMER ACADEMY - De omgevingsvergunning: een stand van zaken (lesdeel 1)",
+          "description": "In nauwe interactie met de deelnemers overlopen Isabelle Larmuseau (VVOR) en Arnout Schelstraete (UGent) de volledige omgevingsvergunningsprocedure ‘van A tot Z’, met veel aandacht voor de wijzigingen in de vergunningenregelgeving en voor de nieuwe tendensen in de vergunningenrechtspraak van 2024.De omgevingsvergunningsprocedure: op weg naar een modulair systeemSpreker: Annelies Maes (Gebiedsmedewerker Omgevingsvergunningen)De modernisering van de milieueffectrapportage binnen de omgevingsvergunningverleningSpreker: Bastiaan Schelstraete (Stibbe)",
+          "price": "€ 125,00",
+          "lesson_dates": "11/06/2025 09:00 – 30/09/2025 23:59",
+          "field-lesson-dates": "11/06/2025 09:00 – 30/09/2025 23:59",
+          "field-description": "In nauwe interactie met de deelnemers overlopen Isabelle Larmuseau (VVOR) en Arnout Schelstraete (UGent) de volledige omgevingsvergunningsprocedure ‘van A tot Z’, met veel aandacht voor de wijzigingen in de vergunningenregelgeving en voor de nieuwe tendensen in de vergunningenrechtspraak van 2024.De omgevingsvergunningsprocedure: op weg naar een modulair systeemSpreker: Annelies Maes (Gebiedsmedewerker Omgevingsvergunningen)De modernisering van de milieueffectrapportage binnen de omgevingsvergunningverleningSpreker: Bastiaan Schelstraete (Stibbe)",
+          "combined_text": "SUMMER ACADEMY - De omgevingsvergunning: een stand van zaken (lesdeel 1)Online beschikbaarNummerOVBToegekende punten3BeschrijvingIn nauwe interactie met de deelnemers overlopen Isabelle Larmuseau (VVOR) en Arnout Schelstraete (UGent) de volledige omgevingsvergunningsprocedure ‘van A tot Z’, met veel aandacht voor de wijzigingen in de vergunningenregelgeving en voor de nieuwe tendensen in de vergunningenrechtspraak van 2024.De omgevingsvergunningsprocedure: op weg naar een modulair systeemSpreker: Annelies Maes (Gebiedsmedewerker Omgevingsvergunningen)De modernisering van de milieueffectrapportage binnen de omgevingsvergunningverleningSpreker: Bastiaan Schelstraete (Stibbe)OpmerkingenDeKMO-portefeuillekan voor de betaling van het inschrijvingsgeld worden aangewend. Voor initiatieven in het kader van levenslang leren, waarvoor je inschrijft bij de academie, gebruik je het UGent-erkenningsnummer DV.O103194 (Thema: Duurzaamheid).Online deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25 om 23u59)InschrijvenPrijs€ 125,00Eventuele kortingsprijs afh. van uw profiel (zie winkelmandje)11/06/2025 09:00 – 30/09/2025 23:59| voeg toe aan kalenderToevoegen aan winkelmandje"
         },
-        "field-teachers": {
-          "text": "Prof. dr. Wim Verbaal",
-          "links": [
-            {
-              "text": "Prof. dr. Wim Verbaal",
-              "url": "https://humanitiesacademie.ugent.be/lesgever/wim-verbaal"
-            }
-          ]
-        },
+        "field-ebp-num": "OVB",
+        "field-ebp-points": "3",
         "field-previous-lessons-required": "",
-        "field-description": {
-          "text": "inschrijven(mogelijk vanaf 1 augustus)",
-          "links": [
-            {
-              "text": "inschrijven",
-              "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2024&arCode=ACVELI"
-            }
-          ]
-        },
-        "price": "€ 357,00",
-        "field-lesson-dates": "10/02/2025 08:30 – 05/07/2025 19:00",
-        "field-location-ref": "Campus Boekentoren"
-      },
-      "academy": "Humanities Academie",
-      "categories": [
-        "Micro-credentials"
-      ]
-    },
-    {
-      "url": "https://humanitiesacademie.ugent.be/MC/literaturen-van-azie-en-afrika",
-      "title": "Micro-credential Literaturen van Azië en Afrika",
-      "fields": {
-        "title": "Literaturen van Azië en Afrika (micro-credential)",
-        "field-course-id": "MC9",
-        "field-course-language": "Nederlands",
-        "field-course-category": {
-          "text": "Micro-credentials",
-          "links": [
-            {
-              "text": "Micro-credentials",
-              "url": "https://humanitiesacademie.ugent.be/programma/micro-credentials"
-            }
-          ]
-        },
-        "field-course-desc": "Literatuur geeft aan wat er leeft, waar debat over is, wat mensen beweegt. Auteurs en performers reflecteren door hun woordkunst op politiek-economische ontwikkelingen, sociale relaties, machtsstructuren en hun individuele engagement daarmee. Literatuur is op die manier allicht geen rechtstreekse spiegel, maar wel de polsslag van de samenleving.In de meeste literatuurwetenschappelijke benaderingen wordt uitgegaan van de ‘Westerse’ canon; er is meestal maar bitter weinig aandacht voor literaturen uit Azië en Afrika. Deze opleiding wil dat doorbreken en Aziatische en Afrikaanse literaturen centraal stellen. Het interessante is dat daarmee meteen de theoretische parameters van het begrip ‘literatuur’ zelf in vraag komen te staan: het begrip is immers nauw verbonden met precies die ‘Westerse’ canon.Wat is een micro-credential?Voor wie?je hebt interesse in literaturen in het algemeenje toont belangstelling voor Afrikaanse en Aziatische geschiedenis en samenlevingen in het bijzonderNa afloop heb je:een degelijk inzicht in de mondelinge en schriftelijke literaturen van Azië en Afrika, alsook in andere expressievormen in nieuwe media;kennis van de literatuurgeschiedenis van Azië en Afrika en de voornaamste literaire genres en hun vertegenwoordigers;een goed begrip van de relaties tussen de literaire genres en het bredere maatschappelijke veld, zowel op lokaal als globaal vlak;kennis van de voornaamste literaire debatten die je ook kan koppelen aan de maatschappelijk-culturele achtergrond en socio-literaire context;de vaardigheid om zelfstandig kritisch te reflecteren, zowel op het literatuurwetenschappelijk begrippenapparaat als op canonvorming.",
-        "field-course-program": "Programma onder voorbehoudPraktisch?on campus hoorcollegesmet ruime mogelijkheid totactieve participatielivestreamenopnamesom zowel synchroon als asynchroon mee te volgenModule 1: Inleiding tot de literaturen van Afrika12 hoorcollegeseerste semesterwoensdag 8u30 - 11u30on campus:Blandijn, leslokaal 2.21, BlandijnModule 2: Oosterse literaturen: Japan12 hoorcollegestweede semesterdinsdag 16u00 - 19u00on campus: auditorium B - Walter Soete, T2, campus UfoModule 3: Oosterse literaturen: Zuid-Azië12 hoorcollegestweede semesterdonderdag 13u00 - 16u00on campus:Blandijn, leslokaal 1.12Onderwijstaal?hoorcolleges in het Nederlandsgastlessen vooral in het Engels, mogelijks ook in het Franshandboeken en leesmateriaal in het Nederlands en het EngelsInhoud?Module 1: Inleiding tot de literaturen van AfrikaAfrika is niet alleen de bakermat van de mensheid, maar ook van prachtige literaire genres. Naast oude schriftculturen, bijvoorbeeld in Ethiopië, Noord-Afrika en het Swahiligebied, kent het continent ook veel mondelinge genres: mythen, spreekwoorden, poëzie, epen, theater, enz.De geschreven literaturen zijn zowel geïnspireerd door deze mondelinge genres als door Europese tradities zoals de roman. We vinden teksten geschreven in Afrikaanse talen en veel geschreven literatuur in Europese talen. Afrika’s literatuur heeft ook de weg gevonden naar nieuwe media, waar geëxperimenteerd wordt met een verscheidenheid aan literaire vormen. Oude en nieuwe tradities, genres, auteurs en ontwikkelingen komen in deze cursus over Afrikaanse literaturen volop aan bod, gezien in de bredere (inter)nationale context.Module 2: Oosterse literaturen: JapanDe Japanse literatuur heeft een lange, rijkgevarieerde geschiedenis en bevat tal van werken die de tand des tijds hebben doorstaan.Het verhaal van Genjivan de hofdame Murasaki Shikibu (begin elfde eeuw) wordt vaak de oudste roman ter wereld genoemd, en de eerste bloemlezing gedichtenManyoshustamt al uit de achtste eeuw. Aanvankelijk was, net zoals bij de rest van de Japanse kunst en cultuur, de Chinese invloed groot, maar gaandeweg ontstonden eigen literaire vormen, zoals detankaen dehaiku. Toen Japan midden negentiende eeuw, na een lange periode van zelfopgelegde nationale isolatie, opnieuw zijn grenzen openstelde, ging het meteen gretig op zoek naar westerse kennis, niet alleen technisch, wetenschappelijk en militair, maar ook cultureel. De moderne westerse schrijvers werden met grote belangstelling gelezen en algauw was hun impact op de Japanse literatuur onmiskenbaar.Deze module gaat na hoe Japanse auteurs de afgelopen honderd jaar omgingen met die buitenlandse invloeden en hoe 'Japans' hun werk is gebleven in verschillende fases van modernisering en internationalisering. Verder is er aandacht voor de problematiek van het vertalen van literatuur uit het ‘Verre’ Oosten.Module 3: Oosterse literaturen: Zuid-AziëDit vak geeft een inleiding tot de teksttradities van Zuid-Azië - de regio van en rond India - van bij hun begin, ca. 3500 jaar geleden, tot het heden.Aan de hand van uittreksels (in vertaling) uit canonieke werken in Indische talen, in het bijzonder Sanskrit en Hindi, bestudeer je de evolutie en veelzijdigheid van het begrip ‘literatuur’ in de Zuid-Aziatische context. De vele verschillende genres worden bekeken, beginnende bij de Vedische hymnen, vroege filosofische literatuur in de Upaniṣads, over de grote epen, de rijke verhaalliteratuur, de hoofse schone letteren en theaterstukken, tot traditionele wetenschappelijke literatuur (o.a. Āyurvedische teksten), en het ontstaan van hedendaagse genres als de novelles en kortverhalen. Je refelcteert over de bredere socioculturele en religieuze contexten van het ontstaan van deze teksten, en over de evolutie van hun receptie bij de diverse gemeenschappen in Zuid-Azië tot ver daarbuiten, in het bijzonder over hun betekenis voor de hedendaagse wereld.studiefiche Module 1: Inleiding tot de literaturen van Afrikastudiefiche Module 2: Oosterse literaturen: Japanstudiefiche Module 3: Oosterse literaturen: Zuid-AziëEvaluatie?Voor elke module:begeleidwerkstukschriftelijk examenToelating?geen voorkennisnodigvan enige Afrikaanse of Aziatische taalpassieve kennis van Engels en Frans om de gastlessen te kunnen volgen (vertaling kan gefaciliteerd worden)",
-        "field-course-remarks": "Idealiter ben je ingeschreven ten laatste bij de start van de eerste les. Dit is belangrijk met het oog op de begeleide werkstukken.",
-        "field-course-img": "",
-        "thumbnail": "",
-        "variations": {
-          "title": "Literaturen van Azië en Afrika (micro-credential)",
-          "teachers": {
-            "text": "Prof. dr. Inge Brinkman, Prof. dr. Eva De Clercq, Prof. dr. Luc Van Haute",
-            "links": [
-              {
-                "text": "Prof. dr. Inge Brinkman",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/inge-brinkman"
-              },
-              {
-                "text": "Prof. dr. Eva De Clercq",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/eva-de-clercq"
-              },
-              {
-                "text": "Prof. dr. Luc Van Haute",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/luc-van-haute"
-              }
-            ]
-          },
-          "description": {
-            "text": "inschrijven(kan vanaf 1 augustus)",
-            "links": [
-              {
-                "text": "inschrijven",
-                "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2024&arCode=ACLIAA"
-              }
-            ]
-          },
-          "price": "€ 495,00",
-          "lesson_dates": "23/09/2024 - 08:30 – 29/09/2025 - 19:00",
-          "location": {
-            "text": "Campus Boekentoren",
-            "url": "https://humanitiesacademie.ugent.be/locaties/campus-boekentoren"
-          },
-          "field-teachers": {
-            "text": "Prof. dr. Inge Brinkman, Prof. dr. Eva De Clercq, Prof. dr. Luc Van Haute",
-            "links": [
-              {
-                "text": "Prof. dr. Inge Brinkman",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/inge-brinkman"
-              },
-              {
-                "text": "Prof. dr. Eva De Clercq",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/eva-de-clercq"
-              },
-              {
-                "text": "Prof. dr. Luc Van Haute",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/luc-van-haute"
-              }
-            ]
-          },
-          "field-lesson-dates": "23/09/2024 - 08:30 – 29/09/2025 - 19:00",
-          "field-location-ref": {
-            "text": "Campus Boekentoren",
-            "url": "https://humanitiesacademie.ugent.be/locaties/campus-boekentoren"
-          },
-          "field-description": {
-            "text": "inschrijven(kan vanaf 1 augustus)",
-            "links": [
-              {
-                "text": "inschrijven",
-                "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2024&arCode=ACLIAA"
-              }
-            ]
-          },
-          "combined_text": "Literaturen van Azië en Afrika (micro-credential)Online beschikbaarLesgever(s)Prof. dr. Inge BrinkmanProf. dr. Eva De ClercqProf. dr. Luc Van HauteBeschrijvinginschrijven(kan vanaf 1 augustus)InschrijvenPrijs€ 495,0023/09/2024 - 08:30 – 29/09/2025 - 19:00| voeg toe aan kalenderCampus Boekentoren"
-        },
-        "field-teachers": {
-          "text": "Prof. dr. Inge Brinkman",
-          "links": [
-            {
-              "text": "Prof. dr. Inge Brinkman",
-              "url": "https://humanitiesacademie.ugent.be/lesgever/inge-brinkman"
-            }
-          ]
-        },
-        "field-previous-lessons-required": "",
-        "field-description": {
-          "text": "inschrijven(kan vanaf 1 augustus)",
-          "links": [
-            {
-              "text": "inschrijven",
-              "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2024&arCode=ACLIAA"
-            }
-          ]
-        },
-        "price": "€ 495,00",
-        "field-lesson-dates": "23/09/2024 - 08:30 – 29/09/2025 - 19:00",
-        "field-location-ref": "Campus Boekentoren"
-      },
-      "academy": "Humanities Academie",
-      "categories": [
-        "Micro-credentials"
-      ]
-    },
-    {
-      "url": "https://humanitiesacademie.ugent.be/programma/studiedagen/2025-2026-opl021-human-osteology",
-      "title": "Human Osteology",
-      "fields": {
-        "title": "Human Osteology",
-        "field-course-id": "OPL021",
-        "field-course-language": "Nederlands",
-        "field-course-category": {
-          "text": "Studiedagen",
-          "links": [
-            {
-              "text": "Studiedagen",
-              "url": "https://humanitiesacademie.ugent.be/programma/studiedagen"
-            }
-          ]
-        },
-        "field-course-desc": "During this one-week hands-on beginners course, we aim toprovide participants with a working knowledge of human osteology;provide an ethical framework for dealing with human remains;provide an overview of the informational value of human remains for different fields, including a brief introduction to biomolecular methods;provide hands-on experience with human remains;familiarize them with the relevant tools and resources for them to subsequently broaden as well as deepen this knowledge;The following topics will be covered:the human skeleton (overview)ethical frameworkbasic bone biologyanatomical terminologycranial anatomypostcranial anatomycommon anatomical variationmacroscopic ways to determine whether bone is human or animalbasic osteobiographical techniques for age and sex estimation (introduction)basic pathology: how to recognize pathological lesions (introduction)basic biomolecular sampling techniquesLearning outcomesParticipants who have successfully completed this coursecan distinguish human from animal bone;can reconstruct al human skeleton;are actively aware of the complexity of the human skeleton;are actively aware of what parts are located where in the human body;can correctly identify the most important human bones and determine the side (left / right);can also correctly identify the smaller, more complex bones;are actively aware of the presence of more skeletal parts in the remains of immature individuals;have a basic knowledge of the techniques for determining age and sex, and know where to find more information about this;have a basic knowledge of pathological features on the human skeleton;have a basic knowledge of biomolecular techniques and possible sampling;have insight into the proper ethical handling of human remains.For the duration of the course, participants will need to study in their own time on a daily basis.",
-        "field-course-program": "Practical?Monday 22nd September to Friday 26th September 2025Monday – Thursday: 9.30am – 4.30pm: 1,5h lecture followed by 4,5h practical (individual as well as small groups (2-3 persons) with complete skeletons as well as loose fragements, examples of age and sex, pathological elements, and animal material for comparison)Friday: 9.30am – 4.30pm Study time and evaluationGent, Campus Ledeganckmax 15 participantsSyllabusCertificate of evaluationLanguage: EnglishFor Whom?This course is aimed atprofessionals working in medicolegal fields, rescue services, field archaeology, museums;(PhD) students in history and archaeology looking to gain a better understanding of osteology in archaeological contexts;anyone who has an interest in learning more about human skeletal anatomy.No prior knowledge or experience requiredRegistration fee€975standard registration fee€775 for (PhD) students and job seekersAt checkout, you can indicate whether you are eligible for a discount.Are these prices not feasible for you?Contact us.Together we will look for a solution.Need help?Check our manual.Contact us.",
-        "field-course-remarks": "Deze opleiding is een initiatief van hetArcheOs laboratoriumvan de vakgroep Archeologie, UGent.",
-        "field-course-img": "",
-        "thumbnail": "",
-        "variations": {
-          "title": "Human Osteology",
-          "teachers": {
-            "text": "Prof. dr. Isabelle De Groote, Dr. Jessica Palmer, Liesbeth Massagé",
-            "links": [
-              {
-                "text": "Prof. dr. Isabelle De Groote",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/isabelle-de-groote"
-              },
-              {
-                "text": "Dr. Jessica Palmer",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/jessica-palmer"
-              },
-              {
-                "text": "Liesbeth Massagé",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/liesbeth-massage"
-              }
-            ]
-          },
-          "price": "€ 975,00",
-          "lesson_dates": "22/09/2025 09:30 – 26/09/2025 16:30",
-          "location": {
-            "text": "Campus Ledeganck",
-            "url": "https://humanitiesacademie.ugent.be/locaties/campus-ledeganck"
-          },
-          "field-teachers": {
-            "text": "Prof. dr. Isabelle De Groote, Dr. Jessica Palmer, Liesbeth Massagé",
-            "links": [
-              {
-                "text": "Prof. dr. Isabelle De Groote",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/isabelle-de-groote"
-              },
-              {
-                "text": "Dr. Jessica Palmer",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/jessica-palmer"
-              },
-              {
-                "text": "Liesbeth Massagé",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/liesbeth-massage"
-              }
-            ]
-          },
-          "field-lesson-dates": "22/09/2025 09:30 – 26/09/2025 16:30",
-          "field-location-ref": {
-            "text": "Campus Ledeganck",
-            "url": "https://humanitiesacademie.ugent.be/locaties/campus-ledeganck"
-          },
-          "combined_text": "Human OsteologyLesgever(s)Prof. dr. Isabelle De GrooteDr. Jessica PalmerLiesbeth MassagéOpmerkingenZijn deze prijzen voor jou niet haalbaar?Contacteer ons.Plaatsen voor UGent'ers zijn beperkt. Ben je UGent'er en wil je deze opleiding volgen?Contacteer ons.InschrijvenPrijs€ 975,00Eventuele kortingsprijs afh. van uw profiel (zie winkelmandje)22/09/2025 09:30 – 26/09/2025 16:30| voeg toe aan kalenderCampus LedeganckToevoegen aan winkelmandje"
-        },
-        "field-teachers": {
-          "text": "Prof. dr. Isabelle De Groote",
-          "links": [
-            {
-              "text": "Prof. dr. Isabelle De Groote",
-              "url": "https://humanitiesacademie.ugent.be/lesgever/isabelle-de-groote"
-            }
-          ]
-        },
-        "field-previous-lessons-required": "",
+        "field-description": "Grote milieurampen leiden tot veel verontwaardiging bij het publiek. Er bestaat een grote consensus over het feit dat de vervuiler de schade die hij veroorzaakt moet betalen. Maar dat blijkt gemakkelijker gezegd dan gedaan. Want het vergoeden van ‘pure’ schade aan het leefmilieu geeft aanleiding tot heel wat complexe juridische vraagstukken. Wie kan zo’n vergoeding aan de natuur dan claimen, en in welke mate verschilt die van morele schade? Hoe plaatsen we een prijs op schade aan de natuur, wanneer die bijvoorbeeld niet zomaar in natuur hersteld kan worden? Bij de recente hervorming van het Burgerlijk Wetboek koos men ervoor om géén expliciete regeling rond milieuschade te voorzien. Ook doken complexe bevoegdheidsrechtelijke vraagstukken op. En wat dan gezegd van de uitspraak van het Brusselse Hof van Beroep in de klimaatzaak, waar een deur wordt geopend richting de vergoeding van angstschade? En van de recente Cassatie-rechtspraak die de deur plots sluit voor schadeclaims in dierenwelzijnszaken door vzw’s? We duiken tijdens deze studiedag in de veelheid van juridische vragen die opduiken rond het thema van de vergoeding van de milieuschade en blikken vooruit richting mogelijke hervormingen.Réparer le préjudice écologique en droit civil: un casse-tête constitutionnel?Spreker: Charles-Hubert Born (UCLouvain)Milieuschade claimen bij de burgerlijke rechter – analyse in het licht van de recente rechtspraakontwikkelingenSpreker: Ann Carette (UAntwerpen en Raad voor Vergunningsbetwistingen)De waardering van schade aan de natuur : lessen uit het BIOVAL-projectSpreker: Farah Bouqulelle (UGent)",
         "field-remarks": {
-          "text": "Zijn deze prijzen voor jou niet haalbaar?Contacteer ons.Plaatsen voor UGent'ers zijn beperkt. Ben je UGent'er en wil je deze opleiding volgen?Contacteer ons.",
+          "text": "DeKMO-portefeuillekan voor de betaling van het inschrijvingsgeld worden aangewend. Voor initiatieven in het kader van levenslang leren, waarvoor je inschrijft bij de academie, gebruik je het UGent-erkenningsnummer DV.O103194 (Thema: Duurzaamheid).Online deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25 om 23u59)",
           "links": [
             {
-              "text": "Contacteer ons.",
-              "url": "mailto:humanitiesacademie@ugent.be?subject=Biologische%20Antropologie%3A%20Osteologie%20voor%20Archeologen"
+              "text": "KMO-portefeuille",
+              "url": "https://gandaiusacademy.ugent.be/subsidies"
+            }
+          ]
+        },
+        "price": "€ 125,00",
+        "field-lesson-dates": "11/06/2025 09:00 – 30/09/2025 23:59"
+      },
+      "academy": "Gandaius Permanente Vorming",
+      "categories": [
+        "Rechtsdomeinen",
+        "Webinars / on demand"
+      ]
+    },
+    {
+      "url": "https://gandaiusacademy.ugent.be/programma/gerechtsdeskundige/2022-2023/beroepsspecifiek",
+      "title": "Beroepsspecifieke opleidingen",
+      "fields": {
+        "title": "Beroepsspecifieke opleidingen",
+        "field-course-id": "beroepsspecifiek",
+        "field-course-language": "Nederlands",
+        "field-course-category": {
+          "text": "Gerechtsdeskundige",
+          "links": [
+            {
+              "text": "Gerechtsdeskundige",
+              "url": "https://gandaiusacademy.ugent.be/programma/gerechtsdeskundige"
+            }
+          ]
+        },
+        "field-course-desc": "Ben je op zoek naar een beroepsspecifieke lezing, studiedag, opleiding of micro-credential? Dan kijk je best eens in het aanbod van onze zusteracademies!Ga naar de overzichtspagina met alle Academies van LevensLang Leren aan de Universiteit Gent.",
+        "field-course-img": "",
+        "thumbnail": ""
+      },
+      "academy": "Gandaius Permanente Vorming",
+      "categories": [
+        "Gerechtsdeskundige"
+      ]
+    },
+    {
+      "url": "https://gandaiusacademy.ugent.be/programma/micro-credentials/2025-2026-ga097-mc-familierecht-micro-credential-verdiepend-personen",
+      "title": "Micro-credential 'Verdiepend personen- familie- en relatievermogensrecht'",
+      "fields": {
+        "title": "Micro-credential 'Verdiepend personen-, relatie- en familievermogensrecht'",
+        "field-course-id": "GA097-MC-familierecht",
+        "field-course-language": "Nederlands",
+        "field-course-category": {
+          "text": "Micro-credentials",
+          "links": [
+            {
+              "text": "Micro-credentials",
+              "url": "https://gandaiusacademy.ugent.be/programma/microcredentials"
+            }
+          ]
+        },
+        "field-course-desc": "Ontdek de nieuwste ontwikkelingen in personen-, familie- en relatievermogensrecht met onze boeiende micro-credential.Deze micro-credential biedt een verdieping en uitbreiding van basiskennis over personen-, familie- en relatievermogensrecht, met een speciale focus op recente wijzigingen in wetgeving en rechtspraak die relevant zijn voor professionals zoals advocaten, magistraten, notarissen en ambtenaren van de burgerlijke stand.We richten ons op de meest recente ontwikkelingen in het personen- en familierecht en familiaal vermogensrecht, inclusief wijzigingen op wetgevend vlak en belangrijke uitspraken in de rechtspraak en doctrine. Onze analyse van het Belgische rechtssysteem wordt gedaan vanuit het perspectief van het gelijkheidsbeginsel en internationale verdragen waaraan ons land gebonden is.Een belangrijk aspect van deze cursus is de focus op recente rechtspraak van het Grondwettelijk Hof, waarin bepalingen uit het interne familierecht worden getoetst aan de grondrechten. We besteden ook aandacht aan de rechtspositie van transgender personen en recent Belgisch empirisch familierechtelijk onderzoek.LessenroosterDe lessen voor deze micro-credential worden gegeven in het tweede semester.Het volledige lessenrooster is hier beschikbaar vanaf eind oktober.",
+        "field-course-remarks": "Je hebt de keuze om de micro-credential on campus te volgen, of naar eigen keuze (van plaats en tijd) de opgenomen lessen te verwerken.",
+        "field-course-img": "",
+        "thumbnail": "",
+        "variations": {
+          "title": "Micro-credential 'Verdiepend personen-, relatie- en familievermogensrecht'",
+          "teachers": {
+            "text": "Prof. dr. Gerd Verschelden",
+            "links": [
+              {
+                "text": "Prof. dr. Gerd Verschelden",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/gerd-verschelden"
+              }
+            ]
+          },
+          "description": {
+            "text": "InschrijvenVoor deze micro-credential kan ueenvoudig inschrijven viadeze link.KMO-portefeuilleDeKMO-portefeuillekan voor de betaling van het inschrijvingsgeld worden aangewend. Voor initiatieven in het kader van levenslang leren waarvoor je inschrijft bij de academie gebruik je het UGent-erkenningsnummer DV.O103194.",
+            "links": [
+              {
+                "text": "eenvoudig inschrijven viadeze link",
+                "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2025&arCode=BCVPFR"
+              },
+              {
+                "text": "KMO-portefeuille",
+                "url": "https://gandaiusacademy.ugent.be/subsidies"
+              }
+            ]
+          },
+          "price": "€ 384,80",
+          "lesson_dates": "09/02/2026 08:30 – 30/06/2026 16:30",
+          "location": {
+            "text": "Campus Aula (Faculteit Recht en Criminologie, UGent)",
+            "url": "https://gandaiusacademy.ugent.be/campus-aula"
+          },
+          "field-teachers": {
+            "text": "Prof. dr. Gerd Verschelden",
+            "links": [
+              {
+                "text": "Prof. dr. Gerd Verschelden",
+                "url": "https://gandaiusacademy.ugent.be/lesgever/gerd-verschelden"
+              }
+            ]
+          },
+          "field-lesson-dates": "09/02/2026 08:30 – 30/06/2026 16:30",
+          "field-location-ref": {
+            "text": "Campus Aula (Faculteit Recht en Criminologie, UGent)",
+            "url": "https://gandaiusacademy.ugent.be/campus-aula"
+          },
+          "field-description": {
+            "text": "InschrijvenVoor deze micro-credential kan ueenvoudig inschrijven viadeze link.KMO-portefeuilleDeKMO-portefeuillekan voor de betaling van het inschrijvingsgeld worden aangewend. Voor initiatieven in het kader van levenslang leren waarvoor je inschrijft bij de academie gebruik je het UGent-erkenningsnummer DV.O103194.",
+            "links": [
+              {
+                "text": "eenvoudig inschrijven viadeze link",
+                "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2025&arCode=BCVPFR"
+              },
+              {
+                "text": "KMO-portefeuille",
+                "url": "https://gandaiusacademy.ugent.be/subsidies"
+              }
+            ]
+          },
+          "combined_text": "Micro-credential 'Verdiepend personen-, relatie- en familievermogensrecht'Online beschikbaarLesgever(s)Prof. dr. Gerd VerscheldenToegekende punten6 studiepuntenBeschrijvingInschrijvenVoor deze micro-credential kan ueenvoudig inschrijven viadeze link.KMO-portefeuilleDeKMO-portefeuillekan voor de betaling van het inschrijvingsgeld worden aangewend. Voor initiatieven in het kader van levenslang leren waarvoor je inschrijft bij de academie gebruik je het UGent-erkenningsnummer DV.O103194.ToelatingsvoorwaardenBasiskennis van het personen- en familierecht is aangeraden.OpmerkingenEindcompetenties:Diepgaande kennis hebben van recent gewijzigde elementen uit het Belgische personen-, familie- en relatievermogensrecht;Dieper inzicht hebben in de historische evolutie van het personen-, familie- en relatievermogensrecht en in de beïnvloeding van deze rechtstak door ethische, politieke, sociologische en economische factoren;Nationale en internationale regelgeving snel vinden, analyseren en gebruiken voor het oplossen van complexe en diepgaande vraagstukken van personen-, familie- en relatievermogensrecht;Kritisch reflecteren over de lacunes in het vigerende personen-, familie- en relatievermogensrecht;Bewust zijn van de nood aan empirisch familierechtelijk onderzoek als substraat voor wetsevaluatie;Kennis hebben van de resultaten van recent Belgisch empirisch familierechtelijk onderzoek;Een wetenschappelijke onderbouwde visie hebben over de richting die het toekomstige personen-, familie- en relatievermogensrecht moet uitgaan;Inschatten van de juridische implicaties van nieuw samengestelde gezinnen, aanpassing van de geslachtsregistratie en medisch begeleide voortplanting;Personen en gezinnen adequaat juridisch begeleiden naar een op maat gesneden oplossing voor hun persoons-, familie- en relatievermogensrechtelijke problemen met respect voor de diversiteit in de gezinsvormen, het geslacht en de seksuele geaardheid van elk individu;Een complex juridisch vraagstuk van personen-, familie- of relatievermogensrecht mondeling vertalen en oplossen op een manier die begrijpelijk is voor een niet-jurist;InschrijvenPrijs€ 384,8009/02/2026 08:30 – 30/06/2026 16:30| voeg toe aan kalenderCampus Aula (Faculteit Recht en Criminologie, UGent)"
+        },
+        "field-teachers": {
+          "text": "Prof. dr. Gerd Verschelden",
+          "links": [
+            {
+              "text": "Prof. dr. Gerd Verschelden",
+              "url": "https://gandaiusacademy.ugent.be/lesgever/gerd-verschelden"
+            }
+          ]
+        },
+        "field-ebp-points": "6 studiepunten",
+        "field-previous-lessons-required": "",
+        "field-description": {
+          "text": "InschrijvenVoor deze micro-credential kan ueenvoudig inschrijven viadeze link.KMO-portefeuilleDeKMO-portefeuillekan voor de betaling van het inschrijvingsgeld worden aangewend. Voor initiatieven in het kader van levenslang leren waarvoor je inschrijft bij de academie gebruik je het UGent-erkenningsnummer DV.O103194.",
+          "links": [
+            {
+              "text": "eenvoudig inschrijven viadeze link",
+              "url": "https://oasis.ugent.be/oasis-web/registratie?0&target=inschrijven&aj=2025&arCode=BCVPFR"
             },
             {
-              "text": "Contacteer ons.",
-              "url": "mailto:humanitiesacademie@ugent.be?subject=Biologische%20Antropologie%3A%20Osteologie%20voor%20Archeologen"
+              "text": "KMO-portefeuille",
+              "url": "https://gandaiusacademy.ugent.be/subsidies"
             }
           ]
         },
-        "price": "€ 975,00",
-        "field-lesson-dates": "22/09/2025 09:30 – 26/09/2025 16:30",
-        "field-location-ref": "Campus Ledeganck"
+        "field-target-audience": "Basiskennis van het personen- en familierecht is aangeraden.",
+        "field-remarks": "Eindcompetenties:Diepgaande kennis hebben van recent gewijzigde elementen uit het Belgische personen-, familie- en relatievermogensrecht;Dieper inzicht hebben in de historische evolutie van het personen-, familie- en relatievermogensrecht en in de beïnvloeding van deze rechtstak door ethische, politieke, sociologische en economische factoren;Nationale en internationale regelgeving snel vinden, analyseren en gebruiken voor het oplossen van complexe en diepgaande vraagstukken van personen-, familie- en relatievermogensrecht;Kritisch reflecteren over de lacunes in het vigerende personen-, familie- en relatievermogensrecht;Bewust zijn van de nood aan empirisch familierechtelijk onderzoek als substraat voor wetsevaluatie;Kennis hebben van de resultaten van recent Belgisch empirisch familierechtelijk onderzoek;Een wetenschappelijke onderbouwde visie hebben over de richting die het toekomstige personen-, familie- en relatievermogensrecht moet uitgaan;Inschatten van de juridische implicaties van nieuw samengestelde gezinnen, aanpassing van de geslachtsregistratie en medisch begeleide voortplanting;Personen en gezinnen adequaat juridisch begeleiden naar een op maat gesneden oplossing voor hun persoons-, familie- en relatievermogensrechtelijke problemen met respect voor de diversiteit in de gezinsvormen, het geslacht en de seksuele geaardheid van elk individu;Een complex juridisch vraagstuk van personen-, familie- of relatievermogensrecht mondeling vertalen en oplossen op een manier die begrijpelijk is voor een niet-jurist;",
+        "price": "€ 384,80",
+        "field-lesson-dates": "09/02/2026 08:30 – 30/06/2026 16:30",
+        "field-location-ref": "Campus Aula (Faculteit Recht en Criminologie, UGent)"
       },
-      "academy": "Humanities Academie",
+      "academy": "Gandaius Permanente Vorming",
       "categories": [
-        "Studiedagen"
+        "Micro-credentials"
       ]
     },
     {
-      "url": "https://humanitiesacademie.ugent.be/programma/studiedagen/2025-2026-opl023-biologische-antropologie-osteologie-voor-archeologen",
-      "title": "Biologische Antropologie: Osteologie voor Archeologen - geannuleerd",
+      "url": "https://gandaiusacademy.ugent.be/inschrijven-belangrijk-om-weten",
+      "title": "Inschrijven: belangrijk om weten",
       "fields": {
-        "title": "Dagopleiding ​biologische antropologie: Osteologie​ voor archeologen",
-        "field-course-id": "OPL023",
-        "field-course-language": "Nederlands",
-        "field-course-category": {
-          "text": "Studiedagen",
-          "links": [
-            {
-              "text": "Studiedagen",
-              "url": "https://humanitiesacademie.ugent.be/programma/studiedagen"
-            }
-          ]
-        },
-        "field-course-desc": "Ben jij een archeoloog? Kom jij tijdens opgravingen in aanraking met menselijke resten? Dan is deze praktijkgerichte beginnerscursus menselijke osteologie iets voor jou.Tijdens deze opleidingbrengen we je een absolutebasiskennis menselijke osteologiebij;reiken we je derelevante bronnenaan om je kennis vervolgens te verbreden;Na afloop van deze opleidingkan je een menselijkskeletin anatomisch verbandreconstrueren;kan je de voornaamste menselijkebeenderencorrectidentificeren;kan je de kleinere complexere botten anatomischsitueren;ben je je actief bewust van de complexiteit van het menselijke skelet en wat voor onderdelen zich waar in het lichaam bevinden, om hier op het veld op te kunnen anticiperen (e.g. de vele kleine en bijgevolg vaak gemiste botten in de pols);ben je je actief bewust van de aanwezigheid van meer skeletonderdelen bij resten van onvolwassen individuen;heb je eendenk-en referentiekadervoor de informatiewaarde van menselijke resten en hun potentieel binnen de archeologische vraagstelling en site.Illustratie: Leonard Cools",
-        "field-course-program": "Praktisch?vrijdag 20 juni 202509:30 - 12:30 en 13:30 - 16:30Gent, Campus Ledeganckmax 15 deelnemershoorcollegevan anderhalf uurgevolgd doorpractica(afwisselend individueel / in kleine groep) zowel met volledige skeletten als met losse elementen, om de menselijke variatie te kaderensyllabusgetuigschriftInschrijven kan tot en met vrijdag 13 juni.Doelgroep?veldarcheologen werkzaam in de commerciële archeologische sector(PhD) studentenUGent'ers die deze opleiding willen volgen, nemen contact op methumanitiesacademie@ugent.be.Toelatingsvoorwaarden?Geen ervaring met of kennis van fysische antropologie vereist.Inschrijvingsgeld€225standaard inschrijvingsgeld€175 voor (PhD) studenten en werkzoekendenBij het afrekenen, kan je aanduiden of je al dan niet in aanmerking komt voor een korting.Zijn deze prijzen voor jou niet haalbaar?Contacteer ons.Samen gaan we op zoek naar een oplossing.Hulp nodig?Bekijk onze handleiding.Contacteer ons.",
-        "field-course-remarks": "Deze opleiding is een initiatief van hetArcheOs laboratoriumvan de vakgroep Archeologie, UGent.",
-        "field-course-img": "",
-        "thumbnail": "",
-        "variations": {
-          "title": "Dagopleiding ​biologische antropologie: Osteologie​ voor archeologen",
-          "teachers": {
-            "text": "Prof. dr. Isabelle De Groote, Liesbeth Massagé, Dr. Jessica Palmer",
-            "links": [
-              {
-                "text": "Prof. dr. Isabelle De Groote",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/isabelle-de-groote"
-              },
-              {
-                "text": "Liesbeth Massagé",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/liesbeth-massage"
-              },
-              {
-                "text": "Dr. Jessica Palmer",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/jessica-palmer"
-              }
-            ]
-          },
-          "price": "€ 225,00",
-          "lesson_dates": "20/06/2025 09:30 – 16:30",
-          "location": {
-            "text": "Campus Ledeganck",
-            "url": "https://humanitiesacademie.ugent.be/locaties/campus-ledeganck"
-          },
-          "field-teachers": {
-            "text": "Prof. dr. Isabelle De Groote, Liesbeth Massagé, Dr. Jessica Palmer",
-            "links": [
-              {
-                "text": "Prof. dr. Isabelle De Groote",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/isabelle-de-groote"
-              },
-              {
-                "text": "Liesbeth Massagé",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/liesbeth-massage"
-              },
-              {
-                "text": "Dr. Jessica Palmer",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/jessica-palmer"
-              }
-            ]
-          },
-          "field-lesson-dates": "20/06/2025 09:30 – 16:30",
-          "field-location-ref": {
-            "text": "Campus Ledeganck",
-            "url": "https://humanitiesacademie.ugent.be/locaties/campus-ledeganck"
-          },
-          "combined_text": "Dagopleiding ​biologische antropologie: Osteologie​ voor archeologenLesgever(s)Prof. dr. Isabelle De GrooteLiesbeth MassagéDr. Jessica PalmerOpmerkingenZijn deze prijzen voor jou niet haalbaar?Contacteer ons.Plaatsen voor UGent'ers zijn beperkt. Ben je UGent'er en wil je deze opleiding volgen?Contacteer ons.InschrijvenPrijs€ 225,0020/06/2025 09:30 – 16:30| voeg toe aan kalenderCampus Ledeganck"
-        },
-        "field-teachers": {
-          "text": "Prof. dr. Isabelle De Groote",
-          "links": [
-            {
-              "text": "Prof. dr. Isabelle De Groote",
-              "url": "https://humanitiesacademie.ugent.be/lesgever/isabelle-de-groote"
-            }
-          ]
-        },
-        "field-previous-lessons-required": "",
-        "field-remarks": {
-          "text": "Zijn deze prijzen voor jou niet haalbaar?Contacteer ons.Plaatsen voor UGent'ers zijn beperkt. Ben je UGent'er en wil je deze opleiding volgen?Contacteer ons.",
-          "links": [
-            {
-              "text": "Contacteer ons.",
-              "url": "mailto:humanitiesacademie@ugent.be?subject=Biologische%20Antropologie%3A%20Osteologie%20voor%20Archeologen"
-            },
-            {
-              "text": "Contacteer ons.",
-              "url": "mailto:humanitiesacademie@ugent.be?subject=Biologische%20Antropologie%3A%20Osteologie%20voor%20Archeologen"
-            }
-          ]
-        },
-        "price": "€ 225,00",
-        "field-lesson-dates": "20/06/2025 09:30 – 16:30",
-        "field-location-ref": "Campus Ledeganck"
+        "body": "Bekijk onzeTips & Tricks voor het inloggen om inlogproblemen te vermijden.",
+        "field-body": "Dit platform is een persoonlijk vormingsdossierOm een inschrijving af te ronden, is het verplicht om in te loggen met behulp van een e-mailadres. Idealiter is dit ook het e-mailadres van de persoon die de gekozen opleiding volgt. Vervolgens vult u de naam en facturatiegegevens in, evenals het prijstarief dat van toepassing is.Elke loginnaam bevat dus een persoonlijk vormingsdossier.",
+        "field-text": "Onze vormingsinitiatieven staan open voor fysieke deelname (in het auditorium) en/of deelname via livestream.Bij elk initiatief wordt geduid hoe u kan deelnemen:Ter plaatseOnline (in sommige gevallen staat 'online' gelijk aan het bekijken van de opname achteraf; dit wordt dan steeds expliciet vermeld)BeideWaar mogelijk voorzien wij ook een opname die u achteraf nog kan bekijken. Twijfelt u of dit het geval is en wenst u er graag gebruik van te maken, aarzel dan niet om vooraf even te polsen viagandaius@ugent.be."
       },
-      "academy": "Humanities Academie",
+      "academy": "Gandaius Permanente Vorming",
       "categories": [
-        "Studiedagen"
+        "Praktische hulp"
       ]
     },
     {
-      "url": "https://humanitiesacademie.ugent.be/programma/lezingen/2024-2025-lez052-eilandhoppen-in-helleense-zeeen-cultuur-en-geschiedenis-van-de",
-      "title": "Eilandhoppen in Helleense zeeën: cultuur en geschiedenis van de Griekse eilanden",
+      "url": "https://gandaiusacademy.ugent.be/subsidies",
+      "title": "Subsidies",
       "fields": {
-        "title": "Boekvoorstelling: ‘Leidraad door het labyrint: de macht van klassieke mythen in onzekere tijden’ (Evelien Bracke)",
-        "field-course-id": "LEZ052",
-        "field-course-language": "Nederlands",
-        "field-course-category": {
-          "text": "Lezingen",
+        "body": "Voor de meeste opleidingen en studiedagen vragen we een erkenning aan bij de kmo-portefeuille, zodat je er gebruik van kan maken voor het betalen van het inschrijvingsgeld.Bij enkele opleidingen is het ook mogelijk om een beroep te doen op het Vlaams Opleidingsverlof (VOV).Wanneer welke subsidies mogelijk zijn, staat vermeld bij elke opleiding en studiedag.",
+        "field-body": {
+          "text": "Kmo-portefeuilleOok na de hervorming van de kmo-portefeuille in 2023 kan u deze gebruiken voor (de meeste van) onze activiteiten.Gebruik het volgende erkenningsnummer bij uw aanvraag bij de kmo-portefeuille:DV.O103194(opgelet: na 'DV.' volgt de hoofdletter O en vervolgens 6 cijfers):voor al onze studiedagen, congressen en vormingsreeksen.Belangrijk:Uw aanvraag bij de kmo-portefeuille moet gebeuren vóór de start of uiterlijk 14 dagen na de start van de cursus.U betaalt NIET rechtstreeks aan de UGent. U stort de gevraagde bijdrage in het inschrijvingsgeld aan de kmo-portefeuille, die het volledige inschrijvingsgeld doorstort naar de UGent.Wanneer u op de site van de kmo-portefeuille de opdracht tot betaling aan de UGent geeft, vermeld dan steeds de gestructureerde mededeling op de UGent-factuur.Meer informatie over de kmo-portefeuillewww.kmo-portefeuille.be",
           "links": [
             {
-              "text": "Lezingen",
-              "url": "https://humanitiesacademie.ugent.be/programma/lezingen"
+              "text": "www.kmo-portefeuille.be",
+              "url": "http://www.kmo-portefeuille.be"
             }
           ]
         },
-        "field-media-file": "Download file",
-        "field-course-desc": "Deze lezingenreeks wordt georganiseerd door hetGriekenlandcentrum, een organisatie ontstaan in de schoot van verschillende vakgroepen/afdelingen waar Grieks een rol speelt. Het stelt zich tot doel de Griekse cultuur van de oudheid tot het heden te belichten in al haar aspecten en dit door middel van een zestal voordrachten per jaar, aangevuld met tentoonstellingen, muziekuitvoeringen en culturele uitstappen. Het centrum bouwt voort op de rijke traditie van onze universiteit en wil een brug slaan tussen de academische studie van de Griekse beschaving en de brede maatschappelijke interesse die hiervoor bestaat.Griekenland is altijd al bepaald geweest door zijn eilanden. De omringende zee heeft deze eilanden geïsoleerd, maar ook met de rest van de wereld verbonden. De eilanden hebben reizigers over zee aangetrokken, van stoutmoedige kolonisten in de Oudheid tot hedendaagse migranten en toeristen. Anderzijds hebben eilandbewoners vaak hun eigen tradities koppig behouden. Verhalen, muziek, dialecten, en culturele tradities geven de eilanden hun eigen aparte karakter.In deze lezingenreeks gaan we eilandhoppen. Van Kreta over Sicilië naar Cyprus en kleinere eilanden. We bekijken verschillende elementen die de Griekse eilanden zo uniek, mysterieus, en aantrekkelijk hebben gemaakt. Muziek, economie, literatuur, religie, taal, handel en politiek komen aan bod, in een panorama dat reikt van de vroegste Minoïsche tijd over middeleeuwse mediterrane netwerken tot de migratiestromen van vandaag.",
-        "field-course-program": "1. Ruard Wallis de Vries,Tussen toerist en vluchteling: twee Griekse eilanden nader bekekenwoensdag 16 oktober 2024leslokaal 0.4 (Blandijnberg 2, Gent)2. Dalia Pratali Maffei,A Thousand Years of Dialects in Ancient Cretewoensdag 6 november 2024leslokaal 0.4 (Blandijnberg 2, Gent)3. Patrick Gouw,Het verdeelde eiland van Aphrodite: de 'Cyprus-kwestie' in historisch perspectiefwoensdag 11 december 2024leslokaal 0.4 (Blandijnberg 2, Gent)4. Griekse avond met lezingen, poëzie en muziek ter ere van de Griekse taalwoensdag 5 februari 2025Auditorium 5 Jeanne Wiemer (Blandijnberg 2, Gent)i.s.m. de Griekse ambassade5. Pieter Hendriks - Mikis Theodorakis, meer dan de sirtakiwoensdag 19 februari 2025Auditorium 1 Jan Broeckx (Blandijnberg 2, 9000 Gent)6. Boekvoorstelling: ‘Nieuwgriekse geschiedenis. De Griekse wereld van de late middeleeuwen tot vandaag’ (Pieter Borghart)donderdag 27 maart 2025Liberas (Kramersplein 23, Gent)i.s.m. uitgeverij Houtekiet7. Emma Huig - Fabels, demonen en heiligen: Griekse literatuur op middeleeuws Siciliëwoensdag 23 april 2025leslokaal 0.4 (Blandijnberg 2, 9000 Gent)8. Filmvoorstelling: 'Where are you, Adam?'vrijdag 9 mei 2025Auditorium 1 Jan Broeckx (Blandijnberg 2, 9000 Gent)i.s.m. de orthodoxe parochie Heilige Apostel Andreas van Gent9. Boekvoorstelling: ‘Leidraad door het labyrint: de macht van klassieke mythen in onzekere tijden’ (Evelien Bracke)woensdag 4 juni 2025zaal FORUM in het GUM (Ledeganckstraat 35, Gent)i.s.m. Academia Press",
-        "field-course-remarks": "PraktischLezingen vinden plaats opwoensdagavond om 19u30, inleslokaal 0.4(Blandijnberg 2, Gent), tenzij anders vermeld.Scholieren, studenten(m.u.v. PhD-studenten)en ledenkunnen de lezingengratisbijwonen (met uitzondering van de culturele activiteiten).Niet-ledenbetalen5 eurovoor elke lezingaan de kassa. Vooraf inschrijven voor de lezingen is dus niet nodig.Meer weten?Bezoek dewebsitevan het Griekenlandcentrum.Contacteer hetGriekenlandcentrum.Schrijf je vrijblijvend in op denieuwsbriefvan het Griekenlandcentrum.",
-        "field-course-img": "",
-        "thumbnail": "",
-        "variations": {
-          "title": "Tussen toerist en vluchteling: twee Griekse eilanden nader bekeken",
-          "teachers": {
-            "text": "Ruard Wallis de Vries",
-            "links": [
-              {
-                "text": "Ruard Wallis de Vries",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/ruard-wallis-de-vries"
-              }
-            ]
-          },
-          "description": {
-            "text": "VoorsmaakjeSamos en Leros zijn twee eilanden die, hoewel ze op een heldere dag in elkaars gezichtsveld liggen, een totaal verschillend karakter hebben: Samos is groot, groen, toeristisch, heeft ontelbaar veel stranden maar heeft ook een bevolking die – en dat is uitzonderlijk voor een Grieks eiland – veel meer met landbouw dan met zeevaart bezig is. Leros is klein, tamelijk volgebouwd, vol mannen die de zeven zeeën bevaren hebben, maar ook is het eiland getekend door een bijzondere geschiedenis, waardoor het toerisme nooit een vlucht heeft genomen. Ondertussen zijn er wel veel niet-Griekse expats neergestreken, die het straatbeeld in hoge mate bepalen.Samos en Leros zijn ook de twee eilanden waar ik bloed zweet en tranen heb gelaten, en echt niet alleen omdat ik op beide eilanden een aantal ruïneuze huisjes heb opgeknapt. Het zijn eilanden waarop ik op alle mogelijke manieren geleefd heb, en waar ik me diep verbonden mee voel. Naast mijn eigen perikelen bij de renovatie van de huisjes, maakte ik er ook de economische crisis mee, die al snel werd verdrongen door een grote toestroom aan vluchtelingen uit Syrië, Afghanistan en andere landen. Waarna in de laatste twee jaar een ongekende toestroom aan met name Westeuropese toeristen volgde.Deze eilanden lijken het vermogen te hebben ontwikkeld om (meestal tijdelijk, en soms letterlijk) als opvangkamp te fungeren voor bepaalde bevolkingsgroepen. Want eerder, ver voor het huidige vluchtelingen-issue, waren er politieke gevangenen die op beide eilanden werden vastgezet tijdens de Griekse burgeroorlog (met name op Samos), en in de decennia die daaraan vooraf gingen bouwde Mussolini Leros om tot een imposante marinebasis, waarna de Griekse regering besloot om er de grootste psychiatrische instelling van Griekenland neer te zetten. Maar veruit de grootste demografische verandering vond ruim 100 jaar geleden plaats, toen deze eilanden een enorme hoeveelheid aanGrieksevluchtelingen moest zien te verstouwen – na de Kleinaziatischekatastrofi.In mijn lezing besteed ik aandacht aan hoe deze eilanden zich als kameleons door de eeuwen heen bewegen – behoedzaam, en dan ineens in sneltreinvaart en van kleur verschietend. Ik wil in het verhaal ook de socio-economische veranderingen proberen te benoemen die deze invasies met zich brengen, en zal daarbij, net als in mijn boeken en artikelen, het anekdotisch element niet schuwen.Praktische infoWanneer?woensdag 16 oktober 2024, om 19u30Waar?leslokaal 0.4 (Blandijnberg 2, 9000 Gent)Prijs?gratis voor leden van het Griekenlandcentrum, UGent studenten (m.u.v. PhD-studenten) en scholieren. Anderen betalen €5 aan de kassa.Ik wil deelnemen!",
-            "links": [
-              {
-                "text": "Ik wil deelnemen!",
-                "url": "https://www.grieks.ugent.be/griekenlandcentrum/"
-              }
-            ]
-          },
-          "price": "€ 5,00",
-          "lesson_dates": "16/10/2024 19:30 – 21:00",
-          "location": {
-            "text": "Blandijn - leslokaal 0.4",
-            "url": "https://humanitiesacademie.ugent.be/locaties/blandijn-leslokaal-04-0"
-          },
-          "field-teachers": {
-            "text": "Ruard Wallis de Vries",
-            "links": [
-              {
-                "text": "Ruard Wallis de Vries",
-                "url": "https://humanitiesacademie.ugent.be/lesgever/ruard-wallis-de-vries"
-              }
-            ]
-          },
-          "field-lesson-dates": "16/10/2024 19:30 – 21:00",
-          "field-location-ref": {
-            "text": "Blandijn - leslokaal 0.4",
-            "url": "https://humanitiesacademie.ugent.be/locaties/blandijn-leslokaal-04-0"
-          },
-          "field-description": {
-            "text": "VoorsmaakjeSamos en Leros zijn twee eilanden die, hoewel ze op een heldere dag in elkaars gezichtsveld liggen, een totaal verschillend karakter hebben: Samos is groot, groen, toeristisch, heeft ontelbaar veel stranden maar heeft ook een bevolking die – en dat is uitzonderlijk voor een Grieks eiland – veel meer met landbouw dan met zeevaart bezig is. Leros is klein, tamelijk volgebouwd, vol mannen die de zeven zeeën bevaren hebben, maar ook is het eiland getekend door een bijzondere geschiedenis, waardoor het toerisme nooit een vlucht heeft genomen. Ondertussen zijn er wel veel niet-Griekse expats neergestreken, die het straatbeeld in hoge mate bepalen.Samos en Leros zijn ook de twee eilanden waar ik bloed zweet en tranen heb gelaten, en echt niet alleen omdat ik op beide eilanden een aantal ruïneuze huisjes heb opgeknapt. Het zijn eilanden waarop ik op alle mogelijke manieren geleefd heb, en waar ik me diep verbonden mee voel. Naast mijn eigen perikelen bij de renovatie van de huisjes, maakte ik er ook de economische crisis mee, die al snel werd verdrongen door een grote toestroom aan vluchtelingen uit Syrië, Afghanistan en andere landen. Waarna in de laatste twee jaar een ongekende toestroom aan met name Westeuropese toeristen volgde.Deze eilanden lijken het vermogen te hebben ontwikkeld om (meestal tijdelijk, en soms letterlijk) als opvangkamp te fungeren voor bepaalde bevolkingsgroepen. Want eerder, ver voor het huidige vluchtelingen-issue, waren er politieke gevangenen die op beide eilanden werden vastgezet tijdens de Griekse burgeroorlog (met name op Samos), en in de decennia die daaraan vooraf gingen bouwde Mussolini Leros om tot een imposante marinebasis, waarna de Griekse regering besloot om er de grootste psychiatrische instelling van Griekenland neer te zetten. Maar veruit de grootste demografische verandering vond ruim 100 jaar geleden plaats, toen deze eilanden een enorme hoeveelheid aanGrieksevluchtelingen moest zien te verstouwen – na de Kleinaziatischekatastrofi.In mijn lezing besteed ik aandacht aan hoe deze eilanden zich als kameleons door de eeuwen heen bewegen – behoedzaam, en dan ineens in sneltreinvaart en van kleur verschietend. Ik wil in het verhaal ook de socio-economische veranderingen proberen te benoemen die deze invasies met zich brengen, en zal daarbij, net als in mijn boeken en artikelen, het anekdotisch element niet schuwen.Praktische infoWanneer?woensdag 16 oktober 2024, om 19u30Waar?leslokaal 0.4 (Blandijnberg 2, 9000 Gent)Prijs?gratis voor leden van het Griekenlandcentrum, UGent studenten (m.u.v. PhD-studenten) en scholieren. Anderen betalen €5 aan de kassa.Ik wil deelnemen!",
-            "links": [
-              {
-                "text": "Ik wil deelnemen!",
-                "url": "https://www.grieks.ugent.be/griekenlandcentrum/"
-              }
-            ]
-          },
-          "combined_text": "Tussen toerist en vluchteling: twee Griekse eilanden nader bekekenLesgever(s)Ruard Wallis de VriesBeschrijvingVoorsmaakjeSamos en Leros zijn twee eilanden die, hoewel ze op een heldere dag in elkaars gezichtsveld liggen, een totaal verschillend karakter hebben: Samos is groot, groen, toeristisch, heeft ontelbaar veel stranden maar heeft ook een bevolking die – en dat is uitzonderlijk voor een Grieks eiland – veel meer met landbouw dan met zeevaart bezig is. Leros is klein, tamelijk volgebouwd, vol mannen die de zeven zeeën bevaren hebben, maar ook is het eiland getekend door een bijzondere geschiedenis, waardoor het toerisme nooit een vlucht heeft genomen. Ondertussen zijn er wel veel niet-Griekse expats neergestreken, die het straatbeeld in hoge mate bepalen.Samos en Leros zijn ook de twee eilanden waar ik bloed zweet en tranen heb gelaten, en echt niet alleen omdat ik op beide eilanden een aantal ruïneuze huisjes heb opgeknapt. Het zijn eilanden waarop ik op alle mogelijke manieren geleefd heb, en waar ik me diep verbonden mee voel. Naast mijn eigen perikelen bij de renovatie van de huisjes, maakte ik er ook de economische crisis mee, die al snel werd verdrongen door een grote toestroom aan vluchtelingen uit Syrië, Afghanistan en andere landen. Waarna in de laatste twee jaar een ongekende toestroom aan met name Westeuropese toeristen volgde.Deze eilanden lijken het vermogen te hebben ontwikkeld om (meestal tijdelijk, en soms letterlijk) als opvangkamp te fungeren voor bepaalde bevolkingsgroepen. Want eerder, ver voor het huidige vluchtelingen-issue, waren er politieke gevangenen die op beide eilanden werden vastgezet tijdens de Griekse burgeroorlog (met name op Samos), en in de decennia die daaraan vooraf gingen bouwde Mussolini Leros om tot een imposante marinebasis, waarna de Griekse regering besloot om er de grootste psychiatrische instelling van Griekenland neer te zetten. Maar veruit de grootste demografische verandering vond ruim 100 jaar geleden plaats, toen deze eilanden een enorme hoeveelheid aanGrieksevluchtelingen moest zien te verstouwen – na de Kleinaziatischekatastrofi.In mijn lezing besteed ik aandacht aan hoe deze eilanden zich als kameleons door de eeuwen heen bewegen – behoedzaam, en dan ineens in sneltreinvaart en van kleur verschietend. Ik wil in het verhaal ook de socio-economische veranderingen proberen te benoemen die deze invasies met zich brengen, en zal daarbij, net als in mijn boeken en artikelen, het anekdotisch element niet schuwen.Praktische infoWanneer?woensdag 16 oktober 2024, om 19u30Waar?leslokaal 0.4 (Blandijnberg 2, 9000 Gent)Prijs?gratis voor leden van het Griekenlandcentrum, UGent studenten (m.u.v. PhD-studenten) en scholieren. Anderen betalen €5 aan de kassa.Ik wil deelnemen!InschrijvenPrijs€ 5,0016/10/2024 19:30 – 21:00| voeg toe aan kalenderBlandijn - leslokaal 0.4"
-        },
-        "field-teachers": {
-          "text": "Dr. Evelien Bracke",
-          "links": [
-            {
-              "text": "Dr. Evelien Bracke",
-              "url": "https://humanitiesacademie.ugent.be/lesgever/evelien-bracke"
-            }
-          ]
-        },
-        "field-previous-lessons-required": "",
-        "field-description": {
-          "text": "meer info volgt laterPraktische informatieWanneer?woensdag 4 juni 2025, om 19u30Waar?zaal FORUM in het GUM (Ledeganckstraat 35, Gent)i.s.m. Academia PressIk wil deelnemen!",
-          "links": [
-            {
-              "text": "Ik wil deelnemen!",
-              "url": "https://www.grieks.ugent.be/griekenlandcentrum/"
-            }
-          ]
-        },
-        "price": "€ 5,00",
-        "field-lesson-dates": "04/06/2025 19:30 – 21:00",
-        "field-location-ref": "GUM - Forumzaal"
+        "field-text": "Voor de volgende opleidingen kan u gebruik maken van het Vlaams Opleidingsverlof (VOV):opleiding Bemiddeling (basismodule + specialisatiemodules)opleiding Inleiding tot het recht voor gerechtsdeskundigenVoor de opleiding Bemiddeling kan u desgevallend ook gebruik maken van het Betaald Educatief Verlof van het Brussels Hoofdstedelijk Gewest.Meer informatie:Vlaams OpleidingsverlofBetaald educatief verlof (Brussels Hoofdstedelijk Gewest)"
       },
-      "academy": "Humanities Academie",
+      "academy": "Gandaius Permanente Vorming",
       "categories": [
-        "Lezingen"
+        "Praktische hulp"
+      ]
+    },
+    {
+      "url": "https://gandaiusacademy.ugent.be/documentatiebundel",
+      "title": "Documentatiebundel",
+      "fields": {
+        "body": "De documentatiebundel is enkel nog digitaal beschikbaar, via ons platform of - in sommige gevallen - via de digitale leeromgeving van de UGent.",
+        "field-body": "De documentatiebundel vind je ...- ... in je dashboardLog in via'Mijn profiel'bovenaan.Klik bovenaan op'Mijn profiel'en dan op'Dashboard'.In het tabblad'Mijn aangekochte lessen'vind je de documentatiebundel rechts naast de cursus, in de kolom 'Syllabus'.- ... in de elektronische leeromgeving van de UGentin het bericht met de praktische informatie staat alle uitleg over hoe je de documentatiebundel kan terugvinden.",
+        "field-text": "- ... in je dashboardLog in via'Mijn profiel'bovenaan.Klik bovenaan op'Mijn profiel'en dan op'Dashboard'.In het tabblad'Mijn aangekochte lessen'vind je de documentatiebundel rechts naast de cursus, in de kolom 'Syllabus'.- ... in de elektronische leeromgeving van de UGentin het bericht met de praktische informatie staat alle uitleg over hoe je de documentatiebundel kan terugvinden."
+      },
+      "academy": "Gandaius Permanente Vorming",
+      "categories": [
+        "Praktische hulp"
+      ]
+    },
+    {
+      "url": "https://gandaiusacademy.ugent.be/praktische-hulp/livestream",
+      "title": "Livestream",
+      "fields": {
+        "body": "Onze vormingsinitiatieven staan open voor fysieke deelname (in het auditorium) en/of deelname via livestream. Waar mogelijk voorzien we ook een opname die je achteraf nog kan bekijken.Inschrijven voor online deelname",
+        "field-body": "Deelnemen via livestreamDe link voor je online deelname wordt per aparte mail verstuurd, in de regel 2 dagen op voorhand.Hieronder vind je een afdruk van hoe de pagina van de livestream eruit ziet.De livestream staat doorgaans op \"pauze\". Klik in dat geval op hetplay-icoon links onderaan(pijl links).Controleer of het geluid van de livestream(middelste pijl)én van je computer staat ingeschakeld en of er niet nog een headset is aangesloten.De presentatie maak je zichtbaar door het tabblad 'Scherm' te selecteren(pijl rechts).",
+        "field-text": "De documentatiebundel vind je terug in je dashboard op dit platform:Documentatiebundel openen en/of downloaden",
+        "field-image": "",
+        "thumbnail": ""
+      },
+      "academy": "Gandaius Permanente Vorming",
+      "categories": [
+        "Praktische hulp"
+      ]
+    },
+    {
+      "url": "https://gandaiusacademy.ugent.be/praktische-hulp/opname-bekijken",
+      "title": "Opname bekijken",
+      "fields": {
+        "body": "On demand video's zijn doorgaans beschikbaar binnen vijf werkdagen na de les. je vindt ze terug via je dashboard - of in sommige gevallen: via de elektronische leeromgeving van de UGent.",
+        "field-body": "Je vindt de opname ...- ... in je dashboardLog in via'Mijn profiel'bovenaan.Klik op de website bovenaan op 'Mijn profiel'en dan op'Dashboard'.Ga naar het tabblad 'Mijn aangekochte lessen'.In de kolom 'Video' vind je een link naar de opname getiteld 'Bekijk live video'.Vergeet niet om de controlevragen te beantwoorden als je punten voor permanente vorming wil verdienen.- ... in de elektronische leeromgeving van de UGentin het bericht met de praktische informatie staat alle uitleg over hoe je de opname kan terugvinden en (her)bekijken.",
+        "field-text": "- ... in je dashboardLog in via'Mijn profiel'bovenaan.Klik op de website bovenaan op 'Mijn profiel'en dan op'Dashboard'.Ga naar het tabblad 'Mijn aangekochte lessen'.In de kolom 'Video' vind je een link naar de opname getiteld 'Bekijk live video'.Vergeet niet om de controlevragen te beantwoorden als je punten voor permanente vorming wil verdienen.- ... in de elektronische leeromgeving van de UGentin het bericht met de praktische informatie staat alle uitleg over hoe je de opname kan terugvinden en (her)bekijken."
+      },
+      "academy": "Gandaius Permanente Vorming",
+      "categories": [
+        "Praktische hulp"
+      ]
+    },
+    {
+      "url": "https://gandaiusacademy.ugent.be/aanwezigheidsattest",
+      "title": "Aanwezigheidsattest",
+      "fields": {
+        "body": "Het aanwezigheidsattest vermeldt de behaalde vormingspunten die diverse instanties aan deze cursus hebben toegekend. Doorgaans is het attest beschikbaar de eerstvolgende werkdag na de cursus.",
+        "field-body": "Hoe het aanwezigheidsattest opvragenLog in via'Mijn profiel'bovenaan.Klik bovenaan op'Mijn profiel'en dan op'Dashboard'.In het tabblad'Mijn aangekochte lessen'vindt u het aanwezigheidsattest rechts naast de cursus.",
+        "field-text": "Log in via'Mijn profiel'bovenaan.Klik bovenaan op'Mijn profiel'en dan op'Dashboard'.In het tabblad'Mijn aangekochte lessen'vindt u het aanwezigheidsattest rechts naast de cursus."
+      },
+      "academy": "Gandaius Permanente Vorming",
+      "categories": [
+        "Praktische hulp"
       ]
     }
   ]

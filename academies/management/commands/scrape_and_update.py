@@ -189,7 +189,7 @@ class Command(BaseCommand):
 
     def run_scraper(self):
         """Run the scraper script and return the output JSON file path."""
-        # Get the absolute path to the scraper
+        # Get the absolute path to the scraper        # Get the absolute path to the scraper
         base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
         scraper_path = os.path.join(base_dir, 'getdata', 'scrape.py')
         getdata_dir = os.path.join(base_dir, 'getdata')
@@ -198,38 +198,40 @@ class Command(BaseCommand):
             self.stdout.write(self.style.ERROR(f'Scraper not found at: {scraper_path}'))
             return None
         
-        self.stdout.write('🌐 Starting web scraping process...')
-        self.stdout.write(f'   📂 Scraper location: {scraper_path}')
-        self.stdout.write(f'   🎯 Target: All 10 UGent academies')
-        self.stdout.write(f'   ⏱️  This may take several minutes...')
+        self.stdout.write('[NET] Starting web scraping process...')
+        self.stdout.write(f'   [DIR] Scraper location: {scraper_path}')
+        self.stdout.write(f'   [TARGET] Target: All 10 UGent academies')
+        self.stdout.write(f'   [TIME] This may take several minutes...')
+        self.stdout.write('')  # Empty line for readability
         
         try:
-            # Run the scraper
-            result = subprocess.run([
+            # Run the scraper with real-time output
+            process = subprocess.Popen([
                 sys.executable, scraper_path
-            ], cwd=getdata_dir, capture_output=True, text=True, timeout=600)  # 10 minute timeout
+            ], cwd=getdata_dir, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, 
+               text=True, bufsize=1, universal_newlines=True)
             
-            if result.returncode != 0:
-                self.stdout.write(self.style.ERROR(f'Scraper failed with exit code {result.returncode}'))
-                self.stdout.write(self.style.ERROR(f'Error output: {result.stderr}'))
+            # Stream output in real-time
+            for line in iter(process.stdout.readline, ''):
+                if line.strip():  # Only show non-empty lines
+                    self.stdout.write(f'   {line.strip()}')
+            
+            process.wait()
+            
+            if process.returncode != 0:
+                self.stdout.write(self.style.ERROR(f'Scraper failed with exit code {process.returncode}'))
                 return None
             
             # Look for output file
             output_file = os.path.join(getdata_dir, 'ugent_academies_complete.json')
             if os.path.exists(output_file):
-                self.stdout.write(self.style.SUCCESS('✅ Scraping completed successfully!'))
+                self.stdout.write('')
+                self.stdout.write(self.style.SUCCESS('[OK] Scraping completed successfully!'))
                 
-                # Show scraper output summary if available
-                if result.stdout:
-                    lines = result.stdout.strip().split('\n')
-                    # Look for the summary section
-                    for i, line in enumerate(lines):
-                        if '=== SCRAPING COMPLETE ===' in line and i < len(lines) - 4:
-                            self.stdout.write('📊 Scraping Summary:')
-                            for summary_line in lines[i+1:i+4]:
-                                if summary_line.strip():
-                                    self.stdout.write(f'   {summary_line.strip()}')
-                            break
+                # Show file size info
+                file_size = os.path.getsize(output_file) / (1024 * 1024)  # MB
+                self.stdout.write(f'[STATS] Output file: {output_file}')
+                self.stdout.write(f'[STATS] File size: {file_size:.1f} MB')
                 
                 return output_file
             else:
@@ -237,7 +239,7 @@ class Command(BaseCommand):
                 return None
                 
         except subprocess.TimeoutExpired:
-            self.stdout.write(self.style.ERROR('⏰ Scraper timed out after 10 minutes'))
+            self.stdout.write(self.style.ERROR('[TIME] Scraper timed out after 10 minutes'))
             return None
         except Exception as e:
             self.stdout.write(self.style.ERROR(f'Error running scraper: {e}'))
