@@ -110,13 +110,12 @@
                     {% trans "Only upcoming" %}
                 </label>
             </div>
-        </div>
-        <div class="col-md-2">
+        </div>        <div class="col-md-2">
             <button type="submit" class="btn btn-primary w-100">
                 <i class="bi bi-funnel me-1"></i>{% trans "Filter" %}
             </button>
         </div>
-        <!-- Preserve category filter -->
+        <!-- Preserve filters when submitting -->
         {% if selected_category %}
         <input type="hidden" name="category" value="{{ selected_category }}">
         {% endif %}
@@ -127,11 +126,12 @@
 {% if categories.count > 1 %}
 <div class="filter-section">
     <div class="d-flex flex-wrap align-items-center gap-2">        <span class="fw-bold me-2">{% trans "Categories" %}:</span>
-        <a href="?" class="btn btn-sm {% if not selected_category %}academy-button{% else %}btn-outline-secondary{% endif %}">
+        <a href="?{% if show_upcoming %}upcoming=on&{% endif %}{% if selected_sort %}sort={{ selected_sort }}{% endif %}" 
+           class="btn btn-sm {% if not selected_category %}academy-button{% else %}btn-outline-secondary{% endif %}">
             {% trans "All" %} ({{ total_offerings }})
         </a>
         {% for category in categories %}
-        <a href="?category={{ category.name }}" 
+        <a href="?category={{ category.name }}{% if show_upcoming %}&upcoming=on{% endif %}{% if selected_sort %}&sort={{ selected_sort }}{% endif %}" 
            class="btn btn-sm {% if selected_category == category.name %}academy-button{% else %}btn-outline-secondary{% endif %}">
             {{ category.name }} ({{ category.offering_count }})
         </a>
@@ -206,13 +206,12 @@
     {% empty %}
     <div class="col-12">
         <div class="alert alert-info text-center">
-            <i class="bi bi-info-circle fs-3 mb-3 d-block"></i>
-            {% if selected_category %}            <h4>{% trans "No offerings in" %} "{{ selected_category }}" {% trans "category" %}</h4>
+            <i class="bi bi-info-circle fs-3 mb-3 d-block"></i>            {% if selected_category %}            <h4>{% trans "No offerings in" %} "{{ selected_category }}" {% trans "category" %}</h4>
             <p class="mb-3">{% trans "Try selecting a different category or view all offerings." %}</p>
-            <a href="?" class="btn academy-button">
+            <a href="?{% if show_upcoming %}upcoming=on&{% endif %}{% if selected_sort %}sort={{ selected_sort }}{% endif %}" class="btn academy-button">
                 <i class="bi bi-arrow-clockwise me-1"></i>{% trans "View All Offerings" %}
             </a>
-            {% else %}            <h4>{% trans "No offerings available" %}</h4>
+            {% else %}<h4>{% trans "No offerings available" %}</h4>
             <p class="mb-0">{% trans "This academy doesn't have any offerings yet." %}</p>
             {% endif %}
         </div>
@@ -226,7 +225,7 @@
     <ul class="pagination justify-content-center">
         {% if offerings.has_previous %}
         <li class="page-item">
-            <a class="page-link academy-text" href="?page={{ offerings.previous_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}">
+            <a class="page-link academy-text" href="?page={{ offerings.previous_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_upcoming %}&upcoming=on{% endif %}{% if selected_sort %}&sort={{ selected_sort }}{% endif %}">
                 {% trans "Previous" %}
             </a>
         </li>
@@ -239,7 +238,7 @@
         </li>
         {% elif num > offerings.number|add:'-3' and num < offerings.number|add:'3' %}
         <li class="page-item">
-            <a class="page-link academy-text" href="?page={{ num }}{% if selected_category %}&category={{ selected_category }}{% endif %}">
+            <a class="page-link academy-text" href="?page={{ num }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_upcoming %}&upcoming=on{% endif %}{% if selected_sort %}&sort={{ selected_sort }}{% endif %}">
                 {{ num }}
             </a>
         </li>
@@ -248,7 +247,7 @@
         
         {% if offerings.has_next %}
         <li class="page-item">
-            <a class="page-link academy-text" href="?page={{ offerings.next_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}">
+            <a class="page-link academy-text" href="?page={{ offerings.next_page_number }}{% if selected_category %}&category={{ selected_category }}{% endif %}{% if show_upcoming %}&upcoming=on{% endif %}{% if selected_sort %}&sort={{ selected_sort }}{% endif %}">
                 {% trans "Next" %}
             </a>
         </li>

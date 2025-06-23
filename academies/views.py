@@ -49,8 +49,7 @@ def academy_detail(request, pk):
         offerings = offerings.filter(
             Q(variations__start_date__gte=now) | Q(variations__start_date__isnull=True)
         ).distinct()
-    
-    # Sort by
+      # Sort by
     sort_by = request.GET.get('sort', 'date')
     if sort_by == 'date':
         offerings = offerings.annotate(
@@ -63,11 +62,23 @@ def academy_detail(request, pk):
             earliest_date=Min('variations__start_date')
         ).order_by('earliest_date', 'title')
     
-    # Get categories for this academy
+    # Get categories for this academy based on current filters (before category filter is applied)
+    # This ensures category counts reflect the current "upcoming" filter
+    base_filtered_offerings = offerings  # Store the offerings filtered by upcoming but not by category yet
+    
+    # Get categories with counts based on filtered offerings
+    from django.db.models import Exists, OuterRef
     categories = academy.categories.annotate(
-        offering_count=Count('offerings', filter=Q(offerings__is_active=True))
-    ).order_by('name')
-      # Filter by category if specified
+        offering_count=Count(
+            'offerings',
+            filter=Q(
+                offerings__is_active=True,
+                offerings__pk__in=base_filtered_offerings.values('pk')
+            )
+        )
+    ).filter(offering_count__gt=0).order_by('name')
+    
+    # Filter by category if specified
     category_filter = request.GET.get('category')
     if category_filter:
         offerings = offerings.filter(
@@ -155,14 +166,27 @@ def offering_list(request):
     else:
         offerings = offerings.annotate(
             earliest_date=Min('variations__start_date')
-        ).order_by('earliest_date', 'title')
-      # Get filter options
+        ).order_by('earliest_date', 'title')    # Get filter options with counts based on current filters (before academy/language filter)
+    base_filtered_offerings = offerings  # Store offerings filtered by search and upcoming but not by academy/language
+    
     academies = Academy.objects.annotate(
-        offering_count=Count('offerings', filter=Q(offerings__is_active=True))
+        offering_count=Count(
+            'offerings',
+            filter=Q(
+                offerings__is_active=True,
+                offerings__pk__in=base_filtered_offerings.values('pk')
+            )
+        )
     ).filter(offering_count__gt=0).order_by('name')
     
     languages = Language.objects.annotate(
-        offering_count=Count('offerings', filter=Q(offerings__is_active=True))
+        offering_count=Count(
+            'offerings',
+            filter=Q(
+                offerings__is_active=True,
+                offerings__pk__in=base_filtered_offerings.values('pk')
+            )
+        )
     ).filter(offering_count__gt=0).order_by('name')
     
     # Get total count before pagination
