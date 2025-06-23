@@ -419,6 +419,65 @@ def scrape_academy_introduction(academy_base_url, academy_name):
         print(f"Could not find introduction text on {academy_base_url}")
         return ""
 
+def scrape_teacher_details(teacher_url, teacher_name):
+    """
+    Scrape detailed information from a teacher page
+    
+    Args:
+        teacher_url: URL of the teacher page
+        teacher_name: Name of the teacher
+        
+    Returns:
+        Dictionary with detailed teacher information
+    """
+    print(f"Scraping teacher details for: {teacher_name}")
+    
+    # Add a small delay to avoid overwhelming the server
+    time.sleep(0.1)
+    
+    # Send an HTTP request to the URL
+    try:
+        response = requests.get(teacher_url, timeout=30)
+        
+        # Check if the request was successful
+        if response.status_code != 200:
+            print(f"Failed to retrieve the teacher page: Status code {response.status_code}")
+            return {}
+    except Exception as e:
+        print(f"Error accessing {teacher_url}: {e}")
+        return {}
+    
+    # Parse the HTML content
+    soup = BeautifulSoup(response.text, 'html.parser')
+    
+    # Initialize the details dictionary
+    details = {
+        'name': teacher_name,
+        'link': teacher_url,
+        'photo_url': '',
+        'description': ''
+    }
+    
+    # Extract teacher photo
+    photo_element = soup.select_one("#block-system-main-block > div > section.main--2-columns > div.field.field--name-field-teacher-pic.field--type-image.field--label-hidden.field__item img")
+    if photo_element:
+        photo_src = photo_element.get('src', '')
+        if photo_src:
+            # Make the photo URL absolute if it's relative
+            if photo_src.startswith('/'):
+                base_url = teacher_url.split('/', 3)[0] + '//' + teacher_url.split('/', 3)[2]
+                photo_src = base_url + photo_src
+            details['photo_url'] = photo_src
+    
+    # Extract teacher description with HTML content preserved
+    description_element = soup.select_one("#block-system-main-block > div > section.sidebar--second > div")
+    if description_element:
+        # Get the inner HTML content (preserve HTML formatting)
+        inner_html = ''.join(str(child) for child in description_element.children)
+        details['description'] = inner_html.strip()
+    
+    return details
+
 if __name__ == "__main__":
     # Define the academies to scrape
     academies = [
@@ -472,18 +531,21 @@ if __name__ == "__main__":
             'base_url': 'https://apss.ugent.be'
         }
     ]
-    
-    # Dictionary to store all data
+      # Dictionary to store all data
     all_data = {
         'academies': [],
         'metadata': academy_metadata,  # Add the metadata to the JSON
         'categories': [],
         'offerings': [],
+        'teachers': [],
         'scraped_at': datetime.now().isoformat()
     }
     
     # Dictionary to store unique offerings by URL
     offerings_dict = {}
+    
+    # Dictionary to store unique teachers by URL
+    teachers_dict = {}
     
     # Process each academy
     for academy in academies:
@@ -543,8 +605,7 @@ if __name__ == "__main__":
                                 'academy': academy_name,
                                 'categories': [f"{academy_name} - {category['name']}"]
                             }
-    
-    # Now visit each offering page to get detailed information
+      # Now visit each offering page to get detailed information
     print("\nScraping detailed information for each offering...")
     for url, offering in offerings_dict.items():
         details = scrape_offering_details(url, offering['title'], offering['academy'])
@@ -552,10 +613,28 @@ if __name__ == "__main__":
         # Add the categories to the details
         details['categories'] = offering['categories']
         
+        # Collect teachers from this offering
+        for variation in details.get('variations', []):
+            for teacher in variation.get('teachers', []):
+                teacher_url = teacher.get('link', '')
+                teacher_name = teacher.get('name', '')
+                if teacher_url and teacher_name and teacher_url not in teachers_dict:
+                    teachers_dict[teacher_url] = {
+                        'name': teacher_name,
+                        'link': teacher_url
+                    }
+        
         # Replace the basic offering with the detailed one
         offerings_dict[url] = details
-      # Convert the dictionary to a list for the final JSON
+    
+    # Now scrape detailed information for each teacher
+    print(f"\nScraping detailed information for {len(teachers_dict)} unique teachers...")
+    for teacher_url, teacher_basic in teachers_dict.items():
+        teacher_details = scrape_teacher_details(teacher_url, teacher_basic['name'])
+        if teacher_details:
+            teachers_dict[teacher_url] = teacher_details      # Convert the dictionaries to lists for the final JSON
     all_data['offerings'] = list(offerings_dict.values())
+    all_data['teachers'] = list(teachers_dict.values())
     
     # Save all data to a single JSON file
     if all_data['offerings']:

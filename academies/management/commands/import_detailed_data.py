@@ -53,13 +53,14 @@ class Command(BaseCommand):
             return
         except json.JSONDecodeError as e:
             self.stdout.write(self.style.ERROR(f'Invalid JSON: {e}'))
-            return
-
-        # Import academies
+            return        # Import academies
         self.import_academies(data['academies'])
         
         # Import categories
         self.import_categories(data['categories'])
+        
+        # Import teachers
+        self.import_teachers(data.get('teachers', []))
         
         # Import offerings
         self.import_offerings(data['offerings'])
@@ -119,8 +120,7 @@ class Command(BaseCommand):
             try:
                 # First try to find the academy by exact name
                 academy = Academy.objects.get(name=academy_name)
-            except Academy.DoesNotExist:
-                # If exact match fails, try a case-insensitive search with partial match
+            except Academy.DoesNotExist:                # If exact match fails, try a case-insensitive search with partial match
                 academies = Academy.objects.filter(name__icontains=academy_name)
                 if academies.exists():
                     academy = academies.first()
@@ -131,7 +131,8 @@ class Command(BaseCommand):
             
             category, created = Category.objects.update_or_create(
                 name=item['name'],
-                academy=academy,                defaults={}
+                academy=academy,
+                defaults={}
             )
             
             if created:
@@ -140,6 +141,33 @@ class Command(BaseCommand):
                 updated_count += 1
                 
         self.stdout.write(f'Created {created_count} categories, updated {updated_count} categories, skipped {skipped_count} categories')
+        
+    def import_teachers(self, teachers_data):
+        """Import teachers from the JSON data."""
+        self.stdout.write('Importing teachers...')
+        created_count = 0
+        updated_count = 0
+        
+        for teacher_data in teachers_data:
+            teacher_name = teacher_data.get('name', '').strip()
+            if not teacher_name:
+                continue
+                
+            teacher, created = Teacher.objects.update_or_create(
+                name=teacher_name,
+                defaults={
+                    'profile_url': teacher_data.get('link', ''),
+                    'photo_url': teacher_data.get('photo_url', ''),
+                    'description': teacher_data.get('description', ''),
+                }
+            )
+            
+            if created:
+                created_count += 1
+            else:
+                updated_count += 1
+                
+        self.stdout.write(f'Created {created_count} teachers, updated {updated_count} teachers')
         
     def import_offerings(self, offerings_data):
         """Import offerings from the JSON data."""

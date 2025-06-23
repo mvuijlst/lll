@@ -11,11 +11,15 @@
     </ol>
 </nav>
 
-<div class="row">
-    <div class="col-lg-4">
+<div class="row">    <div class="col-lg-4">
         <div class="card">
             <div class="card-body text-center">
+                {% if teacher.photo_url %}
+                <img src="{{ teacher.photo_url }}" alt="{{ teacher.name }}" 
+                     class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                {% else %}
                 <i class="bi bi-person-circle text-primary mb-3" style="font-size: 6rem;"></i>
+                {% endif %}
                 <h2 class="h4 mb-1">{{ teacher.name }}</h2>
                 {% if teacher.title %}
                 <p class="text-muted mb-3">{{ teacher.title }}</p>
@@ -31,14 +35,13 @@
         </div>
     </div>
     
-    <div class="col-lg-8">
-        {% if teacher.bio %}
+    <div class="col-lg-8">        {% if teacher.description %}
         <div class="card mb-4">
             <div class="card-header">
                 <h5 class="mb-0"><i class="bi bi-person-lines-fill me-2"></i>{% trans "Biography" %}</h5>
             </div>
             <div class="card-body">
-                {{ teacher.bio|linebreaks }}
+                {{ teacher.description|safe }}
             </div>
         </div>
         {% endif %}

@@ -119,6 +119,8 @@ class Teacher(models.Model):
     profile_url = models.URLField(blank=True, help_text="URL to teacher's profile page")
     title = models.CharField(max_length=100, blank=True, help_text="Academic title (e.g., Prof. dr.)")
     bio = models.TextField(blank=True, help_text="Teacher biography")
+    photo_url = models.URLField(blank=True, help_text="URL to teacher's photo")
+    description = models.TextField(blank=True, help_text="Teacher description from profile page (can contain HTML)")
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
     
