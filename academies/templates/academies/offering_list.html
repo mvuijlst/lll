@@ -1,5 +1,6 @@
 {% extends 'academies/base.html' %}
 {% load i18n %}
+{% load academy_extras %}
 
 {% block title %}{% trans "All Offerings" %} - {% trans "UGent Academies" %}{% endblock %}
 
@@ -26,12 +27,12 @@
 <!-- Filters -->
 <div class="filter-section">
     <form method="get" class="row g-3 align-items-end">
-        <div class="col-md-4">
+        <div class="col-md-3">
             <label for="search" class="form-label">{% trans "Search" %}</label>
             <input type="text" class="form-control" id="search" name="search" 
                    value="{{ search_query }}" placeholder="{% trans "Search courses..." %}">
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <label for="academy" class="form-label">{% trans "Academy" %}</label>
             <select class="form-select" id="academy" name="academy">
                 <option value="">{% trans "All Academies" %}</option>
@@ -43,7 +44,7 @@
                 {% endfor %}
             </select>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <label for="language" class="form-label">{% trans "Language" %}</label>
             <select class="form-select" id="language" name="language">
                 <option value="">{% trans "All Languages" %}</option>
@@ -56,6 +57,23 @@
             </select>
         </div>
         <div class="col-md-2">
+            <label for="sort" class="form-label">{% trans "Sort by" %}</label>
+            <select class="form-select" id="sort" name="sort">
+                <option value="date" {% if selected_sort == 'date' %}selected{% endif %}>{% trans "Date" %}</option>
+                <option value="title" {% if selected_sort == 'title' %}selected{% endif %}>{% trans "Title" %}</option>
+                <option value="academy" {% if selected_sort == 'academy' %}selected{% endif %}>{% trans "Academy" %}</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <div class="form-check mt-4">
+                <input class="form-check-input" type="checkbox" id="upcoming" name="upcoming" 
+                       {% if show_upcoming %}checked{% endif %}>
+                <label class="form-check-label" for="upcoming">
+                    {% trans "Only upcoming" %}
+                </label>
+            </div>
+        </div>
+        <div class="col-md-1">
             <button type="submit" class="btn btn-primary w-100">
                 <i class="bi bi-funnel me-1"></i>{% trans "Filter" %}
             </button>
@@ -65,17 +83,20 @@
 
 <!-- Results -->
 <div class="row g-4">
-    {% for offering in offerings %}    <div class="col-md-6 col-lg-4">
+    {% for offering in offerings %}
+    <div class="col-md-6 col-lg-4">
         <div class="card offering-card h-100 themed"
              style="--academy-color: {{ offering.academy.primary_color }}; --academy-light: {{ offering.academy.light_color }}; --academy-contrast: {{ offering.academy.contrast_color }}; border-top-color: {{ offering.academy.primary_color }};">
             {% if offering.image_url %}
-            <div class="card-img-top-wrapper" style="aspect-ratio: 2/1; overflow: hidden; background-color: #f8f9fa;">
-                <img src="{{ offering.image_url }}" 
-                     alt="{{ offering.title }}" 
-                     class="w-100 h-100"
-                     style="object-fit: cover;"
-                     loading="lazy">
-            </div>
+            <a href="{% url 'academies:offering_detail' offering.pk %}" class="text-decoration-none">
+                <div class="card-img-top-wrapper" style="aspect-ratio: 2/1; overflow: hidden; background-color: #f8f9fa;">
+                    <img src="{{ offering.image_url }}" 
+                         alt="{{ offering.title }}" 
+                         class="w-100 h-100"
+                         style="object-fit: cover;"
+                         loading="lazy">
+                </div>
+            </a>
             {% endif %}
             <div class="card-body d-flex flex-column">
                 <h5 class="card-title">
@@ -84,71 +105,45 @@
                         {{ offering.title|truncatechars:80 }}
                     </a>
                 </h5>
-                
-                <div class="mb-3">
+                  <div class="mb-3">
                     <span class="badge academy-badge">
-                        <i class="bi bi-building me-1"></i>{{ offering.academy.name }}
+                        {{ offering.academy.name }}
                     </span>
-                    {% if offering.category %}
-                    <span class="badge badge-category ms-1">
-                        {{ offering.category.name }}
-                    </span>
-                    {% endif %}
                     {% if offering.language %}
-                    <span class="badge badge-language ms-1">
-                        {{ offering.language.name }}
+                    <span class="badge ugent-blue-badge ms-1">
+                        {{ offering.language.name|language_code }}
                     </span>
                     {% endif %}
-                </div>                  {% if offering.description %}
+                </div>
+
+                {% if offering.description %}
                 <p class="card-text text-muted">
                     {{ offering.description|striptags|truncatechars:120 }}
                 </p>
                 {% endif %}
                 
-                <!-- Variation Preview -->
+                <!-- First Variation Date Only -->
                 {% if offering.variations.exists %}
                 <div class="variation-preview mb-3">
                     {% with offering.variations.first as first_variation %}
-                    <div class="d-flex flex-wrap gap-2 align-items-center">
-                        {% if first_variation.lesson_dates %}
-                        <small class="badge bg-light text-dark border">
-                            <i class="bi bi-calendar me-1"></i>{{ first_variation.lesson_dates }}
-                        </small>
-                        {% endif %}
-                        {% if first_variation.price %}
-                        <small class="badge bg-light text-dark border">
-                            <i class="bi bi-tag me-1"></i>{{ first_variation.price }}
-                        </small>
-                        {% endif %}
-                        {% if first_variation.location %}
-                        <small class="badge bg-light text-dark border">
-                            <i class="bi bi-geo-alt me-1"></i>{{ first_variation.location.name }}
-                        </small>
-                        {% endif %}
-                        {% if offering.variations.count > 1 %}
-                        <small class="text-muted">
-                            +{{ offering.variations.count|add:"-1" }} {% trans "more session" %}{{ offering.variations.count|add:"-1"|pluralize }}
-                        </small>
-                        {% endif %}
-                    </div>
+                    {% if first_variation.lesson_dates %}
+                    <small class="badge bg-light text-dark border">
+                        <i class="bi bi-calendar me-1"></i>{{ first_variation.lesson_dates }}
+                    </small>
+                    {% endif %}
+                    {% if first_variation.price %}
+                    <small class="badge bg-light text-dark border ms-1">
+                        <i class="bi bi-tag me-1"></i>{{ first_variation.price }}
+                    </small>
+                    {% endif %}
+                    {% if first_variation.location %}
+                    <small class="badge bg-light text-dark border ms-1">
+                        <i class="bi bi-geo-alt me-1"></i>{{ first_variation.location.name }}
+                    </small>
+                    {% endif %}
                     {% endwith %}
                 </div>
                 {% endif %}
-                
-                <div class="mt-auto">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <small class="text-muted">
-                            {% if offering.variations.count %}
-                                <i class="bi bi-calendar-event me-1"></i>
-                                {{ offering.variations.count }} {% trans "session" %}{{ offering.variations.count|pluralize }}
-                            {% endif %}
-                        </small>
-                        <a href="{% url 'academies:offering_detail' offering.pk %}" 
-                           class="btn academy-button btn-sm">
-                            <i class="bi bi-arrow-right me-1"></i>{% trans "View Details" %}
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -172,10 +167,9 @@
 <!-- Pagination -->
 {% if offerings.has_other_pages %}
 <nav aria-label="Offerings pagination" class="mt-5">
-    <ul class="pagination justify-content-center">
-        {% if offerings.has_previous %}
+    <ul class="pagination justify-content-center">        {% if offerings.has_previous %}
         <li class="page-item">
-            <a class="page-link" href="?page={{ offerings.previous_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_academy %}&academy={{ selected_academy }}{% endif %}{% if selected_language %}&language={{ selected_language }}{% endif %}">
+            <a class="page-link" href="?page={{ offerings.previous_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_academy %}&academy={{ selected_academy }}{% endif %}{% if selected_language %}&language={{ selected_language }}{% endif %}{% if selected_sort %}&sort={{ selected_sort }}{% endif %}{% if show_upcoming %}&upcoming=on{% endif %}">
                 {% trans "Previous" %}
             </a>
         </li>
@@ -188,7 +182,7 @@
         </li>
         {% elif num > offerings.number|add:'-3' and num < offerings.number|add:'3' %}
         <li class="page-item">
-            <a class="page-link" href="?page={{ num }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_academy %}&academy={{ selected_academy }}{% endif %}{% if selected_language %}&language={{ selected_language }}{% endif %}">
+            <a class="page-link" href="?page={{ num }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_academy %}&academy={{ selected_academy }}{% endif %}{% if selected_language %}&language={{ selected_language }}{% endif %}{% if selected_sort %}&sort={{ selected_sort }}{% endif %}{% if show_upcoming %}&upcoming=on{% endif %}">
                 {{ num }}
             </a>
         </li>
@@ -197,7 +191,7 @@
         
         {% if offerings.has_next %}
         <li class="page-item">
-            <a class="page-link" href="?page={{ offerings.next_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_academy %}&academy={{ selected_academy }}{% endif %}{% if selected_language %}&language={{ selected_language }}{% endif %}">
+            <a class="page-link" href="?page={{ offerings.next_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_academy %}&academy={{ selected_academy }}{% endif %}{% if selected_language %}&language={{ selected_language }}{% endif %}{% if selected_sort %}&sort={{ selected_sort }}{% endif %}{% if show_upcoming %}&upcoming=on{% endif %}">
                 {% trans "Next" %}
             </a>
         </li>

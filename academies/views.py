@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.db.models import Count, Q
+from django.db.models import Count, Q, Min
 from django.core.paginator import Paginator
 from django.utils import timezone
 from django.contrib.admin.views.decorators import staff_member_required
@@ -24,12 +24,44 @@ def academy_list(request):
 def academy_detail(request, pk):
     """Display detailed view of an academy with its offerings and categories."""
     academy = get_object_or_404(Academy, pk=pk)
-      # Get offerings with related data
-    offerings = academy.offerings.select_related(
-        'category', 'language'
+    
+    # Get offerings with related data
+    offerings = academy.offerings.select_related(        'category', 'language'
     ).prefetch_related(
         'variations__location', 'categories'
-    ).filter(is_active=True).order_by('title')
+    ).filter(is_active=True)
+    
+    # Filter by upcoming (default is on only when no form submission)
+    # If any form parameter is present, don't use default
+    has_form_params = any([
+        request.GET.get('category'),
+        request.GET.get('sort'),
+        'upcoming' in request.GET
+    ])
+    
+    if has_form_params:
+        show_upcoming = request.GET.get('upcoming') == 'on'
+    else:
+        show_upcoming = True  # Default to True only when no form submitted
+    
+    if show_upcoming:
+        now = timezone.now()
+        offerings = offerings.filter(
+            Q(variations__start_date__gte=now) | Q(variations__start_date__isnull=True)
+        ).distinct()
+    
+    # Sort by
+    sort_by = request.GET.get('sort', 'date')
+    if sort_by == 'date':
+        offerings = offerings.annotate(
+            earliest_date=Min('variations__start_date')
+        ).order_by('earliest_date', 'title')
+    elif sort_by == 'title':
+        offerings = offerings.order_by('title')
+    else:
+        offerings = offerings.annotate(
+            earliest_date=Min('variations__start_date')
+        ).order_by('earliest_date', 'title')
     
     # Get categories for this academy
     categories = academy.categories.annotate(
@@ -42,6 +74,9 @@ def academy_detail(request, pk):
             Q(category__name=category_filter) | Q(categories__name=category_filter)
         ).distinct()
     
+    # Get total count before pagination
+    total_offerings = offerings.count()
+    
     # Pagination
     paginator = Paginator(offerings, 12)  # Show 12 offerings per page
     page_number = request.GET.get('page')
@@ -52,38 +87,76 @@ def academy_detail(request, pk):
         'offerings': page_obj,
         'categories': categories,
         'selected_category': category_filter,
-        'total_offerings': offerings.count()
+        'selected_sort': sort_by,
+        'show_upcoming': show_upcoming,
+        'total_offerings': total_offerings
     })
 
 
 def offering_list(request):
     """Display all offerings with filtering and search capabilities."""
+    from django.utils import timezone
+    
     offerings = Offering.objects.select_related(
         'academy', 'category', 'language'
     ).prefetch_related(
         'variations__location', 'categories'
-    ).filter(is_active=True)
-    
-    # Search functionality
+    ).filter(is_active=True)    # Search functionality
     search_query = request.GET.get('search')
-    if search_query:
+    if search_query and search_query.strip() and search_query.lower() != 'none':
         offerings = offerings.filter(
             Q(title__icontains=search_query) |
             Q(description__icontains=search_query) |
             Q(academy__name__icontains=search_query)
         )
+    else:
+        search_query = ''  # Clean up for template display
     
     # Filter by academy
     academy_filter = request.GET.get('academy')
     if academy_filter:
         offerings = offerings.filter(academy__id=academy_filter)
-    
-    # Filter by language
+      # Filter by language
     language_filter = request.GET.get('language')
     if language_filter:
         offerings = offerings.filter(language__id=language_filter)
     
-    # Get filter options
+    # Filter by upcoming (default is on only when no form submission)
+    # If any form parameter is present, don't use default
+    has_form_params = any([
+        request.GET.get('search'),
+        request.GET.get('academy'),
+        request.GET.get('language'),
+        request.GET.get('sort'),
+        'upcoming' in request.GET
+    ])
+    
+    if has_form_params:
+        show_upcoming = request.GET.get('upcoming') == 'on'
+    else:
+        show_upcoming = True  # Default to True only when no form submitted
+    
+    if show_upcoming:
+        now = timezone.now()
+        offerings = offerings.filter(
+            Q(variations__start_date__gte=now) | Q(variations__start_date__isnull=True)
+        ).distinct()
+    
+    # Sort by
+    sort_by = request.GET.get('sort', 'date')
+    if sort_by == 'date':
+        offerings = offerings.annotate(
+            earliest_date=Min('variations__start_date')
+        ).order_by('earliest_date', 'title')
+    elif sort_by == 'title':
+        offerings = offerings.order_by('title')
+    elif sort_by == 'academy':
+        offerings = offerings.order_by('academy__name', 'title')
+    else:
+        offerings = offerings.annotate(
+            earliest_date=Min('variations__start_date')
+        ).order_by('earliest_date', 'title')
+      # Get filter options
     academies = Academy.objects.annotate(
         offering_count=Count('offerings', filter=Q(offerings__is_active=True))
     ).filter(offering_count__gt=0).order_by('name')
@@ -92,8 +165,11 @@ def offering_list(request):
         offering_count=Count('offerings', filter=Q(offerings__is_active=True))
     ).filter(offering_count__gt=0).order_by('name')
     
+    # Get total count before pagination
+    total_count = offerings.count()
+    
     # Pagination
-    paginator = Paginator(offerings.order_by('title','academy__name'), 20)
+    paginator = Paginator(offerings, 20)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     
@@ -104,7 +180,9 @@ def offering_list(request):
         'search_query': search_query,
         'selected_academy': academy_filter,
         'selected_language': language_filter,
-        'total_count': offerings.count()
+        'selected_sort': sort_by,
+        'show_upcoming': show_upcoming,
+        'total_count': total_count
     })
 
 
@@ -199,18 +277,53 @@ def search_results(request):
             'query': query,
             'no_query': True
         })
-      # Search offerings
+    
+    # Search offerings
     offerings = Offering.objects.select_related(
         'academy', 'category'
     ).prefetch_related(
-        'categories'
+        'categories', 'variations'
     ).filter(
         Q(title__icontains=query) |
         Q(description__icontains=query) |
-        Q(program_content__icontains=query) |
-        Q(categories__name__icontains=query),
+        Q(program_content__icontains=query) |        Q(categories__name__icontains=query),
         is_active=True
-    ).distinct().order_by('academy__name', 'title')[:20]
+    ).distinct()
+    
+    # Filter by upcoming (default is on only when no form submission)
+    # If any form parameter is present, don't use default
+    has_form_params = any([
+        request.GET.get('sort'),
+        'upcoming' in request.GET
+    ])
+    
+    if has_form_params:
+        show_upcoming = request.GET.get('upcoming') == 'on'
+    else:
+        show_upcoming = True  # Default to True only when no form submitted
+    
+    if show_upcoming:
+        now = timezone.now()
+        offerings = offerings.filter(
+            Q(variations__start_date__gte=now) | Q(variations__start_date__isnull=True)
+        ).distinct()
+    
+    # Sort by
+    sort_by = request.GET.get('sort', 'date')
+    if sort_by == 'date':
+        offerings = offerings.annotate(
+            earliest_date=Min('variations__start_date')
+        ).order_by('earliest_date', 'title')
+    elif sort_by == 'title':
+        offerings = offerings.order_by('title')
+    elif sort_by == 'academy':
+        offerings = offerings.order_by('academy__name', 'title')
+    else:
+        offerings = offerings.annotate(
+            earliest_date=Min('variations__start_date')
+        ).order_by('earliest_date', 'title')
+    
+    offerings = offerings[:20]
     
     # Search academies
     academies = Academy.objects.filter(
@@ -230,6 +343,8 @@ def search_results(request):
         'offerings': offerings,
         'academies': academies,
         'teachers': teachers,
+        'selected_sort': sort_by,
+        'show_upcoming': show_upcoming,
         'total_results': total_results
     })
 

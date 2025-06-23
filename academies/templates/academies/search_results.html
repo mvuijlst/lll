@@ -1,4 +1,6 @@
 {% extends 'academies/base.html' %}
+{% load i18n %}
+{% load academy_extras %}
 
 {% block title %}
     {% if query %}Search: {{ query }} - UGent Academies{% else %}Search - UGent Academies{% endif %}
@@ -100,6 +102,37 @@
     </div>
 </div>
 
+<!-- Filters for Offerings -->
+{% if offerings %}
+<div class="filter-section mb-4">
+    <form method="get" class="row g-3 align-items-end">
+        <input type="hidden" name="q" value="{{ query }}">
+        <div class="col-md-3">
+            <label for="sort" class="form-label">{% trans "Sort by" %}</label>
+            <select class="form-select" id="sort" name="sort">
+                <option value="date" {% if selected_sort == 'date' %}selected{% endif %}>{% trans "Date" %}</option>
+                <option value="title" {% if selected_sort == 'title' %}selected{% endif %}>{% trans "Title" %}</option>
+                <option value="academy" {% if selected_sort == 'academy' %}selected{% endif %}>{% trans "Academy" %}</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <div class="form-check mt-4">
+                <input class="form-check-input" type="checkbox" id="upcoming" name="upcoming" 
+                       {% if show_upcoming %}checked{% endif %}>
+                <label class="form-check-label" for="upcoming">
+                    {% trans "Only upcoming" %}
+                </label>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary w-100">
+                <i class="bi bi-funnel me-1"></i>{% trans "Filter" %}
+            </button>
+        </div>
+    </form>
+</div>
+{% endif %}
+
 <!-- Academies Results -->
 {% if academies %}
 <div class="mb-5">
@@ -130,34 +163,62 @@
         <i class="bi bi-book me-2"></i>Courses 
         <span class="badge bg-secondary">{{ offerings.count }}</span>
     </h3>
-    <div class="row g-3">
+    <div class="row g-4">
         {% for offering in offerings %}
-        <div class="col-lg-6">
-            <div class="card offering-card">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h6 class="card-title mb-0">
-                            <a href="{% url 'academies:offering_detail' offering.pk %}" 
-                               class="text-decoration-none">
-                                {{ offering.title|truncatechars:80 }}
-                            </a>
-                        </h6>
+        <div class="col-md-6 col-lg-4">
+            <div class="card offering-card h-100">
+                {% if offering.image_url %}
+                <a href="{% url 'academies:offering_detail' offering.pk %}" class="text-decoration-none">
+                    <div class="card-img-top-wrapper" style="aspect-ratio: 2/1; overflow: hidden; background-color: #f8f9fa;">
+                        <img src="{{ offering.image_url }}" 
+                             alt="{{ offering.title }}" 
+                             class="w-100 h-100"
+                             style="object-fit: cover;"
+                             loading="lazy">
                     </div>
-                    <p class="text-muted small mb-2">
-                        <i class="bi bi-building me-1"></i>{{ offering.academy.name }}
-                        {% if offering.category %}
-                        <span class="ms-2">
-                            <i class="bi bi-folder me-1"></i>{{ offering.category.name }}
+                </a>
+                {% endif %}
+                <div class="card-body d-flex flex-column">
+                    <h6 class="card-title">
+                        <a href="{% url 'academies:offering_detail' offering.pk %}" 
+                           class="text-decoration-none text-dark">
+                            {{ offering.title|truncatechars:60 }}
+                        </a>
+                    </h6>
+                      <div class="mb-3">
+                        <span class="badge academy-badge">
+                            {{ offering.academy.name }}
+                        </span>
+                        {% if offering.language %}
+                        <span class="badge ugent-blue-badge ms-1">
+                            {{ offering.language.name|language_code }}
                         </span>
                         {% endif %}
-                    </p>
+                    </div>
+
                     {% if offering.description %}
-                    <p class="card-text small text-muted">
-                        {{ offering.description|striptags|truncatechars:120 }}
+                    <p class="card-text text-muted small">
+                        {{ offering.description|striptags|truncatechars:100 }}
                     </p>
                     {% endif %}
-                    <a href="{% url 'academies:offering_detail' offering.pk %}" 
-                       class="btn btn-sm btn-primary">View Details</a>
+                    
+                    <!-- First Variation Date Only -->
+                    {% if offering.variations.exists %}
+                    <div class="variation-preview mb-3">
+                        {% with offering.variations.first as first_variation %}
+                        {% if first_variation.lesson_dates %}
+                        <small class="badge bg-light text-dark border">
+                            <i class="bi bi-calendar me-1"></i>{{ first_variation.lesson_dates|truncatechars:20 }}
+                        </small>
+                        {% endif %}
+                        {% if first_variation.price %}
+                        <small class="badge bg-light text-dark border ms-1">
+                            <i class="bi bi-tag me-1"></i>{{ first_variation.price }}
+                        </small>
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
