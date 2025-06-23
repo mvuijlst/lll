@@ -384,8 +384,7 @@ if __name__ == "__main__":
             'name': 'Ghall',
             'url': 'https://ghall.ugent.be/programma',
             'base_url': 'https://ghall.ugent.be'
-        },
-        {
+        },        {
             'name': 'UGain',
             'url': 'https://ugain.ugent.be/programma',
             'base_url': 'https://ugain.ugent.be'
