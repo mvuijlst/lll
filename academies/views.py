@@ -259,10 +259,35 @@ def offering_detail(request, pk):
 
 
 def teacher_list(request):
-    """Display all teachers."""
-    teachers = Teacher.objects.annotate(
+    """Display all teachers with academy filtering."""
+    selected_academy = request.GET.get('academy')
+    
+    # Get all teachers with variation counts
+    all_teachers = Teacher.objects.annotate(
         variation_count=Count('variation_teachers__variation', distinct=True)
-    ).order_by('name')
+    )
+    
+    # Get total count for "All" filter
+    total_teacher_count = all_teachers.count()
+    
+    teachers = all_teachers
+    
+    # Filter by academy if selected
+    if selected_academy:
+        teachers = teachers.filter(
+            variation_teachers__variation__offering__academy__id=selected_academy
+        ).distinct()
+    
+    teachers = teachers.order_by('name')
+    
+    # Get academies with teacher counts for the filter
+    academies = Academy.objects.annotate(
+        teacher_count=Count(
+            'offerings__variations__variation_teachers__teacher',
+            distinct=True,
+            filter=Q(offerings__is_active=True)
+        )
+    ).filter(teacher_count__gt=0).order_by('sort_order', 'name')
     
     # Pagination
     paginator = Paginator(teachers, 24)
@@ -270,7 +295,10 @@ def teacher_list(request):
     page_obj = paginator.get_page(page_number)
     
     return render(request, 'academies/teacher_list.html', {
-        'teachers': page_obj
+        'teachers': page_obj,
+        'academies': academies,
+        'selected_academy': selected_academy,
+        'total_teacher_count': total_teacher_count
     })
 
 

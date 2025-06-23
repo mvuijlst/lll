@@ -21,6 +21,25 @@
 {% endblock %}
 
 {% block content %}
+<!-- Academy Filter -->
+{% if academies.count > 1 %}
+<div class="filter-section">
+    <div class="d-flex flex-wrap align-items-center gap-2">
+        <span class="fw-bold me-2">{% trans "Academies" %}:</span>
+        <a href="?" 
+           class="btn btn-sm {% if not selected_academy %}academy-button{% else %}btn-outline-secondary{% endif %}">
+            {% trans "All" %} ({{ total_teacher_count }})
+        </a>
+        {% for academy in academies %}
+        <a href="?academy={{ academy.id }}" 
+           class="btn btn-sm {% if selected_academy == academy.id|stringformat:"s" %}academy-button{% else %}btn-outline-secondary{% endif %}">
+            {{ academy.name }} ({{ academy.teacher_count }})
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
 <div class="row g-4">
     {% for teacher in teachers %}    <div class="col-md-6 col-lg-4">
         <div class="teacher-card">
@@ -79,7 +98,7 @@
     <ul class="pagination justify-content-center">
         {% if teachers.has_previous %}
         <li class="page-item">
-            <a class="page-link" href="?page={{ teachers.previous_page_number }}">{% trans "Previous" %}</a>
+            <a class="page-link" href="?page={{ teachers.previous_page_number }}{% if selected_academy %}&academy={{ selected_academy }}{% endif %}">{% trans "Previous" %}</a>
         </li>
         {% endif %}
         
@@ -90,14 +109,14 @@
         </li>
         {% elif num > teachers.number|add:'-3' and num < teachers.number|add:'3' %}
         <li class="page-item">
-            <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+            <a class="page-link" href="?page={{ num }}{% if selected_academy %}&academy={{ selected_academy }}{% endif %}">{{ num }}</a>
         </li>
         {% endif %}
         {% endfor %}
         
         {% if teachers.has_next %}
         <li class="page-item">
-            <a class="page-link" href="?page={{ teachers.next_page_number }}">{% trans "Next" %}</a>
+            <a class="page-link" href="?page={{ teachers.next_page_number }}{% if selected_academy %}&academy={{ selected_academy }}{% endif %}">{% trans "Next" %}</a>
         </li>
         {% endif %}
     </ul>
