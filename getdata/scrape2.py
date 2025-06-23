@@ -387,11 +387,11 @@ def scrape_academy_introduction(academy_base_url, academy_name):
     print(f"Scraping introduction for {academy_name}...")
       # Special case for UGain - hardcoded content
     if "ugain" in academy_base_url.lower():
-        return "<p>Welkom bij UGAin, de academie voor levenslang leren aan de Faculteit Ingenieurswetenschappen en Architectuur van de Universiteit Gent.</p> <p>UGAin biedt een gevarieerd aanbod aan bijscholingen, studiedagen, opleidingen en postgraduaten rond actuele en innovatieve thema's in engineering en technologie.</p> <p>Met onze activiteiten slaan we de brug tussen universiteit en praktijk, en ondersteunen we ingenieurs en andere professionals in hun verdere ontwikkeling.</p>"
+        return "<p>Welkom bij UGain, de academie voor levenslang leren aan de Faculteit Ingenieurswetenschappen en Architectuur van de Universiteit Gent.</p> <p>UGAin biedt een gevarieerd aanbod aan bijscholingen, studiedagen, opleidingen en postgraduaten rond actuele en innovatieve thema's in engineering en technologie.</p> <p>Met onze activiteiten slaan we de brug tussen universiteit en praktijk, en ondersteunen we ingenieurs en andere professionals in hun verdere ontwikkeling.</p>"
     
     # Special case for Dunant Academie - hardcoded content
     if "dunant" in academy_base_url.lower():
-        return "<p>Je blijven ontwikkelen op academisch niveau, je loopbaan een boost geven?&nbsp;</p><p>De <strong>Dunant Academie</strong> maakt recente inzichten uit wetenschap en praktijk toegankelijk voor werkveld of breed publiek.</p><p>Ons cursusaanbod helpt je omgaan met vraagstukken van vandaag en morgen. Bepaalde lessen kunnen zowel ter plaatse als online gevolgd worden, in de vorm van theorie of practicum.</p>"
+        return "<p>De <strong>Dunant Academie</strong> maakt recente inzichten uit wetenschap en praktijk toegankelijk voor werkveld of breed publiek.</p><p>Ons cursusaanbod helpt je omgaan met vraagstukken van vandaag en morgen. Bepaalde lessen kunnen zowel ter plaatse als online gevolgd worden, in de vorm van theorie of practicum.</p>"
     
     try:
         # Send an HTTP request to the homepage

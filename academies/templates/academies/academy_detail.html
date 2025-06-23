@@ -47,7 +47,7 @@
     </ol>
 </nav>
 
-<!-- Academy Info -->
+<!-- Academy Info 
 <div class="row mb-4">
     <div class="col-12">
         <div class="card academy-card academy-bg-light" 
@@ -64,12 +64,6 @@
                                 </span>
                             {% endif %}
                         </div>
-                        
-                        {% if academy.introduction %}
-                        <div class="academy-introduction mb-3">
-                            {{ academy.introduction|safe }}
-                        </div>
-                        {% endif %}
                     </div>
                     <div class="col-md-4 text-md-end">
                         {% if user.is_staff %}
@@ -96,6 +90,17 @@
         </div>
     </div>
 </div>
+-->
+
+{% if academy.introduction %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="academy-introduction-content">
+            {{ academy.introduction|safe }}
+        </div>
+    </div>
+</div>
+{% endif %}
 
 <!-- Filters -->
 <div class="filter-section">
