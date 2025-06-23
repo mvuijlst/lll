@@ -1,7 +1,9 @@
 from django.db import models
 from django.utils import timezone
-from django.core.files.storage import default_storage
+from django.conf import settings
 import os
+import hashlib
+import glob
 
 
 class Academy(models.Model):
@@ -154,9 +156,90 @@ class Offering(models.Model):
     def __str__(self):
         return f"{self.title} ({self.academy.name})"
     
-    class Meta:
-        ordering = ['academy__name', 'title']
-
+    def get_display_image_url(self):
+        """
+        Get the image URL to display for this offering.
+        Returns the featured image if available, otherwise a consistent fallback image.        """
+        # If offering has a featured image, use it
+        if self.image_url:
+            return self.image_url
+        
+        # Generate fallback image based on academy
+        return self._get_fallback_image_url()
+    
+    def _get_fallback_image_url(self):
+        """
+        Get a consistent fallback image from the academy's image directory.
+        Uses hashing to ensure the same course always gets the same image.
+        """
+        # Map academy names to their directory names
+        academy_mapping = {
+            'humanities academie': 'humanities',
+            'gandaius permanente vorming': 'gandaius',
+            'science academy': 'science',
+            'the ghall': 'ghall',
+            'ugain - ugent academie voor ingenieurs': 'ugain',
+            'feb academy': 'feb',
+            'academie voor diergeneeskunde': 'acvetmed',
+            'dunant academie': 'dunant',
+            'academy for lifelong learning in pharmacy': 'allpha',
+            'academy for political and social sciences': 'apss'
+        }
+        
+        # Get academy directory name
+        academy_name_lower = self.academy.name.lower()
+        academy_folder = academy_mapping.get(academy_name_lower)
+        
+        # If no direct mapping, try to find partial matches
+        if not academy_folder:
+            for name_key, folder_name in academy_mapping.items():
+                if name_key in academy_name_lower or academy_name_lower in name_key:
+                    academy_folder = folder_name
+                    break
+        
+        # If still no match, create a directory name from academy name
+        if not academy_folder:
+            academy_folder = ''.join(c if c.isalnum() else '_' for c in academy_name_lower)
+            academy_folder = academy_folder.strip('_')
+        
+        # Construct path to academy images
+        media_root = getattr(settings, 'MEDIA_ROOT', '')
+        academy_images_path = os.path.join(media_root, 'academy_images', academy_folder)
+        
+        # Check if directory exists
+        if not os.path.exists(academy_images_path):
+            return None
+        
+        # Get all image files in the directory
+        image_extensions = ['*.jpg', '*.jpeg', '*.png', '*.gif', '*.webp']
+        image_files = []
+        for ext in image_extensions:
+            image_files.extend(glob.glob(os.path.join(academy_images_path, ext)))
+            image_files.extend(glob.glob(os.path.join(academy_images_path, ext.upper())))
+        
+        if not image_files:
+            return None
+        
+        # Sort files for consistency
+        image_files.sort()
+        
+        # Create hash from offering ID and title for consistency
+        hash_string = f"{self.pk}_{self.title}"
+        hash_value = int(hashlib.md5(hash_string.encode()).hexdigest(), 16)
+        
+        # Select image based on hash
+        selected_image = image_files[hash_value % len(image_files)]
+        
+        # Convert to relative path for URL
+        relative_path = os.path.relpath(selected_image, media_root)
+        
+        # Convert Windows path separators to URL separators
+        relative_path = relative_path.replace('\\', '/')
+        
+        # Return full media URL
+        media_url = getattr(settings, 'MEDIA_URL', '/media/')
+        return f"{media_url}{relative_path}"
+        
 
 class Variation(models.Model):
     """Specific instances/sessions of an offering with dates, prices, and locations."""

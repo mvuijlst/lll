@@ -160,11 +160,10 @@
     {% for offering in offerings %}
     <div class="col-md-6 col-lg-4">
         <div class="card offering-card h-100 themed"
-             style="border-top-color: {{ academy.primary_color }};">
-            {% if offering.image_url %}
+             style="border-top-color: {{ academy.primary_color }};">            {% if offering.get_display_image_url %}
             <a href="{% url 'academies:offering_detail' offering.pk %}" class="text-decoration-none">
                 <div class="card-img-top-wrapper" style="aspect-ratio: 2/1; overflow: hidden; background-color: #f8f9fa;">
-                    <img src="{{ offering.image_url }}" 
+                    <img src="{{ offering.get_display_image_url }}" 
                          alt="{{ offering.title }}" 
                          class="w-100 h-100"
                          style="object-fit: cover;"
