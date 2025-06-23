@@ -11,11 +11,16 @@
             <div class="col-md-8">
                 <h1 class="mb-0"><i class="bi bi-collection-fill me-3"></i>{% trans "All Offerings" %}</h1>
                 <p class="lead mb-0 mt-2">{% trans "Browse all available courses across academies" %}</p>
-            </div>
-            <div class="col-md-4 text-md-end">
+            </div>            <div class="col-md-4 text-md-end">
                 <div class="stats-card d-inline-block">
                     <h3 class="mb-1 text-primary">{{ total_count }}</h3>
-                    <small class="text-muted">{% trans "Offering" %}{{ total_count|pluralize }}</small>
+                    <small class="text-muted">
+                        {% if total_offerings == 1 %}
+                            {% trans "Offering" %}
+                        {% else %}
+                            {% trans "Offerings" %}
+                        {% endif %}
+                    </small>
                 </div>
             </div>
         </div>

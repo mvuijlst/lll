@@ -1,19 +1,19 @@
 {% extends 'academies/base.html' %}
+{% load i18n %}
 
-{% block title %}Academies - UGent Academies{% endblock %}
+{% block title %}{% trans "Academies" %} - {% trans "UGent Academies" %}{% endblock %}
 
 {% block header %}
 <div class="page-header">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-8">
-                <h1 class="mb-0"><i class="bi bi-mortarboard-fill me-3"></i>UGent Academies</h1>
-                <p class="lead mb-0 mt-2">Discover lifelong learning opportunities across our specialized academies</p>
-            </div>
-            <div class="col-md-4 text-md-end">
+                <h1 class="mb-0"><i class="bi bi-mortarboard-fill me-3"></i>{% trans "UGent Academies" %}</h1>
+                <p class="lead mb-0 mt-2">{% trans "Discover lifelong learning opportunities across our specialized academies" %}</p>
+            </div>            <div class="col-md-4 text-md-end">
                 <div class="stats-card d-inline-block">
                     <h3 class="mb-1 text-primary">{{ academies.count }}</h3>
-                    <small class="text-muted">Academies</small>
+                    <small class="text-muted">{% trans "Academies" %}</small>
                 </div>
             </div>
         </div>
@@ -39,34 +39,31 @@
                     {{ academy.description|truncatewords:20 }}
                 </p>
                 {% endif %}
-                
-                {% if academy.base_url %}
+                  {% if academy.base_url %}
                 <p class="card-text">
                     <small class="text-muted">
                         <i class="bi bi-globe me-1"></i>
                         <a href="{{ academy.base_url }}" target="_blank" class="text-decoration-none academy-text">
-                            Visit Website
+                            {% trans "Visit Website" %}
                         </a>
                     </small>
                 </p>
                 {% endif %}
                 
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="badge academy-badge">
+                <div class="d-flex justify-content-between align-items-center mb-3">                    <span class="badge academy-badge">
                         <i class="bi bi-book me-1"></i>
-                        {{ academy.offering_count }} offering{{ academy.offering_count|pluralize }}
+                        {% blocktrans count counter=academy.offering_count %}{{ counter }} offering{% plural %}{{ counter }} offerings{% endblocktrans %}
                     </span>
                     {% if academy.categories.count %}
                     <span class="badge bg-secondary">
-                        {{ academy.categories.count }} categor{{ academy.categories.count|pluralize:"y,ies" }}
+                        {% blocktrans count counter=academy.categories.count %}{{ counter }} category{% plural %}{{ counter }} categories{% endblocktrans %}
                     </span>
                     {% endif %}
                 </div>
-                
-                <div class="mt-auto">
+                  <div class="mt-auto">
                     <a href="{% url 'academies:academy_detail' academy.pk %}" 
                        class="btn academy-button w-100">
-                        <i class="bi bi-arrow-right me-1"></i>Explore Offerings
+                        <i class="bi bi-arrow-right me-1"></i>{% trans "Explore Offerings" %}
                     </a>
                 </div>
             </div>

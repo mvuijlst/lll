@@ -26,10 +26,15 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 text-md-end">
-                <div class="stats-card d-inline-block">
+            <div class="col-md-4 text-md-end">                <div class="stats-card d-inline-block">
                     <h3 class="mb-1" style="color: {{ academy.primary_color }};">{{ total_offerings }}</h3>
-                    <small class="text-muted">Offering{{ total_offerings|pluralize }}</small>
+                    <small class="text-muted">
+                        {% if total_offerings == 1 %}
+                            {% trans "Offering" %}
+                        {% else %}
+                            {% trans "Offerings" %}
+                        {% endif %}
+                    </small>
                 </div>
             </div>
         </div>

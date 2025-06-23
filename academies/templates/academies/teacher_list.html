@@ -61,10 +61,10 @@
                 {{ teacher.description|striptags|truncatewords:20 }}
             </p>
             {% endif %}
-            
-            {% if teacher.variation_count %}
-            <p class="small text-muted mb-3">                <i class="bi bi-book me-1"></i>
-                {{ teacher.variation_count }} {% trans "course" %}{{ teacher.variation_count|pluralize }}
+              {% if teacher.variation_count %}
+            <p class="small text-muted mb-3">
+                <i class="bi bi-book me-1"></i>
+                {% blocktrans count counter=teacher.variation_count %}{{ counter }} course{% plural %}{{ counter }} courses{% endblocktrans %}
             </p>
             {% endif %}
             

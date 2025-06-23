@@ -3,7 +3,7 @@
 {% load academy_extras %}
 
 {% block title %}
-    {% if query %}Search: {{ query }} - UGent Academies{% else %}Search - UGent Academies{% endif %}
+    {% if query %}{% trans "Search" %}: {{ query }} - {% trans "UGent Academies" %}{% else %}{% trans "Search" %} - {% trans "UGent Academies" %}{% endif %}
 {% endblock %}
 
 {% block header %}
@@ -11,23 +11,23 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-8">
-                {% if query %}
-                <h1 class="mb-0">
-                    <i class="bi bi-search me-3"></i>Search Results
+                {% if query %}                <h1 class="mb-0">
+                    <i class="bi bi-search me-3"></i>{% trans "Search Results" %}
                 </h1>
-                <p class="lead mb-0 mt-2">Results for "{{ query }}"</p>
+                <p class="lead mb-0 mt-2">{% trans "Results for" %} "{{ query }}"</p>
                 {% else %}
                 <h1 class="mb-0">
-                    <i class="bi bi-search me-3"></i>Search
+                    <i class="bi bi-search me-3"></i>{% trans "Search" %}
                 </h1>
-                <p class="lead mb-0 mt-2">Find courses, teachers, and academies</p>
+                <p class="lead mb-0 mt-2">{% trans "Find courses, teachers, and academies" %}</p>
                 {% endif %}
-            </div>
-            {% if total_results %}
+            </div>            {% if total_results %}
             <div class="col-md-4 text-md-end">
                 <div class="stats-card d-inline-block">
                     <h3 class="mb-1 text-primary">{{ total_results }}</h3>
-                    <small class="text-muted">Result{{ total_results|pluralize }}</small>
+                    <small class="text-muted">
+                        {% blocktrans count counter=total_results %}{{ counter }} Result{% plural %}{{ counter }} Results{% endblocktrans %}
+                    </small>
                 </div>
             </div>
             {% endif %}
@@ -41,17 +41,15 @@
 <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="card">
-            <div class="card-body text-center">
-                <i class="bi bi-search fs-1 text-muted mb-3"></i>
-                <h3>Search UGent Academies</h3>
-                <p class="text-muted mb-4">Enter keywords to find courses, teachers, or academies</p>
+            <div class="card-body text-center">                <i class="bi bi-search fs-1 text-muted mb-3"></i>
+                <h3>{% trans "Search UGent Academies" %}</h3>
+                <p class="text-muted mb-4">{% trans "Enter keywords to find courses, teachers, or academies" %}</p>
                 <form method="get" action="{% url 'academies:search_results' %}">
-                    <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" name="q" 
-                               placeholder="Search for courses, teachers, academies..." 
+                    <div class="input-group input-group-lg">                        <input type="text" class="form-control" name="q" 
+                               placeholder="{% trans "Search for courses, teachers, academies..." %}" 
                                required>
                         <button class="btn btn-primary" type="submit">
-                            <i class="bi bi-search me-1"></i>Search
+                            <i class="bi bi-search me-1"></i>{% trans "Search" %}
                         </button>
                     </div>
                 </form>
@@ -62,14 +60,12 @@
 {% elif total_results == 0 %}
 <div class="row justify-content-center">
     <div class="col-md-8">
-        <div class="alert alert-info text-center">
-            <i class="bi bi-info-circle fs-3 mb-3 d-block"></i>
-            <h4>No results found</h4>
-            <p class="mb-3">We couldn't find anything matching "{{ query }}"</p>
+        <div class="alert alert-info text-center">            <i class="bi bi-info-circle fs-3 mb-3 d-block"></i>
+            <h4>{% trans "No results found" %}</h4>
+            <p class="mb-3">{% trans "We couldn't find anything matching" %} "{{ query }}"</p>
             <form method="get" action="{% url 'academies:search_results' %}">
-                <div class="input-group">
-                    <input type="text" class="form-control" name="q" 
-                           placeholder="Try different keywords..." 
+                <div class="input-group">                    <input type="text" class="form-control" name="q" 
+                           placeholder="{% trans "Try different keywords..." %}" 
                            value="{{ query }}">
                     <button class="btn btn-primary" type="submit">
                         <i class="bi bi-search"></i>
@@ -84,14 +80,12 @@
 <!-- Search Summary -->
 <div class="row mb-4">
     <div class="col-12">
-        <div class="d-flex justify-content-between align-items-center">
-            <p class="mb-0 text-muted">
-                Found {{ total_results }} result{{ total_results|pluralize }} for "{{ query }}"
+        <div class="d-flex justify-content-between align-items-center">            <p class="mb-0 text-muted">
+                {% blocktrans count counter=total_results with query=query %}Found {{ counter }} result for "{{ query }}"{% plural %}Found {{ counter }} results for "{{ query }}"{% endblocktrans %}
             </p>
             <form method="get" action="{% url 'academies:search_results' %}" class="d-flex">
-                <div class="input-group">
-                    <input type="text" class="form-control" name="q" 
-                           placeholder="Refine search..." 
+                <div class="input-group">                    <input type="text" class="form-control" name="q" 
+                           placeholder="{% trans "Refine search..." %}" 
                            value="{{ query }}">
                     <button class="btn btn-outline-primary" type="submit">
                         <i class="bi bi-search"></i>
@@ -135,19 +129,17 @@
 
 <!-- Academies Results -->
 {% if academies %}
-<div class="mb-5">
-    <h3 class="h5 mb-3">
-        <i class="bi bi-mortarboard me-2"></i>Academies 
+<div class="mb-5">    <h3 class="h5 mb-3">
+        <i class="bi bi-mortarboard me-2"></i>{% trans "Academies" %} 
         <span class="badge bg-secondary">{{ academies.count }}</span>
     </h3>
     <div class="row g-3">
         {% for academy in academies %}
         <div class="col-md-6 col-lg-4">
             <div class="card academy-card">
-                <div class="card-body">
-                    <h6 class="card-title">{{ academy.name }}</h6>
+                <div class="card-body">                    <h6 class="card-title">{{ academy.name }}</h6>
                     <a href="{% url 'academies:academy_detail' academy.pk %}" 
-                       class="btn btn-sm btn-primary">View Academy</a>
+                       class="btn btn-sm btn-primary">{% trans "View Academy" %}</a>
                 </div>
             </div>
         </div>
@@ -158,9 +150,8 @@
 
 <!-- Offerings Results -->
 {% if offerings %}
-<div class="mb-5">
-    <h3 class="h5 mb-3">
-        <i class="bi bi-book me-2"></i>Courses 
+<div class="mb-5">    <h3 class="h5 mb-3">
+        <i class="bi bi-book me-2"></i>{% trans "Courses" %} 
         <span class="badge bg-secondary">{{ offerings.count }}</span>
     </h3>
     <div class="row g-4">
@@ -229,23 +220,27 @@
 
 <!-- Teachers Results -->
 {% if teachers %}
-<div class="mb-5">
-    <h3 class="h5 mb-3">
-        <i class="bi bi-person-badge me-2"></i>Teachers 
+<div class="mb-5">    <h3 class="h5 mb-3">
+        <i class="bi bi-person-badge me-2"></i>{% trans "Teachers" %} 
         <span class="badge bg-secondary">{{ teachers.count }}</span>
     </h3>
     <div class="row g-3">
         {% for teacher in teachers %}
         <div class="col-md-6 col-lg-4">
-            <div class="card">
-                <div class="card-body text-center">
+            <div class="card">                <div class="card-body text-center">
+                    {% if teacher.photo_url %}
+                    <img src="{{ teacher.photo_url }}" 
+                         alt="{{ teacher.name }}" 
+                         class="rounded-circle mb-2"
+                         style="width: 60px; height: 60px; object-fit: cover;">
+                    {% else %}
                     <i class="bi bi-person-circle text-primary mb-2" style="font-size: 2rem;"></i>
+                    {% endif %}
                     <h6 class="card-title">{{ teacher.name }}</h6>
                     {% if teacher.title %}
                     <p class="text-muted small mb-2">{{ teacher.title }}</p>
-                    {% endif %}
-                    <a href="{% url 'academies:teacher_detail' teacher.pk %}" 
-                       class="btn btn-sm btn-primary">View Profile</a>
+                    {% endif %}                    <a href="{% url 'academies:teacher_detail' teacher.pk %}" 
+                       class="btn btn-sm btn-primary">{% trans "View Profile" %}</a>
                 </div>
             </div>
         </div>
