@@ -3,6 +3,27 @@
 
 {% block title %}{{ offering.title }} - {% trans "UGent Academies" %}{% endblock %}
 
+{% block extra_css %}
+<style>
+    /* Ensure headings in content use #1E64C8 */
+    .offering-content h1, .offering-content h2, .offering-content h3, 
+    .offering-content h4, .offering-content h5, .offering-content h6 {
+        color: #1E64C8 !important;
+    }
+    
+    /* Ensure links in content use #1E64C8 */
+    .offering-content a {
+        color: #1E64C8 !important;
+    }
+    
+    /* Keep text black */
+    .offering-content p, .offering-content div, .offering-content span,
+    .offering-content li, .offering-content td, .offering-content th {
+        color: #000 !important;
+    }
+</style>
+{% endblock %}
+
 {% block content %}
 <div style="--academy-color: {{ offering.academy.primary_color }}; --academy-light: {{ offering.academy.light_color }}; --academy-contrast: {{ offering.academy.contrast_color }};">
 
@@ -65,22 +86,22 @@
                     </div>
                     {% endif %}
                 </div>                {% if offering.description %}
-                <div class="mb-4">
-                    <h3 class="h5 academy-text">{% trans "Description" %}</h3>
+                <div class="mb-4 offering-content">
+                    <h3 class="h5" style="color: #1E64C8;">{% trans "Description" %}</h3>
                     <div class="text-muted">{{ offering.description|safe }}</div>
                 </div>
                 {% endif %}
 
                 {% if offering.program_content %}
-                <div class="mb-4">
-                    <h3 class="h5 academy-text">{% trans "Program Content" %}</h3>
+                <div class="mb-4 offering-content">
+                    <h3 class="h5" style="color: #1E64C8;">{% trans "Program Content" %}</h3>
                     <div class="text-muted">{{ offering.program_content|safe }}</div>
                 </div>
                 {% endif %}
 
                 {% if offering.remarks %}
-                <div class="mb-4">
-                    <h3 class="h5 academy-text">{% trans "Remarks" %}</h3>
+                <div class="mb-4 offering-content">
+                    <h3 class="h5" style="color: #1E64C8;">{% trans "Remarks" %}</h3>
                     <div class="alert academy-bg-light">{{ offering.remarks|safe }}</div>
                 </div>
                 {% endif %}
@@ -123,9 +144,8 @@
                             <i class="bi bi-geo-alt me-1 text-info"></i>{{ variation.location.name }}
                         </p>
                         {% endif %}
-                        
-                        {% if variation.price %}
-                        <p class="mb-2 fw-bold academy-text">
+                          {% if variation.price %}
+                        <p class="mb-2 fw-bold" style="color: #1E64C8;">
                             <i class="bi bi-tag me-1"></i>{{ variation.price }}
                         </p>
                         {% endif %}
@@ -140,10 +160,9 @@
                         {% if variation.variation_teachers.exists %}
                         <div class="mt-2">
                             <small class="text-muted">
-                                <i class="bi bi-person me-1"></i>
-                                {% for vt in variation.variation_teachers.all %}
+                                <i class="bi bi-person me-1"></i>                                {% for vt in variation.variation_teachers.all %}
                                     <a href="{% url 'academies:teacher_detail' vt.teacher.pk %}" 
-                                       class="text-decoration-none academy-text">{{ vt.teacher.name }}</a>
+                                       style="color: #1E64C8; text-decoration: none;">{{ vt.teacher.name }}</a>
                                     {% if not forloop.last %}, {% endif %}
                                 {% endfor %}
                             </small>
@@ -158,9 +177,8 @@
                     <hr>
                     <h6 class="text-muted mb-3">
                         <i class="bi bi-list me-1"></i>{% trans "All Sessions" %}
-                    </h6>
-                    {% for variation in variations %}
-                    <div class="variation-item academy-themed mb-2 {% if variation not in upcoming_variations %}opacity-75{% endif %}">
+                    </h6>                    {% for variation in variations %}
+                    <div class="variation-item mb-2 {% if variation not in upcoming_variations %}opacity-75{% endif %}">
                         <div class="d-flex justify-content-between align-items-start">
                             <div class="flex-grow-1">
                                 {% if variation.lesson_dates %}
@@ -175,7 +193,7 @@
                                 {% endif %}
                             </div>
                             {% if variation.price %}
-                            <small class="academy-text fw-bold">{{ variation.price }}</small>
+                            <small class="fw-bold" style="color: #1E64C8;">{{ variation.price }}</small>
                             {% endif %}
                         </div>
                     </div>
@@ -190,10 +208,9 @@
             </div>
         </div>
 
-        {% if offering.links.exists %}
-        <div class="card mt-3">
+        {% if offering.links.exists %}        <div class="card mt-3">
             <div class="card-header academy-bg-light">
-                <h6 class="mb-0 academy-text"><i class="bi bi-link-45deg me-2"></i>{% trans "Related Links" %}</h6>
+                <h6 class="mb-0" style="color: #1E64C8;"><i class="bi bi-link-45deg me-2"></i>{% trans "Related Links" %}</h6>
             </div>
             <div class="card-body">
                 {% for link in offering.links.all %}

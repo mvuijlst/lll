@@ -23,7 +23,8 @@
 
 {% block content %}
 <div class="row g-4">    {% for academy in academies %}
-    <div class="col-md-6 col-lg-4">        <div class="card academy-card h-100" 
+    <div class="col-md-6 col-lg-4">
+        <div class="card academy-card h-100" 
              style="--academy-color: {{ academy.primary_color }}; --academy-light: {{ academy.light_color }}; --academy-contrast: {{ academy.contrast_color }}; border-left-color: {{ academy.primary_color }};">            {% if academy.logo %}
             <div class="text-center pt-3 pb-2">
                 <img src="{{ academy.logo.url }}" alt="{{ academy.name }} logo" 

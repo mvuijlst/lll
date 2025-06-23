@@ -16,10 +16,11 @@
                     <div>
                         <h1 class="mb-0">
                             <i class="bi bi-mortarboard-fill me-3"></i>{{ academy.name }}
-                        </h1>                        {% if academy.description %}
-                        <p class="lead mb-0 mt-2">{{ academy.description }}</p>
+                        </h1>
+                        {% if academy.description %}
+                            <p class="lead mb-0 mt-2">{{ academy.description }}</p>
                         {% else %}
-                        <p class="lead mb-0 mt-2">{% trans "Explore our specialized courses and programs" %}</p>
+                            <p class="lead mb-0 mt-2">{% trans "Explore our specialized courses and programs" %}</p>
                         {% endif %}
                     </div>
                 </div>
@@ -57,9 +58,10 @@
                             <span class="badge academy-badge">
                                 <i class="bi bi-book me-1"></i>{{ total_offerings }} {% trans "offering" %}{{ total_offerings|pluralize }}
                             </span>
-                            {% if categories.count %}                            <span class="badge bg-secondary">
-                                <i class="bi bi-folder me-1"></i>{{ categories.count }} {% trans "category" %}{{ categories.count|pluralize:"y,ies" }}
-                            </span>
+                            {% if categories.count %}
+                                <span class="badge bg-secondary">
+                                    <i class="bi bi-folder me-1"></i>{{ categories.count }} {% trans "category" %}{{ categories.count|pluralize:"y,ies" }}
+                                </span>
                             {% endif %}
                         </div>
                     </div>
@@ -115,7 +117,7 @@
             <div class="card-body d-flex flex-column">
                 <h5 class="card-title">
                     <a href="{% url 'academies:offering_detail' offering.pk %}" 
-                       class="text-decoration-none academy-text">
+                       class="text-decoration-none text-dark">
                         {{ offering.title|truncatechars:80 }}
                     </a>
                 </h5>
@@ -142,10 +144,10 @@
                     </span>
                     {% endif %}
                 </div>
-                  {% if offering.description %}
-                <p class="card-text text-muted">
-                    {{ offering.description|truncatechars:120 }}
-                </p>
+                {% if offering.description %}
+                    <p class="card-text text-muted">
+                        {{ offering.description|striptags|truncatechars:120 }}
+                    </p>
                 {% endif %}
                 
                 <!-- Variation Preview -->
