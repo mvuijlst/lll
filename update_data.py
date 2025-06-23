@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 """
-Helper script to automate the process of scraping data and updating the Django database.
+Helper script to automate the complete process of scraping data and updating the Django database.
 This script will:
 1. Run the scrape2.py script to gather data from academy websites
 2. Run the import_detailed_data command to update the Django database
+3. Run the move_ugain_offerings command to handle UGain exceptions
 
 Usage:
     python update_data.py [--clear]
@@ -55,8 +56,7 @@ def main():
             print(f"❌ Error: JSON file not found at {JSON_PATH} or in root directory")
             print("   Please check the scraper configuration and output.")
             return
-        
-    # Step 2: Import data into Django
+          # Step 2: Import data into Django
     print("\n🔄 Step 2: Importing data into Django...")
     command = [sys.executable, 'manage.py', 'import_detailed_data', JSON_PATH]
     if clear_option:
@@ -69,8 +69,22 @@ def main():
     except subprocess.CalledProcessError:
         print("❌ Import failed. Please check the Django error output.")
         return
+    
+    # Step 3: Move UGain offerings from Science Academy to UGain Academy
+    print("\n🔄 Step 3: Moving UGain offerings to correct academy...")
+    try:
+        move_command = [sys.executable, 'manage.py', 'move_ugain_offerings']
+        subprocess.run(move_command, check=True)
+        print("✅ UGain offerings moved successfully")
+    except subprocess.CalledProcessError:
+        print("❌ UGain move failed. This may be normal if no UGain offerings were found.")
+        print("   You can run 'python manage.py move_ugain_offerings' manually if needed.")
         
-    print("\n✨ Data update process completed! ✨")
+    print("\n✨ Complete data update process finished! ✨")
+    print("All steps completed:")
+    print("  ✅ Data scraped from academy websites")
+    print("  ✅ Data imported into Django database")
+    print("  ✅ UGain offerings moved to correct academy")
     print("You can now check the Django site to see the updated content.")
 
 if __name__ == '__main__':

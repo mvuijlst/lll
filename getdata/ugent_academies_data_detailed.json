@@ -2885,7 +2885,424 @@
             "related_courses": [],
             "variations": [],
             "categories": [
+                "Gandaius Academy - Rechtsdomeinen",
                 "Gandaius Academy - Criminologische wetenschappen"
+            ]
+        },
+        {
+            "title": "Omgevingsrecht (2025)",
+            "link": "https://gandaiusacademy.ugent.be/2025/omgevingsrecht",
+            "academy": "Gandaius Academy",
+            "description": "<h3>Vernieuwend, verdiepend en relevant</h3><p>Gandaius Academy biedt jaarlijks in samenwerking met de Vlaamse Vereniging voor Omgevingsrecht (VVOR) een lessenreeks 'Omgevingsrecht' aan. Op een interactieve manier worden de deelnemers wegwijs gemaakt in het omgevingsrecht en omgevingsbeleid. Zowel theorie, praktijk, recht en techniek komen van A tot Z aan bod.</p><h3>Jaarprogramma 'Omgevingsrecht' van 2025</h3><p><strong>Met trots presenteren we het nieuwe jaarprogramma van 2025!</strong> Na het succes van de voorgaande editie bouwen we verder op actuele ontwikkelingen in wetgeving, rechtspraak en bredere maatschappelijke tendensen. Dit programma biedt een unieke kans om kennis en inzicht te verdiepen in de meest prangende thema’s binnen het omgevingsrecht.</p><blockquote><p><strong>Het omgevingsrecht valt niet meer weg te denken uit de huidige rechtspraktijk. Deze jaaropleiding is een must voor elke jurist! </strong></p><p>- prof. dr. Hendrik Schoukens</p></blockquote><p>Het jaarprogramma 2025 brengt toonaangevende experts samen om complexe vraagstukken te verhelderen en praktische inzichten te bieden. Enkele kernonderwerpen:</p><ul><li><strong>Klimaat, energie en bedrijven</strong>: Wat betekenen het Shell-arrest en de EU-zorgplichtwet voor ondernemingen?</li><li><strong>MER en praktijk</strong>: Van burenhinder tot klimaatuitdagingen: hoe blijven we MER toepassen?</li><li><strong>Natuur in stad en platteland</strong>: Herwaardering van ‘gewone’ natuur binnen een snel veranderend landschap.</li><li><strong>Waterbeheer</strong>: De nieuwste uitdagingen rond droogte, overstromingen en grondwaterbeheer.</li><li><strong>Chemische verontreiniging</strong>: Hoe anticiperen we op ‘emerging contaminants’ en pesticiden?</li></ul><p>Elke module is zorgvuldig samengesteld om theorie en praktijk te verbinden en deelnemers klaar te stomen voor de uitdagingen van vandaag en morgen.</p>",
+            "program": "<ul><li><strong>Waterkwantiteit, overstromingen en droogte </strong>(Donderdag 26 juni 2025)<ul><li>Over de Blue Deal 2.0, grondwatertreinen en het peilbesluit.<ul><li>Dagvoorzitter: Ann Carette (Universiteit Antwerpen)</li></ul></li></ul></li></ul><p><a href=\"https://gandaiusacademy.ugent.be/sites/gandaius/files/2025-06/brochure-onze-omgeving-2025-v12.pdf#page=8&amp;view=Fit\">Ga door het volledige dagprogramma</a></p><ul><li><strong>Omgevingsvergunning 2.0 </strong>(Donderdag 25 september 2025)<ul><li>Over slimme vergunningsprocedures en robuuste vergunningen.<ul><li>Dagvoorzitter: Arnout Schelstraete (UGent)</li></ul></li></ul></li></ul><p><a href=\"https://gandaiusacademy.ugent.be/sites/gandaius/files/2025-06/brochure-onze-omgeving-2025-v12.pdf#page=9&amp;view=Fit\">Ga door het volledige dagprogramma</a></p><ul><li><strong>Chemische verontreiniging </strong>(Donderdag 23 oktober 2025)<ul><li>Kennis in opkomst over verontreinigende stoffen in opkomst.<ul><li>Dagvoorzitter: Isabelle Larmuseau (VVOR)</li></ul></li></ul></li><li><strong>Bouwshift en ruimtelijke ordening </strong>(Donderdag 27 november 2025)<ul><li>Over RUP’s, omgevingsbesluiten, planschade en … no net land-take?<ul><li>Dagvoorzitter: Geert Van Hoorick (UGent)</li></ul></li></ul></li><li><strong>Bodem, grondverzet en afval </strong>(Donderdag 11 december 2025)<ul><li>Op naar een grotere ambitie voor gezonde bodems.<ul><li>Dagvoorzitter: Isabelle Larmuseau (VVOR)</li></ul></li></ul></li></ul><h2>Coördinatoren</h2><p>Prof. dr. Hendrik Schoukens (UGent), prof. dr. Geert Van Hoorick (UGent), mr. Isabelle Larmuseau (VVOR)</p>",
+            "course_id": "GA134-omgeving",
+            "language": "Nederlands",
+            "image_url": "https://gandaiusacademy.ugent.be/sites/gandaius/files/styles/medium_no_crop_2x/public/2023-11/afb-VVOR.png?itok=sHfaAH-j",
+            "partners": [
+                {
+                    "name": "VVOR",
+                    "link": "https://vvor.be/"
+                }
+            ],
+            "related_courses": [],
+            "variations": [
+                {
+                    "title": "Lessenreeks 'Omgevingsrecht': lesdag 1 t.e.m. 10",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><p><a href=\"https://gandaiusacademy.ugent.be/sites/gandaius/files/2025-05/brochure-onze-omgeving-2025-v9.pdf#view=Fit\">Ga door de brochure van de lessenreeks 'Omgevingsrecht'</a></p><h3>Inschrijvingsprijs</h3><ul><li>Basisprijs: €250 (volledige lessenreeks: €2.000)</li><li>Kortingsprijs VVOR-leden en openbare besturen: €200 (volledige lessenreeks: €1.800)</li></ul><p class=\"highlight\">Wenst u aanspraak te maken op de kortingsprijs? Selecteer dan de bijbehorende uitzonderingscategorie in uw winkelmandje tijdens het bestelproces.</p><h3>Goed om te weten</h3><ul><li>De les kan zowel live on campus als achteraf via video-opname worden gevolgd.</li><li>Inschrijving is incl. twee koffiepauzes en een broodjeslunch.</li></ul><p class=\"highlight\"><strong>Online deelname = het bekijken van de opname achteraf.</strong></p></div>\n",
+                    "price": "€ 2.000,00",
+                    "dates": [
+                        "30/01/2025 09:00 – 17:00",
+                        "27/02/2025 09:00 – 17:00",
+                        "27/03/2025 09:00 – 17:00",
+                        "24/04/2025 09:00 – 17:00",
+                        "22/05/2025 09:00 – 17:00",
+                        "26/06/2025 09:00 – 17:00",
+                        "25/09/2025 09:00 – 17:00",
+                        "23/10/2025 09:00 – 17:00",
+                        "27/11/2025 09:00 – 17:00",
+                        "11/12/2025 09:00 – 17:00"
+                    ],
+                    "location": {
+                        "name": "Campus Aula (Faculteit Recht en Criminologie, UGent)",
+                        "link": "https://gandaiusacademy.ugent.be/campus-aula"
+                    },
+                    "teachers": []
+                },
+                {
+                    "title": "Waterkwantiteit, overstromingen en droogte: Over de Blue Deal 2.0, grondwatertreinen en het peilbesluit.",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><ul><li>Dagvoorzitter: Ann Carette (Universiteit Antwerpen)</li></ul><p><a href=\"https://gandaiusacademy.ugent.be/sites/gandaius/files/2025-06/brochure-onze-omgeving-2025-v12.pdf#page=8&amp;view=Fit\">Ga door het volledige dagprogramma</a></p><h3>Inschrijvingsprijs</h3><ul><li>Basisprijs: €250</li><li>Kortingsprijs VVOR-leden en openbare besturen: €200</li></ul><p>Wenst u aanspraak te maken op de kortingsprijs? Selecteer dan de bijbehorende uitzonderingscategorie in uw winkelmandje tijdens het bestelproces.</p><h3>Goed om te weten</h3><ul><li>De les kan zowel live on campus als achteraf via video-opname worden gevolgd.</li><li>Inschrijving is incl. twee koffiepauzes en een broodjeslunch.</li></ul><p class=\"highlight\"><strong>Online deelname = het bekijken van de opname achteraf.</strong></p></div>\n",
+                    "price": "€ 250,00",
+                    "dates": [
+                        "26/06/2025 09:00 – 17:00"
+                    ],
+                    "location": {
+                        "name": "Congrescentrum ‘Sint-Baafshuis’",
+                        "link": "https://gandaiusacademy.ugent.be/locaties/congrescentrum-sint-baafshuis"
+                    },
+                    "teachers": []
+                },
+                {
+                    "title": "Omgevingsvergunning 2.0: Over slimme vergunningsprocedures en robuuste vergunningen.",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><ul><li>Dagvoorzitter: Arnout Schelstraete (UGent)</li></ul><p><a href=\"https://gandaiusacademy.ugent.be/sites/gandaius/files/2025-06/brochure-onze-omgeving-2025-v12.pdf#page=9&amp;view=Fit\">Ga door het volledige dagprogramma</a></p><h3>Inschrijvingsprijs</h3><ul><li>Basisprijs: €250</li><li>Kortingsprijs VVOR-leden en openbare besturen: €200</li></ul><p>Wenst u aanspraak te maken op de kortingsprijs? Selecteer dan de bijbehorende uitzonderingscategorie in uw winkelmandje tijdens het bestelproces.</p><h3>Goed om te weten</h3><ul><li>De les kan zowel live on campus als achteraf via video-opname worden gevolgd.</li><li>Inschrijving is incl. twee koffiepauzes en een broodjeslunch.</li></ul><p class=\"highlight\"><strong>Online deelname = het bekijken van de opname achteraf.</strong></p></div>\n",
+                    "price": "€ 250,00",
+                    "dates": [
+                        "25/09/2025 09:00 – 17:00"
+                    ],
+                    "location": {
+                        "name": "Campus Aula (Faculteit Recht en Criminologie, UGent)",
+                        "link": "https://gandaiusacademy.ugent.be/campus-aula"
+                    },
+                    "teachers": []
+                },
+                {
+                    "title": "Chemische verontreiniging: Kennis in opkomst over verontreinigende stoffen in opkomst.",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><ul><li>Dagvoorzitter: Isabelle Larmuseau (VVOR)</li></ul><h3>Inschrijvingsprijs</h3><ul><li>Basisprijs: €250</li><li>Kortingsprijs VVOR-leden en openbare besturen: €200</li></ul><p>Wenst u aanspraak te maken op de kortingsprijs? Selecteer dan de bijbehorende uitzonderingscategorie in uw winkelmandje tijdens het bestelproces.</p><h3>Goed om te weten</h3><ul><li>De les kan zowel live on campus als achteraf via video-opname worden gevolgd.</li><li>Inschrijving is incl. twee koffiepauzes en een broodjeslunch.</li></ul><p class=\"highlight\"><strong>Online deelname = het bekijken van de opname achteraf.</strong></p></div>\n",
+                    "price": "€ 250,00",
+                    "dates": [
+                        "23/10/2025 09:00 – 17:00"
+                    ],
+                    "location": {
+                        "name": "Campus Aula (Faculteit Recht en Criminologie, UGent)",
+                        "link": "https://gandaiusacademy.ugent.be/campus-aula"
+                    },
+                    "teachers": []
+                },
+                {
+                    "title": "Bouwshift en ruimtelijke ordening: Over RUP’s, omgevingsbesluiten, planschade en … no net land-take?",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><ul><li>Dagvoorzitter: Geert Van Hoorick (UGent)</li></ul><h3>Inschrijvingsprijs</h3><ul><li>Basisprijs: €250</li><li>Kortingsprijs VVOR-leden en openbare besturen: €200</li></ul><p>Wenst u aanspraak te maken op de kortingsprijs? Selecteer dan de bijbehorende uitzonderingscategorie in uw winkelmandje tijdens het bestelproces.</p><h3>Goed om te weten</h3><ul><li>De les kan zowel live on campus als achteraf via video-opname worden gevolgd.</li><li>Inschrijving is incl. twee koffiepauzes en een broodjeslunch.</li></ul><p class=\"highlight\"><strong>Online deelname = het bekijken van de opname achteraf.</strong></p></div>\n",
+                    "price": "€ 250,00",
+                    "dates": [
+                        "27/11/2025 09:00 – 17:00"
+                    ],
+                    "location": {
+                        "name": "Campus Aula (Faculteit Recht en Criminologie, UGent)",
+                        "link": "https://gandaiusacademy.ugent.be/campus-aula"
+                    },
+                    "teachers": []
+                },
+                {
+                    "title": "Bodem, grondverzet en afval: Op naar een grotere ambitie voor gezonde bodems.",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><ul><li>Dagvoorzitter: Isabelle Larmuseau (VVOR)</li></ul><h3>Inschrijvingsprijs</h3><ul><li>Basisprijs volledige opleiding: €250 </li><li>Kortingsprijs VVOR-leden en openbare besturen: €200</li></ul><p class=\"highlight\">Wenst u aanspraak te maken op de kortingsprijs? Selecteer dan de bijbehorende uitzonderingscategorie in uw winkelmandje tijdens het bestelproces.</p><h3>Goed om te weten</h3><ul><li>De lessen kunnen zowel live on campus als achteraf via video-opname worden gevolgd.</li><li>Inschrijving is incl. twee koffiepauzes en een broodjeslunch.</li></ul><p class=\"highlight\"><strong>Online deelname = het bekijken van de opname achteraf.</strong></p></div>\n",
+                    "price": "€ 250,00",
+                    "dates": [
+                        "11/12/2025 09:00 – 17:00"
+                    ],
+                    "location": {
+                        "name": "Campus Aula (Faculteit Recht en Criminologie, UGent)",
+                        "link": "https://gandaiusacademy.ugent.be/campus-aula"
+                    },
+                    "teachers": []
+                }
+            ],
+            "categories": [
+                "Gandaius Academy - Rechtsdomeinen"
+            ]
+        },
+        {
+            "title": "SUMMER ACADEMY - De rechtstreekse buitencontractuele aansprakelijkheid van hulppersonen",
+            "link": "https://gandaiusacademy.ugent.be/programma/hulppersonen",
+            "academy": "Gandaius Academy",
+            "description": "<p>Boek 6 BW is op 1 juli 2024 gepubliceerd en trad in werking op 1 januari 2025. De belangrijkste hervorming is ongetwijfeld de afschaffing van de zogenaamde quasi-immuniteit van de uitvoeringsagent. De uitvoeringsagent die voortaan de hulppersoon heet, heeft vele gezichten: de werknemer, de onderaannemer, de bestuurder, de ambtenaar, de vrijwilliger, kortom elkeen die aan de uitvoering van andermans contractuele verbintenis meewerkt. Ook uzelf behoort daar wellicht toe.</p><p>In deze sessie gaan Ignace Claeys en Camille Desmet op diverse aspecten van deze nieuwe regeling in. De sprekers schreven ook al een uitgebreide bijdrage hierover in het Rechtskundig Weekblad van juni (2024).</p><p>Ze bespreken achtereenvolgens:</p><ul><li>hoe de nieuwe regeling algemeen in elkaar steekt en hoe ze zich verhoudt ten aanzien van de (voortaan toegelaten) samenloop van contractuele en buitencontractuele aansprakelijkheid,</li><li>wie zoal in aanmerking komt voor het statuut van de hulppersoon,</li><li>met welke andere regels de nieuwe aansprakelijkheidsregel is te combineren, zoals deze inzake de aansprakelijkheid van werknemers en bestuurders,</li><li>hoe de nieuwe regels in de tijd werken,</li><li>...</li></ul><p>Een aantal praktijkgevallen passeert ook uitgebreid de revue.</p>",
+            "program": "<p>Omdat de studieavond van 3 september bijzonder in de smaak viel en relevant blijft, bieden wij deze opnieuw aan onder de vorm van een webinar in onze Summer Academy. U kan de opname bij u thuis op een moment naar keuze bekijken. </p><p>Vergeet niet de controlevragen te beantwoorden teneinde uw aanwezigheidsattest te ontvangen. </p>",
+            "course_id": "GA147-Hulppersonen",
+            "language": "Nederlands",
+            "image_url": "https://gandaiusacademy.ugent.be/sites/gandaius/files/styles/medium_no_crop_2x/public/2024-05/afb-buitencontractuele-aansprakelijkheid.png?itok=g3sEE1ew",
+            "partners": [],
+            "related_courses": [],
+            "variations": [
+                {
+                    "title": "SUMMER ACADEMY - De rechtstreekse buitencontractuele aansprakelijkheid van hulppersonen",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><p>Online deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25 om 23u59)</p></div>\n",
+                    "price": "€ 100,00",
+                    "dates": [
+                        "01/06/2025 09:00 – 30/09/2025 23:59"
+                    ],
+                    "location": "",
+                    "teachers": [
+                        {
+                            "name": "Prof. dr. Ignace Claeys",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/ignace-claeys"
+                        },
+                        {
+                            "name": "Mr. Camille Desmet",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/camille-desmet"
+                        }
+                    ]
+                }
+            ],
+            "categories": [
+                "Gandaius Academy - Rechtsdomeinen"
+            ]
+        },
+        {
+            "title": "SUMMER ACADEMY - Overzicht van het nieuwe Burgerlijk Wetboek (in 2 lesdelen)",
+            "link": "https://gandaiusacademy.ugent.be/programma/bw-summer",
+            "academy": "Gandaius Academy",
+            "description": "<p>Sinds 2019 bouwt de wetgever aan een volledig nieuw Burgerlijk Wetboek. Na een voorzichtige start nam het project de voorbije twee jaar een hoge vlucht met een nieuw verbintenissen- en buitencontractueel aansprakelijkheidsrecht en een concreet voorstel voor een nieuwe regeling inzake bijzondere contracten. </p><p>De studiedag van 6 november bood een overzicht van het volledige nieuwe wetboek. Tijdens acht beknopte sessies verneemt u de essentie van alle boeken van het nieuwe BW, en krijgt u waar mogelijk inzage in de eerste toepassingen in de rechtspraak, zodat u na afloop weer “mee” bent. Voor de uiteenzettingen kunnen we beroep doen op de allergrootste experts die de UGent voor elk van de betrokken boeken in huis heeft.</p>",
+            "program": "<p>Deel 1:</p><ul><li><strong>Inleiding, opbouw van het nieuwe wetboek en Boek 1 BW Algemene bepalingen</strong> - <em>Prof. dr. Frederik Peeraer</em></li><li><strong>Boek 3 BW Goederen</strong> - <em>Prof. dr. Annelies Wylleman en prof. dr. Joke Baeck</em></li><li><strong>Boek 5 BW Verbintenissen</strong> - <em>Prof. dr. Ignace Claeys</em></li><li><strong>Boek 6 BW Buitencontractuele aansprakelijkheid</strong> - <em>Prof. dr. Marc Kruithof</em></li><li><strong>Q&amp;A</strong></li></ul><p>Deel 2:</p><ul><li><strong>Boek 7 BW Bijzondere contracten</strong> - <em>Prof. dr. Maarten Dambre</em></li><li><strong>Boek 4 BW Nalatenschappen, schenkingen en testamenten en Boek 2, titel 3 Relatievermogensrecht</strong> - <em>Prof. dr. Jan Bael en prof. dr. Els Vyncke</em></li><li><strong>Boek 8 BW Bewijs</strong> - <em>Prof. dr. Wannes Vandenbussche</em></li><li><strong>Boek 9 BW Zekerheden</strong> - <em>Prof. dr. Joke Baeck en prof. dr. Diederik Bruloot</em></li><li><strong>Q&amp;A</strong></li></ul>",
+            "course_id": "GA121-BW",
+            "language": "Nederlands",
+            "image_url": "https://gandaiusacademy.ugent.be/sites/gandaius/files/styles/medium_no_crop_2x/public/2025-06/afb-BW.png?itok=z_xn0cSs",
+            "partners": [],
+            "related_courses": [],
+            "variations": [
+                {
+                    "title": "SUMMER ACADEMY - Overzicht van het nieuwe Burgerlijk Wetboek (lesdeel 1)",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><ul><li><strong>Inleiding, opbouw van het nieuwe wetboek en Boek 1 BW Algemene bepalingen</strong> - <em>Prof. dr. Frederik Peeraer</em></li><li><strong>Boek 3 BW Goederen</strong> - <em>Prof. dr. Annelies Wylleman en prof. dr. Joke Baeck</em></li><li><strong>Boek 5 BW Verbintenissen</strong> - <em>Prof. dr. Ignace Claeys</em></li><li><strong>Boek 6 BW Buitencontractuele aansprakelijkheid</strong> - <em>Prof. dr. Marc Kruithof</em></li><li><strong>Q&amp;A</strong></li></ul><p>Online deelname - vergeet niet achteraf de controlevragen te beantwoorden (deadline 30/09/25 om 23u59)</p></div>\n",
+                    "price": "€ 100,00",
+                    "dates": [
+                        "02/06/2025 09:00 – 30/09/2025 23:59"
+                    ],
+                    "location": "",
+                    "teachers": [
+                        {
+                            "name": "Prof. dr. Annelies Wylleman",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/annelies-wylleman"
+                        },
+                        {
+                            "name": "Prof. dr. Joke Baeck",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/joke-baeck"
+                        },
+                        {
+                            "name": "Prof. dr. Ignace Claeys",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/ignace-claeys"
+                        },
+                        {
+                            "name": "Prof. dr. Marc Kruithof",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/marc-kruithof"
+                        },
+                        {
+                            "name": "Prof. dr. Frederik Peeraer",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/frederik-peeraer"
+                        }
+                    ]
+                },
+                {
+                    "title": "SUMMER ACADEMY - Overzicht van het nieuwe Burgerlijk Wetboek (lesdeel 2)",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><ul><li><strong>Boek 7 BW Bijzondere contracten</strong> - <em>Prof. dr. Maarten Dambre</em></li><li><strong>Boek 4 BW Nalatenschappen, schenkingen en testamenten en Boek 2, titel 3 Relatievermogensrecht</strong> - <em>Prof. dr. Jan Bael en prof. dr. Els Vyncke</em></li><li><strong>Boek 8 BW Bewijs</strong> - <em>Prof. dr. Wannes Vandenbussche</em></li><li><strong>Boek 9 BW Zekerheden</strong> - <em>Prof. dr. Joke Baeck en prof. dr. Diederik Bruloot</em></li><li><strong>Q&amp;A</strong></li></ul><p> </p></div>\n",
+                    "price": "€ 100,00",
+                    "dates": [
+                        "02/06/2025 09:00 – 30/09/2025 23:59"
+                    ],
+                    "location": "",
+                    "teachers": [
+                        {
+                            "name": "Prof. dr. Maarten Dambre",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/maarten-dambre"
+                        },
+                        {
+                            "name": "Prof. dr. Jan Bael",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/jan-bael"
+                        },
+                        {
+                            "name": "Prof. dr. Els Vyncke",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/els-vyncke"
+                        },
+                        {
+                            "name": "Prof. dr. Wannes Vandenbussche",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/wannes-vandenbussche"
+                        },
+                        {
+                            "name": "Prof. dr. Joke Baeck",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/joke-baeck"
+                        },
+                        {
+                            "name": "Prof. dr. Diederik Bruloot",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/diederik-bruloot"
+                        }
+                    ]
+                }
+            ],
+            "categories": [
+                "Gandaius Academy - Rechtsdomeinen"
+            ]
+        },
+        {
+            "title": "SUMMER ACADEMY - Financieel Recht",
+            "link": "https://gandaiusacademy.ugent.be/programma/rechtsdomeinen/2024-2025financieel-summeracademy",
+            "academy": "Gandaius Academy",
+            "description": "<p>We hernemen 2 lessen uit onze specialisatieopleiding Financieel recht, met name Beleggersbescherming en Non-traditional financial assets.</p><p> </p>",
+            "program": "<p>Les 1: Beleggersbescherming</p><p>Deze sessie uit de specialisatieopleiding Financieel recht beoogt een overzicht te geven van de regelen die ertoe strekken de belegger te beschermen. In het bijzonder wordt aandacht besteed aan de gedragsregelen die toepassing vinden bij de aanbieden van beleggingsdiensten (in het bijzonder de zorgplicht) en aan de initiatieven die de FSMA heeft genomen om de commercialisering van te complexe of te risicovolle instrumenten aan banden te leggen (banning en moratorium). Daarbij wordt ook ingegaan op mogelijke privaatrechtelijke gevolgen van de miskenning van de regel.</p><p>Les 2: Non-traditional financial assets, MiCAR and DLT Pilot Regime</p><p>In this session, the legal qualification and treatment of non-traditional financial asset will be analyzed. First, it will be examined to what extent non-traditional financial assets (and service providers with respect to these assets) can be brought within the scope of application of \"traditional\" financial legislation, either by fully submitting these assets to traditional financial legislation or by tailoring some rules to the peculiar nature of the employed technologies. Secondly, it will be studied how recent initiatives at the EU-level have sought to regulate non-traditional financial assets that are not covered by traditional financial legislation. Thirdly, the initiatives at the Belgian level with respect to non-traditional financial assets will be assessed.</p>",
+            "course_id": "GA116-Financieel-SummerAcademy-Beleggersbescherming",
+            "language": "Nederlands",
+            "image_url": "https://gandaiusacademy.ugent.be/sites/gandaius/files/styles/medium_no_crop_2x/public/2025-06/afb-website.png?itok=Bbbyda3p",
+            "partners": [
+                {
+                    "name": "Instituut Financieel Recht",
+                    "link": "https://www.ugent.be/re/mpor/nl/onderzoeksgroepen/instituut-financieel-recht"
+                }
+            ],
+            "related_courses": [],
+            "variations": [
+                {
+                    "title": "Beleggersbescherming",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><p>Deze sessie uit de specialisatieopleiding Financieel recht beoogt een overzicht te geven van de regelen die ertoe strekken de belegger te beschermen. In het bijzonder wordt aandacht besteed aan de gedragsregelen die toepassing vinden bij de aanbieden van beleggingsdiensten (in het bijzonder de zorgplicht) en aan de initiatieven die de FSMA heeft genomen om de commercialisering van te complexe of te risicovolle instrumenten aan banden te leggen (banning en moratorium). Daarbij wordt ook ingegaan op mogelijke privaatrechtelijke gevolgen van de miskenning van de regel.</p></div>\n",
+                    "price": "€ 150,00",
+                    "dates": [
+                        "05/06/2025 09:00 – 30/09/2025 23:59"
+                    ],
+                    "location": "",
+                    "teachers": [
+                        {
+                            "name": "Prof. dr. Reinhard Steennot",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/reinhard-steennot"
+                        }
+                    ]
+                },
+                {
+                    "title": "Non-traditional financial assets, MiCAR and DLT Pilot Regime",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><p>In this session, the legal qualification and treatment of non-traditional financial asset will be analyzed. First, it will be examined to what extent non-traditional financial assets (and service providers with respect to these assets) can be brought within the scope of application of \"traditional\" financial legislation, either by fully submitting these assets to traditional financial legislation or by tailoring some rules to the peculiar nature of the employed technologies. Secondly, it will be studied how recent initiatives at the EU-level have sought to regulate non-traditional financial assets that are not covered by traditional financial legislation. Thirdly, the initiatives at the Belgian level with respect to non-traditional financial assets will be assessed.</p></div>\n",
+                    "price": "€ 150,00",
+                    "dates": [
+                        "05/06/2025 09:00 – 30/09/2025 23:59"
+                    ],
+                    "location": "",
+                    "teachers": [
+                        {
+                            "name": "Prof. dr. Evariest Callens",
+                            "link": "https://gandaiusacademy.ugent.be/lesgever/evariest-callens"
+                        }
+                    ]
+                }
+            ],
+            "categories": [
+                "Gandaius Academy - Rechtsdomeinen"
+            ]
+        },
+        {
+            "title": "SUMMER ACADEMY - Omgevingsrecht",
+            "link": "https://gandaiusacademy.ugent.be/programma/rechtsdomeinen/2024-2025-ga134-omgeving-summeracademy-summer-academy-omgevingsrecht",
+            "academy": "Gandaius Academy",
+            "description": "<h3>Vernieuwend, verdiepend en relevant</h3><p>Gandaius Academy biedt jaarlijks in samenwerking met de Vlaamse Vereniging voor Omgevingsrecht (VVOR) een lessenreeks 'Omgevingsrecht' aan. Op een interactieve manier worden de deelnemers wegwijs gemaakt in het omgevingsrecht en omgevingsbeleid. Zowel theorie, praktijk, recht en techniek komen van A tot Z aan bod.</p><h3>In onze SUMMER ACADEMY hernemen we 2 bijzonder succesvolle studiedagen:</h3><ul><li><strong>De omgevingsvergunning: een stand van zaken </strong>Donderdag 24 oktober 2024</li><li><strong>Milieuschade claimen bij de rechter: moet de vervuiler écht betalen?</strong> Donderdag 15 mei 2025</li></ul><h3>Jaarprogramma 'Omgevingsrecht' van 2025</h3><p> Na het succes van de voorgaande editie bouwen we met het jaarprogramma van 2025 verder op actuele ontwikkelingen in wetgeving, rechtspraak en bredere maatschappelijke tendensen. Dit programma biedt een unieke kans om kennis en inzicht te verdiepen in de meest prangende thema’s binnen het omgevingsrecht. Dit najaar vinden er nog diverse studiedagen plaats waarvoor u kan inschrijven via volgende <a href=\"https://gandaiusacademy.ugent.be/2025/omgevingsrecht\">link</a>:</p><ul><li><strong>Omgevingsvergunning 2.0 </strong>(Donderdag 25 september 2025)</li><li><strong>Chemische verontreiniging </strong>(Donderdag 23 oktober 2025)</li><li><strong>Bouwshift en ruimtelijke ordening </strong>(Donderdag 27 november 2025)</li><li><strong>Bodem, grondverzet en afval </strong>(Donderdag 11 december 2025)</li></ul>",
+            "program": "",
+            "course_id": "GA134-Omgeving-SummerAcademy",
+            "language": "Nederlands",
+            "image_url": "https://gandaiusacademy.ugent.be/sites/gandaius/files/styles/medium_no_crop_2x/public/2025-06/AdobeStock_981659495_0.jpeg?itok=RMBZVA1a",
+            "partners": [],
+            "related_courses": [],
+            "variations": [
+                {
+                    "title": "SUMMER ACADEMY - De omgevingsvergunning: een stand van zaken (lesdeel 1)",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><p>In nauwe interactie met de deelnemers overlopen Isabelle Larmuseau (VVOR) en Arnout Schelstraete (UGent) de volledige omgevingsvergunningsprocedure ‘van A tot Z’, met veel aandacht voor de wijzigingen in de vergunningenregelgeving en voor de nieuwe tendensen in de vergunningenrechtspraak van 2024.</p><ul><li><p><strong>De omgevingsvergunningsprocedure: op weg naar een modulair systeem</strong></p><p>Spreker: Annelies Maes (Gebiedsmedewerker Omgevingsvergunningen)</p></li><li><p><strong>De modernisering van de milieueffectrapportage binnen de omgevingsvergunningverlening</strong></p><p>Spreker: Bastiaan Schelstraete (Stibbe)</p></li></ul></div>\n",
+                    "price": "€ 125,00",
+                    "dates": [
+                        "11/06/2025 09:00 – 30/09/2025 23:59"
+                    ],
+                    "location": "",
+                    "teachers": []
+                },
+                {
+                    "title": "SUMMER ACADEMY - De omgevingsvergunning: een stand van zaken (lesdeel 2)",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><p>In nauwe interactie met de deelnemers overlopen Isabelle Larmuseau (VVOR) en Arnout Schelstraete (UGent) de volledige omgevingsvergunningsprocedure ‘van A tot Z’, met veel aandacht voor de wijzigingen in de vergunningenregelgeving en voor de nieuwe tendensen in de vergunningenrechtspraak van 2024.</p><ul><li><p><strong>Het omgevingsbesluit: een nieuw instrument tussen het ruimtelijk uitvoeringsplan en de omgevingsvergunning in?</strong></p><p>Spreker: Erika Rentmeesters (Truyens advocaten)</p></li><li><p><strong>Takeaways uit de recente omgevingsvergunningenrechtspraak</strong></p><p>Spreker: Jens Hoofd (Dienst van de Bestuursrechtcolleges)</p></li></ul></div>\n",
+                    "price": "€ 125,00",
+                    "dates": [
+                        "11/06/2025 09:00 – 30/09/2025 23:59"
+                    ],
+                    "location": "",
+                    "teachers": []
+                },
+                {
+                    "title": "SUMMER ACADEMY -  Milieuschade claimen bij de rechter: moet de vervuiler écht betalen? (deel 1)",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><p>Grote milieurampen leiden tot veel verontwaardiging bij het publiek. Er bestaat een grote consensus over het feit dat de vervuiler de schade die hij veroorzaakt moet betalen. Maar dat blijkt gemakkelijker gezegd dan gedaan. Want het vergoeden van ‘pure’ schade aan het leefmilieu geeft aanleiding tot heel wat complexe juridische vraagstukken. Wie kan zo’n vergoeding aan de natuur dan claimen, en in welke mate verschilt die van morele schade? Hoe plaatsen we een prijs op schade aan de natuur, wanneer die bijvoorbeeld niet zomaar in natuur hersteld kan worden? Bij de recente hervorming van het Burgerlijk Wetboek koos men ervoor om géén expliciete regeling rond milieuschade te voorzien. Ook doken complexe bevoegdheidsrechtelijke vraagstukken op. En wat dan gezegd van de uitspraak van het Brusselse Hof van Beroep in de klimaatzaak, waar een deur wordt geopend richting de vergoeding van angstschade? En van de recente Cassatie-rechtspraak die de deur plots sluit voor schadeclaims in dierenwelzijnszaken door vzw’s? We duiken tijdens deze studiedag in de veelheid van juridische vragen die opduiken rond het thema van de vergoeding van de milieuschade en blikken vooruit richting mogelijke hervormingen.</p><ul><li><p><strong>Milieugerelateerde angstschade: schade, schadeloosstelling en redelijkheid</strong></p><p>Spreker: Simon Van Eekert (KULeuven)</p></li><li><p><strong>Procedurele knelpunten op weg naar de burgerlijke rechter in klimaatzaken</strong></p><p>Spreker: Stien Dethier (KULeuven)</p></li><li><p><strong>Toegang tot de burgerlijke rechter: Aarhus helpt de natuur, maar niet de dieren?</strong> </p><p>Spreker: Hendrik Schoukens (UGent)</p></li></ul></div>\n",
+                    "price": "€ 125,00",
+                    "dates": [
+                        "11/06/2025 09:00 – 30/09/2025 23:59"
+                    ],
+                    "location": "",
+                    "teachers": []
+                },
+                {
+                    "title": "SUMMER ACADEMY - Milieuschade claimen bij de rechter: moet de vervuiler écht betalen? (deel 2)",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><p>Grote milieurampen leiden tot veel verontwaardiging bij het publiek. Er bestaat een grote consensus over het feit dat de vervuiler de schade die hij veroorzaakt moet betalen. Maar dat blijkt gemakkelijker gezegd dan gedaan. Want het vergoeden van ‘pure’ schade aan het leefmilieu geeft aanleiding tot heel wat complexe juridische vraagstukken. Wie kan zo’n vergoeding aan de natuur dan claimen, en in welke mate verschilt die van morele schade? Hoe plaatsen we een prijs op schade aan de natuur, wanneer die bijvoorbeeld niet zomaar in natuur hersteld kan worden? Bij de recente hervorming van het Burgerlijk Wetboek koos men ervoor om géén expliciete regeling rond milieuschade te voorzien. Ook doken complexe bevoegdheidsrechtelijke vraagstukken op. En wat dan gezegd van de uitspraak van het Brusselse Hof van Beroep in de klimaatzaak, waar een deur wordt geopend richting de vergoeding van angstschade? En van de recente Cassatie-rechtspraak die de deur plots sluit voor schadeclaims in dierenwelzijnszaken door vzw’s? We duiken tijdens deze studiedag in de veelheid van juridische vragen die opduiken rond het thema van de vergoeding van de milieuschade en blikken vooruit richting mogelijke hervormingen.</p><ul><li><p><strong>Réparer le préjudice écologique en droit civil: un casse-tête constitutionnel?</strong></p><p>Spreker: Charles-Hubert Born (UCLouvain)</p></li><li><p><strong>Milieuschade claimen bij de burgerlijke rechter – analyse in het licht van de recente rechtspraakontwikkelingen</strong></p><p>Spreker: Ann Carette (UAntwerpen en Raad voor Vergunningsbetwistingen)</p></li><li><p><strong>De waardering van schade aan de natuur : lessen uit het BIOVAL-project</strong></p><p>Spreker: Farah Bouqulelle (UGent)</p></li></ul></div>\n",
+                    "price": "€ 125,00",
+                    "dates": [
+                        "11/06/2025 09:00 – 30/09/2025 23:59"
+                    ],
+                    "location": "",
+                    "teachers": []
+                }
+            ],
+            "categories": [
+                "Gandaius Academy - Rechtsdomeinen"
+            ]
+        },
+        {
+            "title": "Unpacking the European Health Data Space Regulation: solution or complication?",
+            "link": "https://gandaiusacademy.ugent.be/en/program/law/2024-2025-EHDSR",
+            "academy": "Gandaius Academy",
+            "description": "<p>The <strong>European Health Data Space Regulation (EHDSR)</strong> promises nothing less than the first step towards a European Health Union. But behind its ambitious vision lies a <strong>complex web of legal, ethical and societal questions</strong>. Repeatedly debated during the legislative process, finally translated into a Regulation.</p><p> </p><p>This mini symposium invites you to explore:</p><p>· The <strong>metadata catalogue</strong>: key to a borderless European Health Union, or a bureaucratic maze?</p><p>· How to deal with <strong>GDPR’s lawfulness principle </strong>when exchanging data through the European health data space: how can consent, public interest or legitimate interest carry the load?</p><p>· The implications of a <strong>sector-specific approach to data subjects’ rights</strong>: is the EHDSR going above and beyond or was data subject empowerment sacrificed in the final sprint?</p><p> </p><p>Join us for a compelling afternoon of critical reflections, bold questions, and dynamic debate.</p><p>· <strong>Debate </strong>triggering messages from VIB, pharma and the Belgian Data Protection Authority</p><p>· Combined with <strong>insider views</strong> from the Health Data Authority, UGent and Sciensano</p><p>· And an <strong>opportunity to further discuss </strong>with panel members from 4 different disciplines.</p>",
+            "program": "<p><strong>17.00 - Arrival and check-in</strong></p><p><strong>17.30 - Introduction </strong>(Griet Verhenneman)</p><p><strong>17.40  - Presentations</strong></p><p><strong>TOPIC1: Patient data, research data, statistical data,... Can we count on the meta-data catalogue as a solution towards a European Health Union or will it complicate the path?</strong></p><ul><li>The challenge of a meta-data catalogue on research institutes working with personal and non-personal health-related data - René Custers (Regulatory &amp; Responsible Research manager at VIB)</li><li>The implications of the meta-data catalogue for healthcare providers, researchers and data custodians - Katleen Janssens or Inge Franki (Belgian Health Data Agency)</li></ul><p><strong>TOPIC 2: Consent, public interest, legitimate interest... Is the EHDSR a solution or complication for finding the required legal basis?</strong></p><ul><li>When finding a legal basis is less self-evident. The collection and (re-)use of real-world data for research driven by companies - Laurence Einsweiler (Pfizer) and Dries Van Briel (J&amp;J) </li></ul><p><strong>TOPIC 3: Understanding the legal basis under the EHDSR.</strong></p><ul><li>Unpacking the EHDSR as a sector specific approach to data subject rights - Koen Gorissen Voorzitter GBA</li><li>The impact of the EHDSR for citizens and society. Balancing individual and collective rights? - Wannes van Hoof (Sciensano)</li></ul><p><strong>18.30 - Debate</strong></p><p><strong>Unpacking the EHDRS in a multi-stakeholder environment: a solution or complication to handling different interests, rights and obligations? </strong></p><p>Members of the panel are:</p><ul><li>Nils Broeckx (Kankerregister, UAntwerpen)</li><li>Magali Feys (Attorney at law, AContrario)</li><li>Bart Vannieuwenhuysen (iHD)</li><li>Healthcare providers’ perspective Sara Roda (EU Senior Policy Advisor at Standing Committee of European Doctors)</li><li>Moderator: Tom Goffin (Metamedica, UGent)</li></ul><p><strong>19.30 - Drinks reception</strong></p><p> </p>",
+            "course_id": "GA148-Metamedica",
+            "language": "Engels",
+            "image_url": "https://gandaiusacademy.ugent.be/sites/gandaius/files/styles/medium_no_crop_2x/public/2025-06/25%2009%2018%20Unpacking%20EHDS%20Reg%20metamedica.png?itok=bGQo-lGK",
+            "partners": [],
+            "related_courses": [],
+            "variations": [
+                {
+                    "title": "Unpacking the European Health Data Space Regulation: solution or complication?",
+                    "description": "",
+                    "price": "60,00 €",
+                    "dates": [
+                        "18/09/2025 17:00 – 19:30"
+                    ],
+                    "location": {
+                        "name": "Auditorium E",
+                        "link": "https://gandaiusacademy.ugent.be/locaties/auditorium-e"
+                    },
+                    "teachers": [
+                        {
+                            "name": "Dhr. Nils Broeckx",
+                            "link": "https://gandaiusacademy.ugent.be/en/lesgever/nils-broeckx"
+                        },
+                        {
+                            "name": "Dhr. René Custers",
+                            "link": "https://gandaiusacademy.ugent.be/en/lesgever/rene-custers"
+                        },
+                        {
+                            "name": "Mevr. Laurence Einsweiler",
+                            "link": "https://gandaiusacademy.ugent.be/en/lesgever/laurence-einsweiler"
+                        },
+                        {
+                            "name": "Mevr. Magali Feys",
+                            "link": "https://gandaiusacademy.ugent.be/en/lesgever/magali-feys"
+                        },
+                        {
+                            "name": "Mevr. Inge Franki",
+                            "link": "https://gandaiusacademy.ugent.be/en/lesgever/inge-franki"
+                        },
+                        {
+                            "name": "Dhr. Koen Gorissen",
+                            "link": "https://gandaiusacademy.ugent.be/en/lesgever/koen-gorissen"
+                        },
+                        {
+                            "name": "Mevr. Katleen Janssen",
+                            "link": "https://gandaiusacademy.ugent.be/en/lesgever/katleen-janssen"
+                        },
+                        {
+                            "name": "Mevr. Magdalena Kogut-Czarkowska",
+                            "link": "https://gandaiusacademy.ugent.be/en/lesgever/magdalena-kogut-czarkowska"
+                        },
+                        {
+                            "name": "Mevr. Sara Roda",
+                            "link": "https://gandaiusacademy.ugent.be/en/lesgever/sara-roda"
+                        },
+                        {
+                            "name": "Dhr. Dries Van Briel",
+                            "link": "https://gandaiusacademy.ugent.be/en/lesgever/dries-van-briel"
+                        },
+                        {
+                            "name": "Dhr. Wannes Van Hoof",
+                            "link": "https://gandaiusacademy.ugent.be/en/lesgever/wannes-van-hoof"
+                        },
+                        {
+                            "name": "Dhr. Bart Vannieuwenhuyse",
+                            "link": "https://gandaiusacademy.ugent.be/en/lesgever/bart-vannieuwenhuyse"
+                        }
+                    ]
+                }
+            ],
+            "categories": [
+                "Gandaius Academy - Rechtsdomeinen"
             ]
         },
         {
@@ -3280,6 +3697,43 @@
             "categories": [
                 "Gandaius Academy - Bemiddeling",
                 "Gandaius Academy - Gerechtsdeskundige"
+            ]
+        },
+        {
+            "title": "Bemiddelen in familiebedrijven: instap, uitstap en intergenerationele samenwerking",
+            "link": "https://gandaiusacademy.ugent.be/bemiddelen-in-familiebedrijven",
+            "academy": "Gandaius Academy",
+            "description": "<p><strong>Een familielid wil instappen in het bedrijf. Of net uitstappen. Wat dan? </strong><br/><strong>Hoe laat je generaties samenwerken? </strong><br/><strong>Bemiddelen binnen families en familiebedrijven hoe pak je dit aan?</strong></p><p>In deze exclusieve driedaagse opleiding reiken we inzichten en technieken aan rond bemiddelen bij instap, exit en intergenerationele samenwerking binnen familiebedrijven. Elk thema wordt benaderd vanuit diverse invalshoeken, met ruimte voor reflectie, interactie en bemiddelingsoefeningen.</p>",
+            "program": "<h4><strong>Dag 1: De instap</strong></h4><ul><li><em>Filip De Clercq</em> (Fildor, Corporate Finance) licht toe wat de valkuilen en succesfactoren zijn bij een instap in het familiebedrijf: waardering, loon, aandelen, functie, eigendom vs. management.</li><li><em>Veerle Valaert</em> (Sequenz, family architect) bespreekt de familiale kant: hoe manage je verwachtingen, de meerwaarde van een sociale due diligence, vergroten van het speelveld en hoe ga je om met emoties en dynamieken?</li><li><em>Franky De Meyer (bemiddelaar)</em>: Stel dat het misloopt… hoe bemiddel je als familie dan verder? Je oefent met een concrete conflictsituatie en bemiddelingstechnieken.</li></ul><h4><strong>Dag 2: De exit</strong></h4><ul><li><em>Filip De Clercq</em> belicht het traject met de financiële en juridische aandachtspunten bij een exit: waardebepaling, overdracht, fiscaliteit, afspraken, statuten en aandeelhoudersovereenkomsten.</li><li><em>Veerle Valaert</em> zoomt in op de menselijke impact: wat betekent een uitstap voor de familiebanden, wat als het vermogen dit niet toelaat, hoe hou je het gesprek open en respectvol?</li><li><em>Franky De Meyer - Praktijk</em>: Wat als de exit tot familiaal conflict leidt? Je oefent een bemiddelingsgesprek onder begeleiding.</li></ul><h4><strong>Dag 3: Multigenerationeel samenwerken en samenwerken met externen.</strong></h4><ul><li>Hoe werk je goed samen met verschillende generaties of niet familieleden binnen het familiebedrijf?<br/>Aan de hand van een uitgewerkte case simuleer je een complexe familiale samenwerking. Je leert hoe bemiddelingstechnieken gesprekken constructiever en meer verbindend maken.<br/>Deze dag staat in het teken van dialoog, onderlinge afstemming en het ontwikkelen van een gezamenlijk toekomstkader.</li></ul><h2>Voor wie?</h2><p>Deze opleiding richt zich tot:<br/>🔹 Familieleden binnen of rond een familiebedrijf<br/>🔹 Juridisch en financieel adviseurs<br/>🔹 Bemiddelaars, coaches en vertrouwenspersonen<br/>🔹 Iedereen die betrokken is bij familiale overdracht of samenwerking</p><h2>Begeleiders</h2><ul><li><em>Filip De Clercq</em> – specialist corporate finance, met ervaring in familiale overdrachten en waarderingen</li><li><em>Veerle Valaert</em> – expert in human capital en familiale dynamieken</li><li><em>Franky De Meyer </em>– trainer opleiding en navorming bemiddeling </li></ul><h2>Inschrijvingsprijs</h2><ul><li>Early bird (t.e.m 07-09-2025): €520</li><li>Vanaf 08-09-2025: €600</li></ul><p class=\"highlight\">Opgelet: het aantal plaatsen binnen de opleiding is <strong>beperkt</strong>.</p>",
+            "course_id": "GA151-bemiddelen-in-familiebedrijven",
+            "language": "Nederlands",
+            "image_url": "https://gandaiusacademy.ugent.be/sites/gandaius/files/styles/medium_no_crop_2x/public/2025-06/AdobeStock_816522816.jpeg?itok=z8Qp_afG",
+            "partners": [],
+            "related_courses": [
+                {
+                    "title": "Opleiding Bemiddeling (2025-2026)",
+                    "link": "https://gandaiusacademy.ugent.be/25-26/bemiddeling"
+                }
+            ],
+            "variations": [
+                {
+                    "title": "Bemiddelen in familiebedrijven",
+                    "description": "\n<div class=\"field__label\">Beschrijving</div>\n<div class=\"field__item\"><h2>Inschrijvingsprijs</h2><ul><li>Early bird (t.e.m 07-09-2025): €520</li><li>Vanaf 08-09-2025: €600</li></ul></div>\n",
+                    "price": "€ 520,00",
+                    "dates": [
+                        "07/10/2025 09:30 – 15:45",
+                        "14/10/2025 09:30 – 15:45",
+                        "21/10/2025 09:30 – 15:45"
+                    ],
+                    "location": {
+                        "name": "Campus Aula (Faculteit Recht en Criminologie, UGent)",
+                        "link": "https://gandaiusacademy.ugent.be/campus-aula"
+                    },
+                    "teachers": []
+                }
+            ],
+            "categories": [
+                "Gandaius Academy - Bemiddeling"
             ]
         },
         {
@@ -13189,5 +13643,5 @@
             ]
         }
     ],
-    "scraped_at": "2025-06-23T11:50:42.073146"
+    "scraped_at": "2025-06-23T12:45:07.147021"
 }

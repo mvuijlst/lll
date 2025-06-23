@@ -2,24 +2,47 @@
 
 This project manages data from UGent academies while preserving customizations like logos, colors, and sort orders. The application is fully bilingual (English/Dutch) and displays formatted HTML content from the original sites.
 
+## 🚀 ONE-STEP OPERATION
+
+**Simply run this single command to get everything:**
+
+```bash
+python update_data.py
+```
+
+This command will automatically:
+1. ✅ **Scrape** all data from academy websites (including images)
+2. ✅ **Import** the data into Django database  
+3. ✅ **Move** UGain offerings from Science Academy to UGain Academy
+4. ✅ **Preserve** all customizations (logos, colors, sort orders)
+5. ✅ **Handle** all file locations and dependencies
+
+That's it! No other steps needed.
+
 ## Quick Start
 
 ### Using the Helper Script (Recommended)
-The helper script automates both the scraping and importing process with a single command:
+The helper script automates the complete scraping, importing, and post-processing with a single command:
 
 ```bash
-# Run the automated update script (both scrape and import)
+# Run the complete automated update process (scrape, import, and move UGain offerings)
 python update_data.py
 
 # To clear existing data before importing
 python update_data.py --clear
 ```
 
-### Running the Scraper and Import Separately
+This single command will:
+1. ✅ Scrape data from all academy websites
+2. ✅ Import the data into Django database  
+3. ✅ Move UGain offerings from Science Academy to UGain Academy
+4. ✅ Handle all file locations and dependencies automatically
+
+### Running the Scraper and Import Separately (Manual Process)
+
+If you need more control over each step, you can run them individually:
 
 #### Step 1: Run the Scraper
-The scraper (`scrape2.py`) collects data from all academy websites and saves it to a JSON file. It preserves HTML formatting in descriptions and program content.
-
 ```bash
 # Run the scraper from the project root
 python getdata/scrape2.py
@@ -28,21 +51,19 @@ cd getdata
 python scrape2.py
 ```
 
-The script will:
-1. Visit each academy website
-2. Collect all categories and offerings
-3. Preserve HTML formatting in descriptions and program content
-4. Save data to `getdata/ugent_academies_data_detailed.json`
-
 #### Step 2: Import the Data into Django
-After scraping, import the data into the Django database:
-
 ```bash
 # Import data from the detailed JSON file
 python manage.py import_detailed_data getdata/ugent_academies_data_detailed.json
 
 # To clear existing data before import (caution: this removes all existing data)
 python manage.py import_detailed_data getdata/ugent_academies_data_detailed.json --clear
+```
+
+#### Step 3: Move UGain Offerings
+```bash
+# Move UGain offerings from Science Academy to UGain Academy
+python manage.py move_ugain_offerings
 ```
 
 ### Legacy Methods
