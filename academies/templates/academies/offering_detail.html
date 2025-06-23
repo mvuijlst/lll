@@ -108,6 +108,17 @@
             </div>
         </div>
     </div>    <div class="col-lg-4">
+        {% if offering.image_url %}
+        <div class="card mb-3">
+            <div class="card-body p-0">
+                <img src="{{ offering.image_url }}" 
+                     alt="{{ offering.title }}" 
+                     class="w-100 img-fluid rounded"
+                     style="max-height: 300px; object-fit: contain; background-color: #f8f9fa;">
+            </div>
+        </div>
+        {% endif %}
+        
         <div class="card">
             <div class="card-header academy-bg">
                 <h5 class="mb-0">                    <i class="bi bi-calendar-event me-2"></i>{% trans "Sessions & Dates" %}

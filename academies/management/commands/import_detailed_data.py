@@ -181,8 +181,7 @@ class Command(BaseCommand):
                     self.stdout.write(self.style.WARNING(f"Academy not found for offering: {item['title']} (Academy: {academy_name})"))
                     skipped_count += 1
                     continue
-            
-            # Process language
+              # Process language
             language = None
             if 'language' in item and item['language']:
                 language_names = item['language'].split('\n')
@@ -191,7 +190,8 @@ class Command(BaseCommand):
                     if lang_name:
                         language, _ = Language.objects.get_or_create(name=lang_name)
                         break  # Just use the first language for now
-              # Find or create the offering
+            
+            # Find or create the offering
             defaults = {
                 'title': item['title'],
                 'academy': academy,
@@ -200,6 +200,7 @@ class Command(BaseCommand):
                 'remarks': item.get('remarks', ''),  # Preserve HTML content
                 'course_id': item.get('course_id', ''),
                 'language': language,
+                'image_url': item.get('image_url', ''),
                 'is_active': True
             }
             

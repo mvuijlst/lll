@@ -234,8 +234,7 @@ def scrape_offering_details(offering_url, offering_title, academy_name):
     
     # Parse the HTML content
     soup = BeautifulSoup(response.text, 'html.parser')
-    
-    # Initialize the details dictionary with basic information
+      # Initialize the details dictionary with basic information
     details = {
         'title': offering_title,
         'link': offering_url,
@@ -244,6 +243,7 @@ def scrape_offering_details(offering_url, offering_title, academy_name):
         'program': '',
         'course_id': '',
         'language': '',
+        'image_url': '',
         'partners': [],
         'related_courses': [],
         'variations': []
@@ -359,6 +359,17 @@ def scrape_offering_details(offering_url, offering_title, academy_name):
         # Add this variation to the list
         if variation_data['title']:
             details['variations'].append(variation_data)
+    
+    # Extract offering image if available
+    image_element = soup.select_one('#block-system-main-block > article > div.course--content > section.sidebar--second > div > article > div > picture > img')
+    if image_element:
+        image_src = image_element.get('src', '')
+        if image_src:
+            # Make the image URL absolute if it's relative
+            if image_src.startswith('/'):
+                base_url = offering_url.split('/', 3)[0] + '//' + offering_url.split('/', 3)[2]
+                image_src = base_url + image_src
+            details['image_url'] = image_src
     
     return details
 
