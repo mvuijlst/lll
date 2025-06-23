@@ -79,7 +79,9 @@ class Command(BaseCommand):
                     'base_url': item['url'],
                     'program_url': item.get('program_url', ''),
                     'colour': item.get('colour', ''),
-                    'sort_order': item.get('sort_order', 0),                    'logo': item.get('logo', '')
+                    'sort_order': item.get('sort_order', 0),
+                    'introduction': item.get('introduction', ''),
+                    'logo': item.get('logo', '')
                 }
             )
             

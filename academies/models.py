@@ -12,6 +12,7 @@ class Academy(models.Model):
     colour = models.CharField(max_length=7, blank=True, help_text="Hex color code (e.g., #FF5733)")
     sort_order = models.PositiveIntegerField(default=0, help_text="Order in which this academy appears")
     description = models.TextField(blank=True, help_text="Short description of the academy")
+    introduction = models.TextField(blank=True, help_text="Introduction text from academy homepage (may contain HTML)")
     logo = models.ImageField(upload_to='academy_logos/', blank=True, null=True, help_text="Academy logo image")
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)

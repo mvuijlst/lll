@@ -6,7 +6,8 @@
             "sort_order": 1,
             "colour": "#F1A42B",
             "logo": "academy_logos/humanities.png",
-            "program_url": "https://humanitiesacademie.ugent.be/programma"
+            "program_url": "https://humanitiesacademie.ugent.be/programma",
+            "introduction": "<p>Welkom bij de Humanities Academie! </p>\n<p>Op dit platform vind je alles over <a href=\"https://www.ugent.be/nl/opleidingen/levenslang-leren\">Levenslang Leren</a> aan de <a href=\"https://www.ugent.be/lw/nl\">faculteit Letteren en Wijsbegeerte</a> van de UGent.</p>\n<p>Je kan bij ons terecht voor lezingen, studiedagen, opleidingen en postgraduaten<a href=\"https://www.ugent.be/lw/nl/opleidingen/postgraduaten\"> </a>over allerlei maatschappelijk relevante thema's. </p>"
         },
         {
             "name": "Gandaius Permanente Vorming",
@@ -14,7 +15,8 @@
             "sort_order": 2,
             "colour": "#DC4E28",
             "logo": "academy_logos/gandaius.png",
-            "program_url": "https://gandaiusacademy.ugent.be/programma"
+            "program_url": "https://gandaiusacademy.ugent.be/programma",
+            "introduction": "<p>Welkom bij Gandaius Academy, het opleidingsinstituut voor levenslang leren aan de Gentse Faculteit Recht en Criminologie. Wij staan jaarlijks in voor de organisatie van meerdere opleidingen, studiedagen en -reeksen, waaronder de opleiding Bemiddeling en de Postuniversitaire Cyclus Willy Delva.</p><p>Wij voegen regelmatig nieuwe vormingsinitiatieven toe aan ons programma. Door in te schrijven op onze mailinglijsten blijf je op de hoogte!</p>"
         },
         {
             "name": "Science Academy",
@@ -22,7 +24,8 @@
             "sort_order": 3,
             "colour": "#2D8CA8",
             "logo": "academy_logos/science.png",
-            "program_url": "https://beta-academy.ugent.be/programma"
+            "program_url": "https://beta-academy.ugent.be/programma",
+            "introduction": "<p>Welkom bij de Science Academy.</p><p>Ontdek ons uitgebreide aanbod van levenslang leren aan de Faculteit Wetenschappen van de Universiteit Gent. Bij de Science Academy vind je inspirerende nascholingen, boeiende lessenreeksen, gespecialiseerde postgraduaatsopleidingen en waardevolle micro-credentials voor zowel professionals als nieuwsgierigen. Ga met ons mee op een reis van kennis en innovatie</p>"
         },
         {
             "name": "The GHALL",
@@ -30,7 +33,8 @@
             "sort_order": 4,
             "colour": "#E85E71",
             "logo": "academy_logos/ghall.png",
-            "program_url": "https://ghall.ugent.be/programma"
+            "program_url": "https://ghall.ugent.be/programma",
+            "introduction": "<p>Welkom bij The GHALL (Ghent Health Academy for Lifelong Learning).</p>\n<p>Op deze website vind je het aanbod levenslang leren terug van de faculteit Geneeskunde en Gezondheidswetenschappen van de Universiteit Gent.</p>\n<p>The GHALL biedt lezingen, lessenreeksen, postgraduaatsopleidingen en micro-credentials aan voor (zorg)professionals en geïnteresseerden.</p>\n<p>Je kan rekenen op kwaliteitsvolle opleidingsactiviteiten gebaseerd op up-to-date wetenschappelijk onderzoek.</p>"
         },
         {
             "name": "UGain - UGent Academie voor Ingenieurs",
@@ -38,7 +42,8 @@
             "sort_order": 5,
             "colour": "#1E64C8",
             "logo": "academy_logos/ugain.png",
-            "program_url": "https://ugain.ugent.be/programma"
+            "program_url": "https://ugain.ugent.be/programma",
+            "introduction": "<p>Welkom bij UGAin, de academie voor levenslang leren aan de Faculteit Ingenieurswetenschappen en Architectuur van de Universiteit Gent.</p> <p>UGAin biedt een gevarieerd aanbod aan bijscholingen, studiedagen, opleidingen en postgraduaten rond actuele en innovatieve thema's in engineering en technologie.</p> <p>Met onze activiteiten slaan we de brug tussen universiteit en praktijk, en ondersteunen we ingenieurs en andere professionals in hun verdere ontwikkeling.</p>"
         },
         {
             "name": "FEB Academy",
@@ -46,7 +51,8 @@
             "sort_order": 6,
             "colour": "#AEB050",
             "logo": "academy_logos/feb.png",
-            "program_url": "https://febacademy.ugent.be/programma"
+            "program_url": "https://febacademy.ugent.be/programma",
+            "introduction": "<p>Welkom bij FEB Academy, het opleidingsinstituut voor levenslang leren aan de Faculteit Economie en Bedrijfskunde. Wij organiseren opleidingen in verschillende vormen voor professionals: korte en langlopende opleidingen, studiedagen, micro-credentials, nascholingen voor leerkrachten...</p>\n<p>Wij voegen regelmatig nieuwe vormingsinitiatieven toe aan ons programma. </p>"
         },
         {
             "name": "Academie voor Diergeneeskunde",
@@ -54,7 +60,8 @@
             "sort_order": 7,
             "colour": "#825491",
             "logo": "academy_logos/acvetmed.png",
-            "program_url": "https://acvetmed.ugent.be/programma"
+            "program_url": "https://acvetmed.ugent.be/programma",
+            "introduction": "<p>De Academie voor Diergeneeskunde biedt kwalitatief hoogstaande vormingsactiviteiten aan binnen het werkveld van de diergeneeskunde. Voor een greep uit ons aanbod drukt u op de knop hieronder of scrolt u verder door op deze pagina.</p>"
         },
         {
             "name": "Dunant Academie",
@@ -62,7 +69,8 @@
             "sort_order": 8,
             "colour": "#FB7E3A",
             "logo": "academy_logos/dunant.png",
-            "program_url": "https://dunantacademie.ugent.be/programma"
+            "program_url": "https://dunantacademie.ugent.be/programma",
+            "introduction": "<p>Je blijven ontwikkelen op academisch niveau, je loopbaan een boost geven?&nbsp;</p><p>De <strong>Dunant Academie</strong> maakt recente inzichten uit wetenschap en praktijk toegankelijk voor werkveld of breed publiek.</p><p>Ons cursusaanbod helpt je omgaan met vraagstukken van vandaag en morgen. Bepaalde lessen kunnen zowel ter plaatse als online gevolgd worden, in de vorm van theorie of practicum.</p>"
         },
         {
             "name": "Academy for Lifelong Learning in Pharmacy",
@@ -70,7 +78,8 @@
             "sort_order": 9,
             "colour": "#BE5190",
             "logo": "academy_logos/pharma.png",
-            "program_url": "https://allpha.ugent.be/programma"
+            "program_url": "https://allpha.ugent.be/programma",
+            "introduction": "<p>Welkom bij ALLpha Academy for Lifelong Learning in Pharmacy!</p>\n<p>Extra expertise opbouwen binnen de farmaceutische industrie? Dan ben je bij ons aan het juiste adres!</p>\n<p>Vanuit onze <strong>academische missie</strong>, streven we naar een maatschappelijk relevant aanbod aan lezingen, studiedagen en opleidingen. Met onze <strong>'<em>Inhouse</em>' expertise</strong> aangevuld met <strong>kennis</strong> van externe gastdocenten verzorgen we dit aanbod met als doel jou, als levenslanglerende, te ondersteunen in het opbouwen van extra skills die voor jouw verdere carrière een meerwaarde betekenen. </p>\n<p>Afhankelijk van het type opleiding verkrijg je een aanwezigheidsattest of een getuigschrift dat jouw werkgever en jouw CV ten goede zal komen.</p>\n<p> </p>\n<p> </p>"
         },
         {
             "name": "Academy for Political and Social Sciences",
@@ -78,7 +87,8 @@
             "sort_order": 10,
             "colour": "#71A860",
             "logo": "academy_logos/apss.png",
-            "program_url": "https://apss.ugent.be/programma"
+            "program_url": "https://apss.ugent.be/programma",
+            "introduction": "<p>Welkom bij de Academy for Political and Social Sciences van de Universiteit Gent.</p>\n<p>Op dit platform vind je alles over <a href=\"https://www.ugent.be/nl/opleidingen/levenslang-leren\">Levenslang Leren</a> aan de <a href=\"https://www.ugent.be/ps/nl\">Faculteit Politieke en Sociale Wetenschappen</a>.</p>\n<p>Wij bieden alumni, professionals en geïnteresseerden in politiek en sociaal-wetenschappelijke vraagstukken:</p>\n<ul>\n<li>\n<p>Professionele bijscholingstrajecten (langlopende- en kortlopende opleidingen)</p>\n</li>\n<li>\n<p>Actuele lezingen (avondlezingen)</p>\n</li>\n<li>\n<p>Professionele trajecten op maat van organisaties en bedrijven (op aanvraag bij <a href=\"http://psacademie@ugent.be\">psacademie@ugent.be</a>)</p>\n</li>\n</ul>\n<p> Meer info?</p>"
         }
     ],
     "metadata": {
@@ -13643,5 +13653,5 @@
             ]
         }
     ],
-    "scraped_at": "2025-06-23T12:45:07.147021"
+    "scraped_at": "2025-06-23T13:25:56.819923"
 }

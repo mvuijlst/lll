@@ -34,9 +34,7 @@
             <div class="card-body d-flex flex-column academy-bg-light">
                 <h5 class="card-title academy-text mb-3">
                     {{ academy.name }}
-                </h5>
-                
-                {% if academy.description %}
+                </h5>                {% if academy.description %}
                 <p class="card-text text-muted mb-3">
                     {{ academy.description|truncatewords:20 }}
                 </p>

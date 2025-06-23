@@ -373,6 +373,52 @@ def scrape_offering_details(offering_url, offering_title, academy_name):
     
     return details
 
+def scrape_academy_introduction(academy_base_url, academy_name):
+    """
+    Scrape introduction text from an academy's homepage
+    
+    Args:
+        academy_base_url: Base URL of the academy (e.g., https://ghall.ugent.be)
+        academy_name: Name of the academy for reference
+        
+    Returns:
+        String containing the academy introduction HTML, or empty string if not found
+    """
+    print(f"Scraping introduction for {academy_name}...")
+      # Special case for UGain - hardcoded content
+    if "ugain" in academy_base_url.lower():
+        return "<p>Welkom bij UGAin, de academie voor levenslang leren aan de Faculteit Ingenieurswetenschappen en Architectuur van de Universiteit Gent.</p> <p>UGAin biedt een gevarieerd aanbod aan bijscholingen, studiedagen, opleidingen en postgraduaten rond actuele en innovatieve thema's in engineering en technologie.</p> <p>Met onze activiteiten slaan we de brug tussen universiteit en praktijk, en ondersteunen we ingenieurs en andere professionals in hun verdere ontwikkeling.</p>"
+    
+    # Special case for Dunant Academie - hardcoded content
+    if "dunant" in academy_base_url.lower():
+        return "<p>Je blijven ontwikkelen op academisch niveau, je loopbaan een boost geven?&nbsp;</p><p>De <strong>Dunant Academie</strong> maakt recente inzichten uit wetenschap en praktijk toegankelijk voor werkveld of breed publiek.</p><p>Ons cursusaanbod helpt je omgaan met vraagstukken van vandaag en morgen. Bepaalde lessen kunnen zowel ter plaatse als online gevolgd worden, in de vorm van theorie of practicum.</p>"
+    
+    try:
+        # Send an HTTP request to the homepage
+        response = requests.get(academy_base_url, timeout=30)
+        
+        # Check if the request was successful
+        if response.status_code != 200:
+            print(f"Failed to retrieve the homepage: Status code {response.status_code}")
+            return ""
+    except Exception as e:
+        print(f"Error accessing {academy_base_url}: {e}")
+        return ""
+    
+    # Parse the HTML content
+    soup = BeautifulSoup(response.text, 'html.parser')
+    
+    # Try to find the introduction text using the provided CSS selector
+    intro_element = soup.select_one("#block-system-main-block > article > div.field.field--name-field-body.field--type-entity-reference-revisions.field--label-hidden.field__items > div > article > div > div.layout__item.text--wrapper > div.clearfix.text-formatted.field.field--name-field-text.field--type-text-long.field--label-hidden.field__item")
+    
+    if intro_element:
+        # Get the inner HTML content (preserve HTML formatting)
+        inner_html = ''.join(str(child) for child in intro_element.children)
+        return inner_html.strip()
+    else:
+        print(f"Could not find introduction text on {academy_base_url}")
+        return ""
+
 if __name__ == "__main__":
     # Define the academies to scrape
     academies = [
@@ -450,11 +496,15 @@ if __name__ == "__main__":
             'name': academy_name,
             'url': academy_url
         }
-        
-        # Add metadata from our predefined dictionary if available
+          # Add metadata from our predefined dictionary if available
         if base_url in academy_metadata:
             for key, value in academy_metadata[base_url].items():
                 academy_data[key] = value
+        
+        # Scrape academy introduction text from homepage
+        introduction = scrape_academy_introduction(base_url, academy_name)
+        if introduction:
+            academy_data['introduction'] = introduction
         
         all_data['academies'].append(academy_data)
         
