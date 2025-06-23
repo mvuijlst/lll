@@ -11,27 +11,26 @@
     </ol>
 </nav>
 
-<div class="row">    <div class="col-lg-4">
-        <div class="card">
-            <div class="card-body text-center">
-                {% if teacher.photo_url %}
-                <img src="{{ teacher.photo_url }}" alt="{{ teacher.name }}" 
-                     class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
-                {% else %}
-                <i class="bi bi-person-circle text-primary mb-3" style="font-size: 6rem;"></i>
-                {% endif %}
-                <h2 class="h4 mb-1">{{ teacher.name }}</h2>
-                {% if teacher.title %}
-                <p class="text-muted mb-3">{{ teacher.title }}</p>
-                {% endif %}
-                
-                {% if teacher.profile_url %}
-                <a href="{{ teacher.profile_url }}" target="_blank" 
-                   class="btn btn-primary">
-                    <i class="bi bi-link-45deg me-1"></i>{% trans "View Full Profile" %}
-                </a>
-                {% endif %}
-            </div>
+<div class="row">
+    <div class="col-lg-4">
+        <div class="text-center">
+            {% if teacher.photo_url %}
+            <img src="{{ teacher.photo_url }}" alt="{{ teacher.name }}" 
+                    class="rounded-circle mb-3" style="width: 260px; height: 260px; object-fit: cover;">
+            {% else %}
+            <i class="bi bi-person-circle text-primary mb-3" style="font-size: 6rem;"></i>
+            {% endif %}
+            <h2 class="h4 mb-1">{{ teacher.name }}</h2>
+            {% if teacher.title %}
+            <p class="text-muted mb-3">{{ teacher.title }}</p>
+            {% endif %}
+            
+            <!-- {% if teacher.profile_url %}
+            <a href="{{ teacher.profile_url }}" target="_blank" 
+                class="btn btn-primary">
+                <i class="bi bi-link-45deg me-1"></i>{% trans "View Full Profile" %}
+            </a>
+            {% endif %} -->
         </div>
     </div>
     
