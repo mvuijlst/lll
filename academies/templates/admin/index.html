@@ -1,0 +1,36 @@
+{% extends "admin/index.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="module">
+    <table>
+        <caption><a href="#" class="section" title="{% trans 'Show' %}">{% trans 'Quick Stats' %}</a></caption>
+        <tr>
+            <th scope="row"><a href="{% url 'admin:academies_academy_changelist' %}">{% trans 'Total Academies' %}</a></th>
+            <td>{{ total_academies|default:"0" }}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="{% url 'admin:academies_offering_changelist' %}">{% trans 'Total Offerings' %}</a></th>
+            <td>{{ total_offerings|default:"0" }}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="{% url 'admin:academies_offering_changelist' %}?is_active__exact=1">{% trans 'Active Offerings' %}</a></th>
+            <td>{{ active_offerings|default:"0" }}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="{% url 'admin:academies_variation_changelist' %}">{% trans 'Total Variations' %}</a></th>
+            <td>{{ total_variations|default:"0" }}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="{% url 'admin:academies_variation_changelist' %}?is_available__exact=1">{% trans 'Available Variations' %}</a></th>
+            <td>{{ available_variations|default:"0" }}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="{% url 'admin:academies_teacher_changelist' %}">{% trans 'Total Teachers' %}</a></th>
+            <td>{{ total_teachers|default:"0" }}</td>
+        </tr>
+    </table>
+</div>
+
+{{ block.super }}
+{% endblock %}
