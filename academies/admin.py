@@ -5,6 +5,14 @@ from .models import (
 )
 
 
+class VariationInline(admin.TabularInline):
+    model = Variation
+    extra = 1
+    fields = ('title', 'price', 'lesson_dates', 'start_date', 'end_date', 'location', 'is_available', 'registration_url')
+    show_change_link = True
+    readonly_fields = ('created_at', 'updated_at')
+
+
 @admin.register(Academy)
 class AcademyAdmin(admin.ModelAdmin):
     list_display = ('name', 'sort_order', 'colour', 'has_logo', 'created_at', 'updated_at')
@@ -87,6 +95,7 @@ class OfferingAdmin(admin.ModelAdmin):
             'classes': ('collapse',)
         }),
     )
+    inlines = [VariationInline]
 
 
 @admin.register(Variation)

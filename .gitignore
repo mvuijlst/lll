@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+*.env
+.env*
+
+# Django
+*.sqlite3
+*.log
+*.pot
+*.mo
+*.pyc
+*.pyo
+*.pyd
+/static/
+/media/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Test & coverage
+htmlcov/
+.coverage
+.tox/
+.nox/
+.pytest_cache/
+
+# Misc
+*.bak
+*.swp
+*.swo
+
+# Node
+node_modules/
+
+# Other
+*.orig
+*.rej
+
+# Ignore migrations cache
+**/migrations/__pycache__/
+
+# Ignore compiled translations
+locale/*/LC_MESSAGES/*.mo
