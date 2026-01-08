@@ -54,3 +54,6 @@ node_modules/
 
 # Ignore compiled translations
 locale/*/LC_MESSAGES/*.mo
+
+# Large Data Files
+getdata/drupal/*.sql
