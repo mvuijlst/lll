@@ -1,7 +1,11 @@
 import json
+from pathlib import Path
 
 # Load the scraped data
-with open('getdata/ugent_academies_data_detailed.json', encoding='utf-8') as f:
+BASE_DIR = Path(__file__).resolve().parent
+JSON_PATH = BASE_DIR / 'getdata' / 'ugent_academies_data_detailed.json'
+
+with open(JSON_PATH, encoding='utf-8') as f:
     data = json.load(f)
 
 # Find offerings with images

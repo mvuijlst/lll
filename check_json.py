@@ -1,7 +1,11 @@
 import json
 import re
+from pathlib import Path
 
-with open('getdata/ugent_academies_data_detailed.json', 'r', encoding='utf-8') as f:
+BASE_DIR = Path(__file__).resolve().parent
+JSON_PATH = BASE_DIR / 'getdata' / 'ugent_academies_data_detailed.json'
+
+with open(JSON_PATH, 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 html_count = 0

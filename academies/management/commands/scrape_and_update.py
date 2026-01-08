@@ -2,6 +2,7 @@ import json
 import os
 import sys
 import subprocess
+from pathlib import Path
 from datetime import datetime
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
@@ -43,8 +44,9 @@ class Command(BaseCommand):
                 "Use --force to run this command anyway."
             ))            
             # Suggest running the new command
-            json_path = os.path.join('getdata', 'ugent_academies_data_detailed.json')
-            if os.path.exists(json_path):
+            project_root = Path(__file__).resolve().parents[3]
+            json_path = project_root / 'getdata' / 'ugent_academies_data_detailed.json'
+            if json_path.exists():
                 self.stdout.write(self.style.SUCCESS(
                     f"Found JSON file at '{json_path}'. You can import it with:\n"
                     f"python manage.py import_detailed_data {json_path}"
@@ -74,7 +76,8 @@ class Command(BaseCommand):
                 return
         elif not json_file:
             # Look for the default scraper output file
-            json_file = os.path.join('getdata', 'ugent_academies_complete.json')
+            project_root = Path(__file__).resolve().parents[3]
+            json_file = str(project_root / 'getdata' / 'ugent_academies_complete.json')
             if not os.path.exists(json_file):
                 self.stdout.write(self.style.ERROR('No JSON file specified and default file not found'))
                 return

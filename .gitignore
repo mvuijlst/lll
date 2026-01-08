@@ -9,6 +9,10 @@ __pycache__/
 *.env
 .env*
 
+# Virtual environments
+venv/
+.venv/
+
 # Django
 *.sqlite3
 *.log
